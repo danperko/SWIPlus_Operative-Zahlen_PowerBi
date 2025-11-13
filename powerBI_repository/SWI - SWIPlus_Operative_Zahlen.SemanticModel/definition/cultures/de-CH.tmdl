@@ -1006,7 +1006,7 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "Word Press ID": {
+			          "Canton ID": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -1016,7 +1016,7 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "Canton ID": {
+			          "Word Press ID": {
 			            "State": "Suggested",
 			            "Source": {
 			              "Type": "External",
@@ -68104,141 +68104,231 @@ cultureInfo de-CH
 			          }
 			        }
 			      ]
+			    },
+			    "mapp_api_query_7241_14": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_14"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "mapp api query 7241 14": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "mapp_api_query_7241_14": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_14.session_id": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_14",
+			          "ConceptualProperty": "session_id"
+			        }
+			      },
+			      "State": "Generated",
+			      "Visibility": {
+			        "Value": "Hidden"
+			      },
+			      "Terms": [
+			        {
+			          "session id": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "session_id": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "session": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "session identification": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "session identity": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "session identifier": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.75
+			          }
+			        },
+			        {
+			          "session credential": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.727
+			          }
+			        },
+			        {
+			          "assembly": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "sitting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "conference": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "gathering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "hearing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_14.application_version_PC67": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_14",
+			          "ConceptualProperty": "application_version_PC67"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "application version PC67": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "application_version_PC67": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "PC67": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "version PC67": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "Application Version (PC67)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_14.application_version_qty_PC67": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_14",
+			          "ConceptualProperty": "application_version_qty_PC67"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "application version qty PC67": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "application_version_qty_PC67": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "mapp_api_query_7241_11_clone_enriched_published_datumshierarchie_has_mapp_api_query_7241_11_clone_enriched_published_jahr": {
-			      "Binding": {
-			        "ConceptualEntity": "mapp_api_query_7241_11_clone_enriched"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mapp_api_query_7241_11_clone_enriched.published.datumshierarchie": {
-			          "Target": {
-			            "Entity": "mapp_api_query_7241_11_clone_enriched.published.datumshierarchie"
-			          }
-			        },
-			        "mapp_api_query_7241_11_clone_enriched.published.jahr": {
-			          "Target": {
-			            "Entity": "mapp_api_query_7241_11_clone_enriched.published.jahr"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mapp_api_query_7241_11_clone_enriched.published.datumshierarchie"
-			            },
-			            "Object": {
-			              "Role": "mapp_api_query_7241_11_clone_enriched.published.jahr"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs"
-			        }
-			      ]
-			    },
-			    "mapp_api_query_7241_11_clone_enriched_published_has_datumshierarchie": {
-			      "Binding": {
-			        "ConceptualEntity": "mapp_api_query_7241_11_clone_enriched"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mapp_api_query_7241_11_clone_enriched.published": {
-			          "Target": {
-			            "Entity": "mapp_api_query_7241_11_clone_enriched.published"
-			          }
-			        },
-			        "mapp_api_query_7241_11_clone_enriched.published.datumshierarchie": {
-			          "Target": {
-			            "Entity": "mapp_api_query_7241_11_clone_enriched.published.datumshierarchie"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mapp_api_query_7241_11_clone_enriched.published"
-			            },
-			            "Object": {
-			              "Role": "mapp_api_query_7241_11_clone_enriched.published.datumshierarchie"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "published_have_datumshierarchies"
-			        }
-			      ]
-			    },
-			    "mapp_api_query_7241_10_clone_enriched_published_monat_has_mapp_api_query_7241_10_clone_enriched_published_tag": {
-			      "Binding": {
-			        "ConceptualEntity": "mapp_api_query_7241_10_clone_enriched"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mapp_api_query_7241_10_clone_enriched.published.monat": {
-			          "Target": {
-			            "Entity": "mapp_api_query_7241_10_clone_enriched.published.monat"
-			          }
-			        },
-			        "mapp_api_query_7241_10_clone_enriched.published.tag": {
-			          "Target": {
-			            "Entity": "mapp_api_query_7241_10_clone_enriched.published.tag"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.monat"
-			            },
-			            "Object": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.tag"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "monats_have_tags"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.tag"
-			            },
-			            "Object": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.monat"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tags_have_monats"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.tag"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.monat"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "tags_are_in_monats21"
-			        }
-			      ]
-			    },
 			    "mapp_api_query_7241_10_clone_enriched_published_quartal_has_mapp_api_query_7241_10_clone_enriched_published_monat": {
 			      "Binding": {
 			        "ConceptualEntity": "mapp_api_query_7241_10_clone_enriched"
@@ -68499,7 +68589,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs1"
+			          "ID": "datumshierarchies_have_jahrs"
 			        }
 			      ]
 			    },
@@ -68532,7 +68622,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "published_have_datumshierarchies1"
+			          "ID": "published_have_datumshierarchies"
 			        }
 			      ]
 			    },
@@ -68565,7 +68655,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags1"
+			          "ID": "monats_have_tags"
 			        },
 			        {
 			          "Attribute": {
@@ -68578,7 +68668,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats1"
+			          "ID": "tags_have_monats"
 			        },
 			        {
 			          "Preposition": {
@@ -68862,7 +68952,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs2"
+			          "ID": "datumshierarchies_have_jahrs1"
 			        }
 			      ]
 			    },
@@ -68895,7 +68985,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "published_have_datumshierarchies2"
+			          "ID": "published_have_datumshierarchies1"
 			        }
 			      ]
 			    },
@@ -68928,7 +69018,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags2"
+			          "ID": "monats_have_tags1"
 			        },
 			        {
 			          "Attribute": {
@@ -68941,7 +69031,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats2"
+			          "ID": "tags_have_monats1"
 			        },
 			        {
 			          "Preposition": {
@@ -69225,7 +69315,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs3"
+			          "ID": "datumshierarchies_have_jahrs2"
 			        }
 			      ]
 			    },
@@ -69291,7 +69381,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags3"
+			          "ID": "monats_have_tags2"
 			        },
 			        {
 			          "Attribute": {
@@ -69304,7 +69394,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats3"
+			          "ID": "tags_have_monats2"
 			        },
 			        {
 			          "Preposition": {
@@ -69588,7 +69678,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs4"
+			          "ID": "datumshierarchies_have_jahrs3"
 			        }
 			      ]
 			    },
@@ -69654,7 +69744,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags4"
+			          "ID": "monats_have_tags3"
 			        },
 			        {
 			          "Attribute": {
@@ -69667,7 +69757,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats4"
+			          "ID": "tags_have_monats3"
 			        },
 			        {
 			          "Preposition": {
@@ -69951,7 +70041,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs5"
+			          "ID": "datumshierarchies_have_jahrs4"
 			        }
 			      ]
 			    },
@@ -70017,7 +70107,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags5"
+			          "ID": "monats_have_tags4"
 			        },
 			        {
 			          "Attribute": {
@@ -70030,7 +70120,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats5"
+			          "ID": "tags_have_monats4"
 			        },
 			        {
 			          "Preposition": {
@@ -70314,7 +70404,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs6"
+			          "ID": "datumshierarchies_have_jahrs5"
 			        }
 			      ]
 			    },
@@ -70380,7 +70470,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags6"
+			          "ID": "monats_have_tags5"
 			        },
 			        {
 			          "Attribute": {
@@ -70393,7 +70483,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats6"
+			          "ID": "tags_have_monats5"
 			        },
 			        {
 			          "Preposition": {
@@ -70677,7 +70767,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs7"
+			          "ID": "datumshierarchies_have_jahrs6"
 			        }
 			      ]
 			    },
@@ -70743,7 +70833,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags7"
+			          "ID": "monats_have_tags6"
 			        },
 			        {
 			          "Attribute": {
@@ -70756,7 +70846,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats7"
+			          "ID": "tags_have_monats6"
 			        },
 			        {
 			          "Preposition": {
@@ -71040,7 +71130,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs8"
+			          "ID": "datumshierarchies_have_jahrs7"
 			        }
 			      ]
 			    },
@@ -71106,7 +71196,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags8"
+			          "ID": "monats_have_tags7"
 			        },
 			        {
 			          "Attribute": {
@@ -71119,7 +71209,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats8"
+			          "ID": "tags_have_monats7"
 			        },
 			        {
 			          "Preposition": {
@@ -71403,7 +71493,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs9"
+			          "ID": "datumshierarchies_have_jahrs8"
 			        }
 			      ]
 			    },
@@ -71469,7 +71559,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags9"
+			          "ID": "monats_have_tags8"
 			        },
 			        {
 			          "Attribute": {
@@ -71482,7 +71572,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats9"
+			          "ID": "tags_have_monats8"
 			        },
 			        {
 			          "Preposition": {
@@ -71766,7 +71856,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs10"
+			          "ID": "datumshierarchies_have_jahrs9"
 			        }
 			      ]
 			    },
@@ -71832,7 +71922,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags10"
+			          "ID": "monats_have_tags9"
 			        },
 			        {
 			          "Attribute": {
@@ -71845,7 +71935,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats10"
+			          "ID": "tags_have_monats9"
 			        },
 			        {
 			          "Preposition": {
@@ -72129,7 +72219,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs11"
+			          "ID": "datumshierarchies_have_jahrs10"
 			        }
 			      ]
 			    },
@@ -72162,7 +72252,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "published_have_datumshierarchies3"
+			          "ID": "published_have_datumshierarchies2"
 			        }
 			      ]
 			    },
@@ -72195,7 +72285,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags11"
+			          "ID": "monats_have_tags10"
 			        },
 			        {
 			          "Attribute": {
@@ -72208,7 +72298,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats11"
+			          "ID": "tags_have_monats10"
 			        },
 			        {
 			          "Preposition": {
@@ -72492,7 +72582,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs12"
+			          "ID": "datumshierarchies_have_jahrs11"
 			        }
 			      ]
 			    },
@@ -72525,7 +72615,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "published_have_datumshierarchies4"
+			          "ID": "published_have_datumshierarchies3"
 			        }
 			      ]
 			    },
@@ -72558,7 +72648,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags12"
+			          "ID": "monats_have_tags11"
 			        },
 			        {
 			          "Attribute": {
@@ -72571,7 +72661,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats12"
+			          "ID": "tags_have_monats11"
 			        },
 			        {
 			          "Preposition": {
@@ -72855,7 +72945,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs13"
+			          "ID": "datumshierarchies_have_jahrs12"
 			        }
 			      ]
 			    },
@@ -72921,7 +73011,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags13"
+			          "ID": "monats_have_tags12"
 			        },
 			        {
 			          "Attribute": {
@@ -72934,7 +73024,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats13"
+			          "ID": "tags_have_monats12"
 			        },
 			        {
 			          "Preposition": {
@@ -73218,7 +73308,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs14"
+			          "ID": "datumshierarchies_have_jahrs13"
 			        }
 			      ]
 			    },
@@ -73284,7 +73374,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags14"
+			          "ID": "monats_have_tags13"
 			        },
 			        {
 			          "Attribute": {
@@ -73297,7 +73387,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats14"
+			          "ID": "tags_have_monats13"
 			        },
 			        {
 			          "Preposition": {
@@ -73581,7 +73671,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs15"
+			          "ID": "datumshierarchies_have_jahrs14"
 			        }
 			      ]
 			    },
@@ -73647,7 +73737,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags15"
+			          "ID": "monats_have_tags14"
 			        },
 			        {
 			          "Attribute": {
@@ -73660,7 +73750,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats15"
+			          "ID": "tags_have_monats14"
 			        },
 			        {
 			          "Preposition": {
@@ -73944,7 +74034,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs16"
+			          "ID": "datumshierarchies_have_jahrs15"
 			        }
 			      ]
 			    },
@@ -73977,7 +74067,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "published_have_datumshierarchies5"
+			          "ID": "published_have_datumshierarchies4"
 			        }
 			      ]
 			    },
@@ -74010,7 +74100,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags16"
+			          "ID": "monats_have_tags15"
 			        },
 			        {
 			          "Attribute": {
@@ -74023,7 +74113,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats16"
+			          "ID": "tags_have_monats15"
 			        },
 			        {
 			          "Preposition": {
@@ -74307,7 +74397,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs17"
+			          "ID": "datumshierarchies_have_jahrs16"
 			        }
 			      ]
 			    },
@@ -74340,7 +74430,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "published_have_datumshierarchies6"
+			          "ID": "published_have_datumshierarchies5"
 			        }
 			      ]
 			    },
@@ -74373,7 +74463,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags17"
+			          "ID": "monats_have_tags16"
 			        },
 			        {
 			          "Attribute": {
@@ -74386,7 +74476,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats17"
+			          "ID": "tags_have_monats16"
 			        },
 			        {
 			          "Preposition": {
@@ -74670,7 +74760,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs18"
+			          "ID": "datumshierarchies_have_jahrs17"
 			        }
 			      ]
 			    },
@@ -74736,7 +74826,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags18"
+			          "ID": "monats_have_tags17"
 			        },
 			        {
 			          "Attribute": {
@@ -74749,7 +74839,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats18"
+			          "ID": "tags_have_monats17"
 			        },
 			        {
 			          "Preposition": {
@@ -75033,7 +75123,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs19"
+			          "ID": "datumshierarchies_have_jahrs18"
 			        }
 			      ]
 			    },
@@ -75099,7 +75189,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags19"
+			          "ID": "monats_have_tags18"
 			        },
 			        {
 			          "Attribute": {
@@ -75112,7 +75202,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats19"
+			          "ID": "tags_have_monats18"
 			        },
 			        {
 			          "Preposition": {
@@ -75396,7 +75486,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs20"
+			          "ID": "datumshierarchies_have_jahrs19"
 			        }
 			      ]
 			    },
@@ -75462,7 +75552,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags20"
+			          "ID": "monats_have_tags19"
 			        },
 			        {
 			          "Attribute": {
@@ -75475,7 +75565,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats20"
+			          "ID": "tags_have_monats19"
 			        },
 			        {
 			          "Preposition": {
@@ -75759,7 +75849,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs21"
+			          "ID": "datumshierarchies_have_jahrs20"
 			        }
 			      ]
 			    },
@@ -75825,7 +75915,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_tags21"
+			          "ID": "monats_have_tags20"
 			        },
 			        {
 			          "Attribute": {
@@ -75838,7 +75928,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "tags_have_monats21"
+			          "ID": "tags_have_monats20"
 			        },
 			        {
 			          "Preposition": {
@@ -76122,7 +76212,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "datumshierarchies_have_jahrs22"
+			          "ID": "datumshierarchies_have_jahrs21"
 			        }
 			      ]
 			    },
@@ -76156,6 +76246,59 @@ cultureInfo de-CH
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "visit_time_tses_have_datumshierarchies"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_14_has_coretable_session_id": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_14"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_14": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_14"
+			          }
+			        },
+			        "coretable_session_id": {
+			          "Target": {
+			            "Entity": "coretable_session_id"
+			          },
+			          "Nouns": [
+			            {
+			              "session": {
+			                "State": "Generated"
+			              }
+			            }
+			          ]
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_14"
+			            },
+			            "Object": {
+			              "Role": "coretable_session_id"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_14_have_coretable_session_ids"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "coretable_session_id"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_14"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "coretable_session_ids_have_mapp_api_query_7241_14"
 			        }
 			      ]
 			    },
@@ -77437,6 +77580,72 @@ cultureInfo de-CH
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "mapp_api_query_7241_merged_have_coretable_session_ids"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_14_has_application_version_qty_PC67": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_14"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_14": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_14"
+			          }
+			        },
+			        "mapp_api_query_7241_14.application_version_qty_PC67": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_14.application_version_qty_PC67"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_14"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_14.application_version_qty_PC67"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_14_have_application_version_qty_PC67"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_14_has_application_version_PC67": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_14"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_14": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_14"
+			          }
+			        },
+			        "mapp_api_query_7241_14.application_version_PC67": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_14.application_version_PC67"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_14"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_14.application_version_PC67"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_14_have_application_version_PC67"
 			        }
 			      ]
 			    },
@@ -105679,6 +105888,138 @@ cultureInfo de-CH
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "mapp_api_query_7241_09_enriched_are_published_on_published"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_10_clone_enriched_published_monat_has_mapp_api_query_7241_10_clone_enriched_published_tag": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_10_clone_enriched"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_10_clone_enriched.published.monat": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_10_clone_enriched.published.monat"
+			          }
+			        },
+			        "mapp_api_query_7241_10_clone_enriched.published.tag": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_10_clone_enriched.published.tag"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.monat"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.tag"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monats_have_tags21"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.tag"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.monat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tags_have_monats21"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.tag"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.monat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "tags_are_in_monats21"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_11_clone_enriched_published_has_datumshierarchie": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_11_clone_enriched"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_11_clone_enriched.published": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_11_clone_enriched.published"
+			          }
+			        },
+			        "mapp_api_query_7241_11_clone_enriched.published.datumshierarchie": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_11_clone_enriched.published.datumshierarchie"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_11_clone_enriched.published"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_11_clone_enriched.published.datumshierarchie"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "published_have_datumshierarchies6"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_11_clone_enriched_published_datumshierarchie_has_mapp_api_query_7241_11_clone_enriched_published_jahr": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_11_clone_enriched"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_11_clone_enriched.published.datumshierarchie": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_11_clone_enriched.published.datumshierarchie"
+			          }
+			        },
+			        "mapp_api_query_7241_11_clone_enriched.published.jahr": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_11_clone_enriched.published.jahr"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_11_clone_enriched.published.datumshierarchie"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_11_clone_enriched.published.jahr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "datumshierarchies_have_jahrs22"
 			        }
 			      ]
 			    },

@@ -6,7 +6,8 @@
     "y": 0,
     "z": 0,
     "height": 184.12096910442582,
-    "width": 569.734266958585
+    "width": 569.734266958585,
+    "tabOrder": 7000
   },
   "visual": {
     "visualType": "lineChart",

@@ -11,7 +11,7 @@ queryGroup 'Abfragefehler: 16 10 2025 14:28:44'
 
 	annotation PBI_QueryGroupOrder = 0
 
-annotation PBI_QueryOrder = ["appstore_sales_merged","cdn_prod_swi_services_ch","mapp_api_query_7241_01","mapp_api_query_7241_02","mapp_api_query_7241_03","mapp_api_query_7241_04","mapp_api_query_7241_05","mapp_api_query_7241_06","mapp_api_query_7241_06_enriched","mapp_api_query_7241_07","mapp_api_query_7241_07_PowerBI_Relation","mapp_api_query_7241_08","mapp_api_query_7241_09","mapp_api_query_7241_09_enriched","mapp_api_query_7241_10","mapp_api_query_7241_10_splitted","mapp_api_query_7241_10_enriched_v2","mapp_api_query_7241_11","mapp_api_query_7241_11_enriched","mapp_api_query_7241_merged","mapp_api_query_7241_test","mapp_api_query_7241_10 (2)","playstore_installs_app_version_cleaned","playstore_installs_carrier_cleaned","playstore_installs_country_cleaned","playstore_installs_device_cleaned","playstore_installs_language_cleaned","playstore_installs_os_version_cleaned","playstore_installs_overview","playstore_installs_overview_cleaned","mapping_table_Country","Fehler in mapping_table_Country","mapp_api_query_7241_09_clone_enriched","mapp_api_query_7241_09_clone","mapp_api_query_7241_10_clone","mapp_api_query_7241_10_clone_enriched","mapp_api_query_7241_11_clone_enriched","mapp_api_query_7241_11_clone","coretable_session_id"]
+annotation PBI_QueryOrder = ["appstore_sales_merged","cdn_prod_swi_services_ch","mapp_api_query_7241_01","mapp_api_query_7241_02","mapp_api_query_7241_03","mapp_api_query_7241_04","mapp_api_query_7241_05","mapp_api_query_7241_06","mapp_api_query_7241_06_enriched","mapp_api_query_7241_07","mapp_api_query_7241_07_PowerBI_Relation","mapp_api_query_7241_08","mapp_api_query_7241_09","mapp_api_query_7241_09_enriched","mapp_api_query_7241_10","mapp_api_query_7241_10_splitted","mapp_api_query_7241_10_enriched_v2","mapp_api_query_7241_11","mapp_api_query_7241_11_enriched","mapp_api_query_7241_merged","mapp_api_query_7241_test","mapp_api_query_7241_10 (2)","playstore_installs_app_version_cleaned","playstore_installs_carrier_cleaned","playstore_installs_country_cleaned","playstore_installs_device_cleaned","playstore_installs_language_cleaned","playstore_installs_os_version_cleaned","playstore_installs_overview","playstore_installs_overview_cleaned","mapping_table_Country","Fehler in mapping_table_Country","mapp_api_query_7241_09_clone_enriched","mapp_api_query_7241_09_clone","mapp_api_query_7241_10_clone","mapp_api_query_7241_10_clone_enriched","mapp_api_query_7241_11_clone_enriched","mapp_api_query_7241_11_clone","coretable_session_id","mapp_api_query_7241_14"]
 
 annotation __PBI_TimeIntelligenceEnabled = 1
 
@@ -80,6 +80,7 @@ ref table LocalDateTable_545ec8b6-e0d7-4e88-a578-b3ee3cb88ccf
 ref table LocalDateTable_b207c27d-4294-4dcf-ac49-1359ff154092
 ref table LocalDateTable_b65e814b-e63c-48ae-8993-ef848fc7ed61
 ref table LocalDateTable_f5d0e01f-cae0-4790-9e4d-dd79ae4bd3c6
+ref table mapp_api_query_7241_14
 
 ref cultureInfo de-CH
 

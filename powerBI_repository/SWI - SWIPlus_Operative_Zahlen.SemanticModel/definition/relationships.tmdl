@@ -218,3 +218,7 @@ relationship b318909f-875a-e4f0-7b06-217760a7d7c1
 	fromColumn: mapp_api_query_7241_04.location_country
 	toColumn: mapping_table_Country.WebtrekkCountry
 
+relationship AutoDetected_298c64a4-77b4-4da5-9c60-5f2e2a0ab6f3
+	fromColumn: mapp_api_query_7241_14.session_id
+	toColumn: coretable_session_id.session_id
+
