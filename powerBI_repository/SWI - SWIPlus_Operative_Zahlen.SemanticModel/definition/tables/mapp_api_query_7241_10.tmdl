@@ -1,0 +1,103 @@
+table mapp_api_query_7241_10
+	lineageTag: 1d5971d0-b658-48e4-8a0e-2dff63722dd1
+
+	column time_days
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 69d0a71f-7621-495f-b47a-de6ad6a1ad5c
+		summarizeBy: none
+		sourceColumn: time_days
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 88f8b1e4-5534-4c5a-8b70-92a39c127eb2
+		summarizeBy: none
+		sourceColumn: pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 8eaf51d2-819f-4efd-8477-4e344705e881
+		summarizeBy: none
+		sourceColumn: pages_preceeding1
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 39aac875-0ac0-400f-8d58-852eb6733926
+		summarizeBy: none
+		sourceColumn: pages_preceeding2
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 60f215ef-db8c-4ea0-be15-c52c0745c5c4
+		summarizeBy: none
+		sourceColumn: pages_follower1
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: f16e9965-1875-40c6-8f49-160121695d9e
+		summarizeBy: none
+		sourceColumn: pages_follower2
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5c2ddce7-6756-4383-95ea-58aac25e3118
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column visits
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 90e9a35b-b7d5-4de5-85db-d23d4885bfaa
+		summarizeBy: sum
+		sourceColumn: visits
+
+		annotation SummarizationSetBy = Automatic
+
+	column WpPostId
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 343e7326-db64-4314-8dae-48dafed166f4
+		summarizeBy: none
+		sourceColumn: WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_10 = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_10_Table = swiplus_Schema{[Name="mapp_api_query_7241_10",Kind="Table"]}[Data],
+				    #"Ersetzter Wert" = Table.ReplaceValue(mapp_api_query_7241_10_Table,null,"exit",Replacer.ReplaceValue,{"pages_follower1"}),
+				    #"Ersetzter Wert1" = Table.ReplaceValue(#"Ersetzter Wert",null,"exit",Replacer.ReplaceValue,{"pages_follower2"})
+				in
+				    #"Ersetzter Wert1"
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,156 @@
+table mapping_table_Country
+	lineageTag: e9d10954-7ac3-4f24-b376-0a1a28eb15fc
+
+	column WebtrekkCountry
+		dataType: string
+		lineageTag: a984cafa-064d-4758-bfa5-120887fb3555
+		summarizeBy: none
+		sourceColumn: WebtrekkCountry
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 3d4258d5-ebf0-4791-a05d-0672ebe97a0f
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column alpha-2
+		dataType: string
+		lineageTag: 24016140-a586-41db-8d5d-8488725b5a2f
+		summarizeBy: none
+		sourceColumn: alpha-2
+
+		annotation SummarizationSetBy = Automatic
+
+	column alpha-3
+		dataType: string
+		lineageTag: 4cf6ce64-dcd1-4d88-bafc-a504f53cda06
+		summarizeBy: none
+		sourceColumn: alpha-3
+
+		annotation SummarizationSetBy = Automatic
+
+	column country-code
+		dataType: string
+		lineageTag: 65298541-0856-49b3-b7e3-cb699587e460
+		summarizeBy: none
+		sourceColumn: country-code
+
+		annotation SummarizationSetBy = Automatic
+
+	column iso_3166-2
+		dataType: string
+		lineageTag: 4ffb4277-5bed-41ce-ab9f-e7f68e9eeec9
+		summarizeBy: none
+		sourceColumn: iso_3166-2
+
+		annotation SummarizationSetBy = Automatic
+
+	column region
+		dataType: string
+		lineageTag: 487b9b5f-5d92-42c9-8beb-1e4e27aeddec
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = Automatic
+
+	column sub-region
+		dataType: string
+		lineageTag: 8b7a9f26-a00d-4d0c-96bb-8e31fd11ad80
+		summarizeBy: none
+		sourceColumn: sub-region
+
+		annotation SummarizationSetBy = Automatic
+
+	column intermediate-region
+		dataType: string
+		lineageTag: aa8832d0-2817-4b13-83e1-6d930f001da1
+		summarizeBy: none
+		sourceColumn: intermediate-region
+
+		annotation SummarizationSetBy = Automatic
+
+	column region-code
+		dataType: string
+		lineageTag: 40e36fee-2649-4bea-a28a-09b745888dcb
+		summarizeBy: none
+		sourceColumn: region-code
+
+		annotation SummarizationSetBy = Automatic
+
+	column sub-region-code
+		dataType: string
+		lineageTag: 7fc29fcc-5c02-4286-8d13-c3eaaa3fd3ae
+		summarizeBy: none
+		sourceColumn: sub-region-code
+
+		annotation SummarizationSetBy = Automatic
+
+	column intermediate-region-code
+		dataType: string
+		lineageTag: 5e8621ba-99af-4688-93d7-840a52442734
+		summarizeBy: none
+		sourceColumn: intermediate-region-code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Continent
+		dataType: string
+		lineageTag: 2cffab09-bebb-40ef-8de1-fc615bb41c00
+		summarizeBy: none
+		sourceColumn: Continent
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'UN Member States'
+		dataType: string
+		lineageTag: a1cf16b2-ea41-4083-a55c-264c03709914
+		summarizeBy: none
+		sourceColumn: UN Member States
+
+		annotation SummarizationSetBy = Automatic
+
+	column SWI-Ländergruppe
+		dataType: string
+		lineageTag: 7084d94a-29e6-4756-89cb-ad851a769942
+		summarizeBy: none
+		sourceColumn: SWI-Ländergruppe
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'SWI-"193 UNO anerkannte Länder plus Vatikan und Palästina"'
+		dataType: string
+		lineageTag: 6702a56f-fbde-4ef6-90ca-43c62b1b14ec
+		summarizeBy: none
+		sourceColumn: SWI-"193 UNO anerkannte Länder plus Vatikan und Palästina"
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Domestic vs. Foreign'
+		dataType: string
+		lineageTag: fd7d482b-fec1-4db2-97b6-4ff6b0720f9b
+		summarizeBy: none
+		sourceColumn: Domestic vs. Foreign
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapping_table_Country = m
+		mode: import
+		source =
+				let
+				    Quelle = SharePoint.Files("https://srgssr.sharepoint.com/sites/SWIData", [ApiVersion = 15]),
+				    #"mapping_table_Country xlsx_https://srgssr sharepoint com/sites/SWIData/Shared Documents/Storage/Manual Data/" = Quelle{[Name="mapping_table_Country.xlsx",#"Folder Path"="https://srgssr.sharepoint.com/sites/SWIData/Shared Documents/Storage/Manual Data/"]}[Content],
+				    #"Importierte Excel-Arbeitsmappe" = Excel.Workbook(#"mapping_table_Country xlsx_https://srgssr sharepoint com/sites/SWIData/Shared Documents/Storage/Manual Data/"),
+				    Sheet1_Sheet = #"Importierte Excel-Arbeitsmappe"{[Item="Sheet1",Kind="Sheet"]}[Data],
+				    #"Höher gestufte Header" = Table.PromoteHeaders(Sheet1_Sheet, [PromoteAllScalars=true]),
+				    #"Entfernte Duplikate" = Table.Distinct(#"Höher gestufte Header", {"WebtrekkCountry"})
+				in
+				    #"Entfernte Duplikate"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

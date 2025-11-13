@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "3fbf7003763a32552694",
+  "position": {
+    "x": 0,
+    "y": 43.692785104732351,
+    "z": 25000,
+    "height": 160.8688906128782,
+    "width": 1280,
+    "tabOrder": 23000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Downloadzahlen sind derzeit nicht automatisiert verfügbar. Die aktuellen Werte finden Sie",
+                    "textStyle": {
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": " in diesem Dashboard",
+                    "textStyle": {
+                      "fontSize": "14pt"
+                    },
+                    "url": "https://srgssr.sharepoint.com/sites/SWI_Statistics/SitePages/SWI-Plus.aspx"
+                  },
+                  {
+                    "value": " oder direkt in den App Stores.",
+                    "textStyle": {
+                      "fontSize": "14pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "Eine Anleitung zur manuellen Aktualisierung finden Sie unter:  ",
+                    "textStyle": {
+                      "fontSize": "14pt"
+                    }
+                  },
+                  {
+                    "value": "https://srgssr.sharepoint.com/sites/SWI_Statistics/SitePages/SWI.aspx#kann-ich-die-zahlen-auch-selbst-aktualisieren",
+                    "textStyle": {
+                      "fontSize": "14pt"
+                    },
+                    "url": "https://srgssr.sharepoint.com/sites/SWI_Statistics/SitePages/SWI.aspx#kann-ich-die-zahlen-auch-selbst-aktualisieren"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

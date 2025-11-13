@@ -1,0 +1,127 @@
+table mapp_api_query_7241_11
+	lineageTag: 426b2675-bf8d-4a82-8477-d1e31f884a52
+
+	column pages
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 09c0af5f-9006-48bd-9233-054785ad3258
+		summarizeBy: none
+		sourceColumn: pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_1
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: ded3bf1d-dc7f-443c-92d2-2631495073d8
+		summarizeBy: none
+		sourceColumn: page_category_text_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_2
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 6c614be1-4562-4541-bb89-5cca11b59d25
+		summarizeBy: none
+		sourceColumn: page_category_text_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_3
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: fff07ecc-fc84-4917-b397-768cf06bc4a6
+		summarizeBy: none
+		sourceColumn: page_category_text_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_10
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 3faeed5b-4798-4de2-b8ec-395e74049231
+		summarizeBy: none
+		sourceColumn: page_category_text_10
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_14
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d6c17744-7d51-4d52-b77d-f154b05fdbd8
+		summarizeBy: none
+		sourceColumn: page_parameter_text_14
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_12
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 1b7e4b92-3828-4efa-a9e8-65febccab0bd
+		summarizeBy: none
+		sourceColumn: page_parameter_text_12
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_32
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 8074dfd7-5438-4aaf-82ca-44a28d1bf519
+		summarizeBy: none
+		sourceColumn: page_parameter_text_32
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_18
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 2cb04908-7faa-4db1-9cf0-4e632c431b47
+		summarizeBy: none
+		sourceColumn: page_parameter_text_18
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_62
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 229bfe86-5b41-4c89-98a7-4079fa04e57a
+		summarizeBy: none
+		sourceColumn: page_parameter_text_62
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: bd35d302-1c65-46d4-8657-1235c65cdf03
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column WpPostId
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 1beb6d7f-f1e2-427d-baf9-7e4da807f145
+		summarizeBy: none
+		sourceColumn: WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_11 = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_11_Table = swiplus_Schema{[Name="mapp_api_query_7241_11",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_11_Table
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navigation
+

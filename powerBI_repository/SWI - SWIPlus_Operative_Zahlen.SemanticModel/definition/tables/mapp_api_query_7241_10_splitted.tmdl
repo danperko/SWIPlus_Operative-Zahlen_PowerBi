@@ -1,0 +1,442 @@
+table mapp_api_query_7241_10_splitted
+	lineageTag: a963c133-4736-4dc6-b97d-bac2b932bd23
+
+	measure '% Page Impr. (Total)' = ```
+			
+			DIVIDE (
+			    [Page Impressions],
+			    CALCULATE ( [Page Impressions], ALLSELECTED ( 'mapp_api_query_7241_10_splitted' ) )
+			)
+			
+			```
+		lineageTag: 05ad817c-4287-45c7-b1d4-875e7be8672f
+
+	measure 'Page Impressions' =
+			
+			SUM ( 'mapp_api_query_7241_10_splitted'[pages_pageImpressions] )
+		formatString: 0
+		lineageTag: d0dcdccd-daf2-45f6-b6ad-7fa021851f2f
+
+	measure '% Views (Total)' =
+			
+			DIVIDE (
+			    [Page Impressions],
+			    CALCULATE (
+			        [Page Impressions],
+			        ALLSELECTED ( 'mapp_api_query_7241_10_splitted' )
+			    )
+			)
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 9a180511-cec4-4c66-9d94-ec1ede1bd663
+
+	column time_days
+		dataType: string
+		lineageTag: f5e9e535-807d-42f3-9188-49b8e45a7d3e
+		summarizeBy: none
+		sourceColumn: time_days
+
+		annotation SummarizationSetBy = Automatic
+
+	column WpPostId
+		dataType: string
+		lineageTag: cb70a27a-6f1d-4ac5-a500-2f7a4046f8ca
+		summarizeBy: none
+		sourceColumn: WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_full
+		dataType: string
+		lineageTag: e7c7f2ca-33ba-4603-a62a-e6b37f58f499
+		summarizeBy: none
+		sourceColumn: pages_full
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1_full
+		dataType: string
+		lineageTag: 8321cc04-78c3-4eea-b414-e4f122cf34c4
+		summarizeBy: none
+		sourceColumn: pages_preceeding1_full
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2_full
+		dataType: string
+		lineageTag: 352fb2a4-df57-439f-8e05-04a51ad41517
+		summarizeBy: none
+		sourceColumn: pages_preceeding2_full
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1_full
+		dataType: string
+		lineageTag: fed3e8ee-bfec-4ae0-99c9-17c7f38b32f7
+		summarizeBy: none
+		sourceColumn: pages_follower1_full
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2_full
+		dataType: string
+		lineageTag: ce5f5506-26aa-4ede-8c73-a0bc488ad424
+		summarizeBy: none
+		sourceColumn: pages_follower2_full
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_01
+		dataType: string
+		lineageTag: 65221d31-c017-4834-9b91-da0861f8d084
+		summarizeBy: none
+		sourceColumn: pages_01
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_02
+		dataType: string
+		lineageTag: a7cf5a03-1996-4202-919c-10d7c2271e93
+		summarizeBy: none
+		sourceColumn: pages_02
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_03
+		dataType: string
+		lineageTag: c7a235c9-f417-4adf-a44b-c7a2c16ca6dd
+		summarizeBy: none
+		sourceColumn: pages_03
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_04
+		dataType: string
+		lineageTag: 231d058d-4350-4ae2-9bbe-9cbcf80fdda6
+		summarizeBy: none
+		sourceColumn: pages_04
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_05
+		dataType: string
+		lineageTag: 340638e3-04fa-42fd-bfac-75e3242caa64
+		summarizeBy: none
+		sourceColumn: pages_05
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_06
+		dataType: string
+		lineageTag: dbd026c1-5945-4525-9b78-71fc97bdb5cb
+		summarizeBy: none
+		sourceColumn: pages_06
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1_01
+		dataType: string
+		lineageTag: 3c822780-56c8-4afd-b528-7ff9a710dd33
+		summarizeBy: none
+		sourceColumn: pages_preceeding1_01
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1_02
+		dataType: string
+		lineageTag: 19b55346-ff73-4879-ad99-18b2ec4d918a
+		summarizeBy: none
+		sourceColumn: pages_preceeding1_02
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1_03
+		dataType: string
+		lineageTag: 3b2b6f14-794d-442b-8b53-4c0e08a90c21
+		summarizeBy: none
+		sourceColumn: pages_preceeding1_03
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1_04
+		dataType: string
+		lineageTag: 4988982b-5d5f-4dee-a979-9f624c157069
+		summarizeBy: none
+		sourceColumn: pages_preceeding1_04
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1_05
+		dataType: string
+		lineageTag: 66f116ba-4556-4c4a-972e-ba7a6df88750
+		summarizeBy: none
+		sourceColumn: pages_preceeding1_05
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1_06
+		dataType: string
+		lineageTag: 243cc8ea-dadc-4651-88cd-76adaa7454a5
+		summarizeBy: none
+		sourceColumn: pages_preceeding1_06
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2_01
+		dataType: string
+		lineageTag: d118eb5a-d48e-45e4-98b2-88a4f5026a73
+		summarizeBy: none
+		sourceColumn: pages_preceeding2_01
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2_02
+		dataType: string
+		lineageTag: a6fd0530-321f-47f5-87de-8bbd22d18e1d
+		summarizeBy: none
+		sourceColumn: pages_preceeding2_02
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2_03
+		dataType: string
+		lineageTag: 1a0a9b13-cbab-4e54-a679-f1ef03bb70f6
+		summarizeBy: none
+		sourceColumn: pages_preceeding2_03
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2_04
+		dataType: string
+		lineageTag: 25108ef5-2991-45bd-978a-d42836c0ca85
+		summarizeBy: none
+		sourceColumn: pages_preceeding2_04
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2_05
+		dataType: string
+		lineageTag: 72d3ac69-631f-431c-bfc8-3be69b349ebb
+		summarizeBy: none
+		sourceColumn: pages_preceeding2_05
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2_06
+		dataType: string
+		lineageTag: 6661d296-5b74-4e4b-950b-f702498c5c82
+		summarizeBy: none
+		sourceColumn: pages_preceeding2_06
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1_01
+		dataType: string
+		lineageTag: 3599217e-9706-4afa-8a26-039c9989c42b
+		summarizeBy: none
+		sourceColumn: pages_follower1_01
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1_02
+		dataType: string
+		lineageTag: 1b1add79-4a00-4861-9a0c-c4c53df122fd
+		summarizeBy: none
+		sourceColumn: pages_follower1_02
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1_03
+		dataType: string
+		lineageTag: 877e8738-7a1b-4ad9-8e2b-b8f0ff07d5b4
+		summarizeBy: none
+		sourceColumn: pages_follower1_03
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1_04
+		dataType: string
+		lineageTag: 1bd0ad23-e1e4-4aed-8c78-9a4aac78f3d1
+		summarizeBy: none
+		sourceColumn: pages_follower1_04
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1_05
+		dataType: string
+		lineageTag: 3cbf44cf-e852-45f6-b083-f3fa6991e28b
+		summarizeBy: none
+		sourceColumn: pages_follower1_05
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1_06
+		dataType: string
+		lineageTag: bf3bbe1f-2408-4167-9b21-806db1cfb722
+		summarizeBy: none
+		sourceColumn: pages_follower1_06
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2_01
+		dataType: string
+		lineageTag: 2b6fc0de-993e-4427-bef8-14d83ac90820
+		summarizeBy: none
+		sourceColumn: pages_follower2_01
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2_02
+		dataType: string
+		lineageTag: 4abf7209-cf93-4836-9a0b-199e596fc688
+		summarizeBy: none
+		sourceColumn: pages_follower2_02
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2_03
+		dataType: string
+		lineageTag: f569dc24-0522-49c6-a152-436878ec2ffd
+		summarizeBy: none
+		sourceColumn: pages_follower2_03
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2_04
+		dataType: string
+		lineageTag: 9f284541-b151-48c1-9dea-9f4bf1cfec9f
+		summarizeBy: none
+		sourceColumn: pages_follower2_04
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2_05
+		dataType: string
+		lineageTag: 2dcf5e8e-8d41-4522-a578-e50151a6fd0e
+		summarizeBy: none
+		sourceColumn: pages_follower2_05
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2_06
+		dataType: string
+		lineageTag: 948904ab-466e-4772-8c3d-607bfb17e0f7
+		summarizeBy: none
+		sourceColumn: pages_follower2_06
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_note
+		dataType: string
+		lineageTag: 5dd0be90-d469-48dc-ace0-c45f901f050e
+		summarizeBy: none
+		sourceColumn: pages_note
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1_note
+		dataType: string
+		lineageTag: b2a87222-5f10-45d1-8d3d-90ff90636266
+		summarizeBy: none
+		sourceColumn: pages_preceeding1_note
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2_note
+		dataType: string
+		lineageTag: a4a10550-42d7-471d-8ae4-87a6162aa856
+		summarizeBy: none
+		sourceColumn: pages_preceeding2_note
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1_note
+		dataType: string
+		lineageTag: de52c56e-4c5c-4274-8e4d-fff0f9b1a176
+		summarizeBy: none
+		sourceColumn: pages_follower1_note
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2_note
+		dataType: string
+		lineageTag: ff9fa03e-67f5-45bb-8a18-edb62e848931
+		summarizeBy: none
+		sourceColumn: pages_follower2_note
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages
+		dataType: string
+		lineageTag: 78ab0974-59f8-41cd-b6ae-dd1e2f3c772e
+		summarizeBy: none
+		sourceColumn: pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1
+		dataType: string
+		lineageTag: 983de21c-8ec0-4fcd-b189-3f75a5d04e9c
+		summarizeBy: none
+		sourceColumn: pages_preceeding1
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2
+		dataType: string
+		lineageTag: 37f8673f-bab3-443a-bf05-9f2b37458bd7
+		summarizeBy: none
+		sourceColumn: pages_preceeding2
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1
+		dataType: string
+		lineageTag: 5c11cd0f-e6c0-42b3-9fe3-22ba1dee814b
+		summarizeBy: none
+		sourceColumn: pages_follower1
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2
+		dataType: string
+		lineageTag: cf4a579f-908c-4913-9783-c8e5534346aa
+		summarizeBy: none
+		sourceColumn: pages_follower2
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		lineageTag: ba0cab60-d86e-4461-b76a-eaf8f10728d2
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column visits
+		dataType: int64
+		formatString: 0
+		lineageTag: 7e6f9386-aefb-4200-82a1-e925faff9575
+		summarizeBy: sum
+		sourceColumn: visits
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_10_splitted = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_10_splitted_Table = swiplus_Schema{[Name="mapp_api_query_7241_10_splitted",Kind="Table"]}[Data],
+				    #"Ersetzter Wert" = Table.ReplaceValue(mapp_api_query_7241_10_splitted_Table,null,"exit",Replacer.ReplaceValue,{"pages_follower2_05"}),
+				    #"Ersetzter Wert1" = Table.ReplaceValue(#"Ersetzter Wert",null,"exit",Replacer.ReplaceValue,{"pages_follower1_05"})
+				in
+				    #"Ersetzter Wert1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

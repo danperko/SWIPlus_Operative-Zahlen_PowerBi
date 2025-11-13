@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "SWI - SWIPlus_Operative_Zahlen"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "e0b9e6ca-9515-45c0-b40b-e1fa03110e24"
+  }
+}

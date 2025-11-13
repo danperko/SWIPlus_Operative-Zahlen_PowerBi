@@ -1,0 +1,963 @@
+table playstore_installs_overview
+	lineageTag: a6531716-db22-4f67-a78d-3ff82af31068
+
+	column Date
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 1aa8270e-692a-4631-857f-5cf11f23c66b
+		summarizeBy: none
+		sourceColumn: Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Package_name
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: fc8dfe13-bce7-49b2-9c5a-e8a05d7dfa47
+		summarizeBy: none
+		sourceColumn: Package_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_Device_Installs
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 7310cf23-b4ea-479b-b9ff-3c1507a000b4
+		summarizeBy: none
+		sourceColumn: Daily_Device_Installs
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_Device_Uninstalls
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: a2f9d623-7711-4751-872c-1368c35bc600
+		summarizeBy: none
+		sourceColumn: Daily_Device_Uninstalls
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_Device_Upgrades
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: f31e9e95-ea4c-4da4-87ec-11d57591a497
+		summarizeBy: none
+		sourceColumn: Daily_Device_Upgrades
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_User_Installs
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 5eb5e750-2972-4929-b68f-775e83ac3277
+		summarizeBy: none
+		sourceColumn: Total_User_Installs
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_User_Installs
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 6eb1adc1-28ef-4458-8ec5-0dece6588c50
+		summarizeBy: none
+		sourceColumn: Daily_User_Installs
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_User_Uninstalls
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 07dff838-6213-49a2-a3ac-3077bbc34aa9
+		summarizeBy: none
+		sourceColumn: Daily_User_Uninstalls
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Device_Installs
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 0ef4ae6e-afea-46d9-8328-ee236cee85d1
+		summarizeBy: none
+		sourceColumn: Active_Device_Installs
+
+		annotation SummarizationSetBy = Automatic
+
+	column Install_events
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: f9caf9f6-135b-4aa6-a1b7-caea0a1f97ad
+		summarizeBy: none
+		sourceColumn: Install_events
+
+		annotation SummarizationSetBy = Automatic
+
+	column Update_events
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: f548bf78-15f7-47aa-bfc5-47be5c863e01
+		summarizeBy: none
+		sourceColumn: Update_events
+
+		annotation SummarizationSetBy = Automatic
+
+	column _c11
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: a28304cc-bc90-4e97-942e-0deba0c3ed51
+		summarizeBy: none
+		sourceColumn: _c11
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_file
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 0daf95ad-7b8b-43d6-a5ba-36b1373cccf2
+		summarizeBy: none
+		sourceColumn: source_file
+
+		annotation SummarizationSetBy = Automatic
+
+	column Update_ev�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d192b268-c34b-4d62-87a9-670a486acb20
+		summarizeBy: none
+		sourceColumn: Update_ev�
+
+		annotation SummarizationSetBy = Automatic
+
+	column _c9
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 267d5424-ddc0-4769-bcdf-25084a2d606c
+		summarizeBy: none
+		sourceColumn: _c9
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uninstall_events
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 1eac1178-6cb4-451e-8cd2-8c0681a360ff
+		summarizeBy: none
+		sourceColumn: Uninstall_events
+
+		annotation SummarizationSetBy = Automatic
+
+	column Current_Device_Installs
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d9b0af6e-ef63-4ad3-a205-cfdaf4879c90
+		summarizeBy: none
+		sourceColumn: Current_Device_Installs
+
+		annotation SummarizationSetBy = Automatic
+
+	column Current_User_Installs
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d5e493fd-e168-4e3e-a6c5-8b0dd1ef02a1
+		summarizeBy: none
+		sourceColumn: Current_User_Installs
+
+		annotation SummarizationSetBy = Automatic
+
+	column _c7
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 605f7efb-09fe-487f-be63-1008c3b67b65
+		summarizeBy: none
+		sourceColumn: _c7
+
+		annotation SummarizationSetBy = Automatic
+
+	column To
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: af79aee9-5584-4bc0-a455-8456c22f4b38
+		summarizeBy: none
+		sourceColumn: To
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cur
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 62e723f6-bed5-4a34-bab6-a131b0b81c45
+		summarizeBy: none
+		sourceColumn: Cur
+
+		annotation SummarizationSetBy = Automatic
+
+	column T�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: e5b69010-a5f1-4324-aeab-9544975b711f
+		summarizeBy: none
+		sourceColumn: T�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_Us
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: b91556da-0365-4769-990b-e84f91ec5a84
+		summarizeBy: none
+		sourceColumn: Daily_Us
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_User_Uninstall
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 08f02d89-79ce-4cfd-aaed-45125d196196
+		summarizeBy: none
+		sourceColumn: Daily_User_Uninstall
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_User_Unin
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: bea81a28-cddd-4b22-8989-973fdd69f2c7
+		summarizeBy: none
+		sourceColumn: Daily_User_Unin
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_User_�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: a610639f-ffcc-48fe-a944-5e08cd0fb4a9
+		summarizeBy: none
+		sourceColumn: Daily_User_�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dail
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 34c95345-aa71-4174-bcfd-f9d7c086291e
+		summarizeBy: none
+		sourceColumn: Dail
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_User_Uninst
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 912318b5-92c2-4088-ab0c-70f4dff41b1e
+		summarizeBy: none
+		sourceColumn: Daily_User_Uninst
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_User
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 54cd46a1-f235-4e5d-91cf-9f1bf5f2f0af
+		summarizeBy: none
+		sourceColumn: Daily_User
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_User_Uninsta�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 236da41a-5bff-434b-966f-e002fe676938
+		summarizeBy: none
+		sourceColumn: Daily_User_Uninsta�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_Use
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 65adc280-541a-4890-9d23-74e876571f59
+		summarizeBy: none
+		sourceColumn: Daily_Use
+
+		annotation SummarizationSetBy = Automatic
+
+	column �
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 3e3a8b8c-cdfc-48ff-aea0-b4f8f829d413
+		summarizeBy: none
+		sourceColumn: �
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 1f44f9ac-707b-4e73-9e7e-8bccff638f22
+		summarizeBy: none
+		sourceColumn: Daily
+
+		annotation SummarizationSetBy = Automatic
+
+	column Da
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 65fb12e8-1715-4ed7-877f-6b93c4e8e5c7
+		summarizeBy: none
+		sourceColumn: Da
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_D�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 84d46b53-24e4-440c-a922-5ba9bf7c9eac
+		summarizeBy: none
+		sourceColumn: Active_D�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_User_Unins�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 151d6281-770a-42d0-8860-6c42bc1c5408
+		summarizeBy: none
+		sourceColumn: Daily_User_Unins�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Device_Insta�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 18900c20-5229-4ecb-a23a-59f652553869
+		summarizeBy: none
+		sourceColumn: Active_Device_Insta�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Dev�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: fbabc18b-50e2-4e32-a588-a43b81840f28
+		summarizeBy: none
+		sourceColumn: Active_Dev�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Device_Ins�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 261d9a55-e92b-49b4-976b-972be165a5c9
+		summarizeBy: none
+		sourceColumn: Active_Device_Ins�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Device_Instal
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 490bf51b-39b3-4a4a-a245-a7f72e7d454c
+		summarizeBy: none
+		sourceColumn: Active_Device_Instal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Device�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 1be8a738-0d9c-4c7f-b59c-4f329d951d84
+		summarizeBy: none
+		sourceColumn: Active_Device�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Device_I
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 2a169a25-866b-4f01-a046-6b85b7f20fdc
+		summarizeBy: none
+		sourceColumn: Active_Device_I
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Active_Device_Instal� 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 85c9d80d-4bea-478b-beb1-a6a7c83d7246
+		summarizeBy: none
+		sourceColumn: Active_Device_Instal�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Up
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 89e09462-d520-4b77-9115-3dc083c37a75
+		summarizeBy: none
+		sourceColumn: Up
+
+		annotation SummarizationSetBy = Automatic
+
+	column Install_ev
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: e8288f0b-4488-4c1e-b7cd-92b60df499ab
+		summarizeBy: none
+		sourceColumn: Install_ev
+
+		annotation SummarizationSetBy = Automatic
+
+	column Install�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: dd2b75d6-027d-4893-afb1-b9d16c06ae44
+		summarizeBy: none
+		sourceColumn: Install�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Install_even
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: b062c589-f889-46a9-aff3-024a48b7b287
+		summarizeBy: none
+		sourceColumn: Install_even
+
+		annotation SummarizationSetBy = Automatic
+
+	column Install_event�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 224fb891-4651-43f5-9511-98f906f88976
+		summarizeBy: none
+		sourceColumn: Install_event�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Device_Install
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: ac1e4c2f-a2d8-44a1-9e30-b2d079c98d2f
+		summarizeBy: none
+		sourceColumn: Active_Device_Install
+
+		annotation SummarizationSetBy = Automatic
+
+	column Updat
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 51a91ef0-b0cc-487e-9a34-af552cf22e22
+		summarizeBy: none
+		sourceColumn: Updat
+
+		annotation SummarizationSetBy = Automatic
+
+	column Install_
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: fd97061b-e706-48ee-b381-8d2e638f6c11
+		summarizeBy: none
+		sourceColumn: Install_
+
+		annotation SummarizationSetBy = Automatic
+
+	column In�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 166b806e-952a-468b-b97e-0e2f69203d64
+		summarizeBy: none
+		sourceColumn: In�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Install_even� 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 3b4536dd-295c-42ef-9cb4-0f60ead7b13d
+		summarizeBy: none
+		sourceColumn: Install_even�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Upd
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 78c57470-79f5-4f0c-b33a-5f90569a2c14
+		summarizeBy: none
+		sourceColumn: Upd
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Up� 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: b77066ef-8c9a-46a6-a73b-7502656923b9
+		summarizeBy: none
+		sourceColumn: Up�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Upda�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: a6abfa16-d97b-4bdf-abe2-088966b3a0fb
+		summarizeBy: none
+		sourceColumn: Upda�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Insta
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d945c002-933b-4397-bd83-9328c9a7a359
+		summarizeBy: none
+		sourceColumn: Insta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Instal
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 9de0005b-78fd-4ada-8634-b6f37c34ee94
+		summarizeBy: none
+		sourceColumn: Instal
+
+		annotation SummarizationSetBy = Automatic
+
+	column Install_eve
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: a8c5ad63-b748-49d2-8ae8-8ff8dbeb6d2d
+		summarizeBy: none
+		sourceColumn: Install_eve
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Instal� 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: ee5f562f-e8ae-46f3-910b-bcf72cde04f1
+		summarizeBy: none
+		sourceColumn: Instal�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ins�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: c144b72f-0674-4b34-a97d-80e0dfcfda25
+		summarizeBy: none
+		sourceColumn: Ins�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Install_e�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 869dba31-5bb4-4280-9db4-26d4e005cd95
+		summarizeBy: none
+		sourceColumn: Install_e�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Install_eve� 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 9d86d5b4-a5fc-4e42-8836-60b41a2168b3
+		summarizeBy: none
+		sourceColumn: Install_eve�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Inst�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: c180807c-3945-48f5-a513-cf0a1de33216
+		summarizeBy: none
+		sourceColumn: Inst�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inst 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 7b01b559-960a-4234-bce3-a76bbd284c99
+		summarizeBy: none
+		sourceColumn: Inst
+
+		annotation SummarizationSetBy = Automatic
+
+	column I�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d57fc9f9-ee6f-402d-bed2-7a75041b065b
+		summarizeBy: none
+		sourceColumn: I�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'In 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 0c73b38e-eb32-49ad-9f04-1222c908941d
+		summarizeBy: none
+		sourceColumn: In
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'I 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: ef1a45fd-be46-496a-a938-43025fa2774d
+		summarizeBy: none
+		sourceColumn: I
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Install 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 337fdef5-4732-4845-b3ff-93e26528eb33
+		summarizeBy: none
+		sourceColumn: Install
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Device_Inst
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: e2fe772b-e47a-4e1c-b782-a98e71698fdc
+		summarizeBy: none
+		sourceColumn: Active_Device_Inst
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Device_In
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: a154334d-5237-4799-b926-9e08c9a2c0e9
+		summarizeBy: none
+		sourceColumn: Active_Device_In
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Active_Device_Insta 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 3adf8df7-07d6-435c-a9e4-c61a5e8d2e43
+		summarizeBy: none
+		sourceColumn: Active_Device_Insta
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Devic�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d6f05f27-cc15-419f-929d-e91716e1b19e
+		summarizeBy: none
+		sourceColumn: Active_Devic�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Active_Device_Installs� 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: f0e4a7a1-635f-4839-b9c4-9932fc1a2737
+		summarizeBy: none
+		sourceColumn: Active_Device_Installs�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Active_Device_Install� 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 7a530ce3-cd92-4e0b-89f9-ba04ad51ad21
+		summarizeBy: none
+		sourceColumn: Active_Device_Install�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Device_�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d587ca3c-ccd2-48fb-9c93-28dd0c5a999b
+		summarizeBy: none
+		sourceColumn: Active_Device_�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Active_D 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 8ff2fd60-1925-46eb-b1cc-a0eeb04433ad
+		summarizeBy: none
+		sourceColumn: Active_D
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Active_Device_Inst� 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: ec45a5ea-bea7-42f2-8a2d-05456d15bc13
+		summarizeBy: none
+		sourceColumn: Active_Device_Inst�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Active_Dev 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 7fe911e4-cde6-4b14-85a6-4ccae72edd45
+		summarizeBy: none
+		sourceColumn: Active_Dev
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Active_Device 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d34ba7f3-c048-4d86-9246-f449751eb002
+		summarizeBy: none
+		sourceColumn: Active_Device
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Active_Devic 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 45170b7d-56d0-4f81-8444-3862c8f9f869
+		summarizeBy: none
+		sourceColumn: Active_Devic
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: da890100-d8be-45f3-8f0b-0040fe1b42ca
+		summarizeBy: none
+		sourceColumn: Active_�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_De�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 3275216f-a6e3-4b67-9b9b-cf9340b2c980
+		summarizeBy: none
+		sourceColumn: Active_De�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Active_Device_Ins 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 7cf067f4-01cc-443b-9121-432dd2baa22e
+		summarizeBy: none
+		sourceColumn: Active_Device_Ins
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Devi�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 5bd54205-9834-4f9d-9fb5-b54395b89b63
+		summarizeBy: none
+		sourceColumn: Active_Devi�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Activ�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 3cd56363-eeb2-4994-ad4f-eb150034ae92
+		summarizeBy: none
+		sourceColumn: Activ�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Acti
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 3e599651-8526-4efd-be22-54a534c094e4
+		summarizeBy: none
+		sourceColumn: Acti
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Active_De 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: daee9b2b-c566-4faf-aead-968b395d2d22
+		summarizeBy: none
+		sourceColumn: Active_De
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Acti� 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: f3b8279a-577a-4ef2-8846-d1f3e4da12fc
+		summarizeBy: none
+		sourceColumn: Acti�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Act
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 7bb5b968-9d52-4371-9ff7-ba8a0f6c60f5
+		summarizeBy: none
+		sourceColumn: Act
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ac�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 4992ae70-7cbb-41be-bfb6-e45e54eea77a
+		summarizeBy: none
+		sourceColumn: Ac�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_User_Uni�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 98bb59ef-8152-4eb5-94f8-871b4e42fd90
+		summarizeBy: none
+		sourceColumn: Daily_User_Uni�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'To� 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: afb9c47a-4bf4-442e-8332-570f569a7957
+		summarizeBy: none
+		sourceColumn: To�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Tota
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: f0b5312a-79ff-4a3f-bbfa-59061d6b0cdb
+		summarizeBy: none
+		sourceColumn: Tota
+
+		annotation SummarizationSetBy = Automatic
+
+	column Curr�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: ea7f604e-4b73-4df4-a9ca-a4f04faffe09
+		summarizeBy: none
+		sourceColumn: Curr�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'T 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 28919818-618c-4558-99b7-64eacc06a943
+		summarizeBy: none
+		sourceColumn: T
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uninstall_even�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 8191d192-caeb-4bc9-8c66-4ed28a41310a
+		summarizeBy: none
+		sourceColumn: Uninstall_even�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Install_� 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 753df812-cf5e-4adb-9acb-a1154b5b8b98
+		summarizeBy: none
+		sourceColumn: Install_�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uninstall_e�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 52ff1531-a011-4361-8cc7-d30aa44fd7bf
+		summarizeBy: none
+		sourceColumn: Uninstall_e�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uninstall_�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 8d9be901-d4b4-4b58-a501-8cdbdcae2061
+		summarizeBy: none
+		sourceColumn: Uninstall_�
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uninstall_event�
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 52dca3dc-a159-43d3-8448-442208eeb7ca
+		summarizeBy: none
+		sourceColumn: Uninstall_event�
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Uninstall_event 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 8260a041-83cf-4cf5-bfaa-e9740af8656d
+		summarizeBy: none
+		sourceColumn: Uninstall_event
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uninstall_eve
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: f182094d-3e36-4f04-ac14-f00a1235390e
+		summarizeBy: none
+		sourceColumn: Uninstall_eve
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Uninstall_e 2'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: decd160e-4577-4bda-821b-3dadefbdf9c7
+		summarizeBy: none
+		sourceColumn: Uninstall_e
+
+		annotation SummarizationSetBy = Automatic
+
+	column Update_eve
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: cf313dd5-b05f-48fa-86db-1ab54d17e49a
+		summarizeBy: none
+		sourceColumn: Update_eve
+
+		annotation SummarizationSetBy = Automatic
+
+	partition playstore_installs_overview = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    playstore_installs_overview_Table = swiplus_Schema{[Name="playstore_installs_overview",Kind="Table"]}[Data]
+				in
+				    playstore_installs_overview_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

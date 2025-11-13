@@ -1,0 +1,64 @@
+table mapp_api_query_7241_04
+	lineageTag: 6efaea20-b965-482f-bb7e-146b56f4000a
+
+	column session_id
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: a2201b2b-310a-4150-a0d2-4c7350140634
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_city
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d91928e0-fce6-4da3-8371-04742bcaebe1
+		summarizeBy: none
+		sourceColumn: location_city
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_region
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: b620263c-b5df-42cb-86eb-6480b18d201c
+		summarizeBy: none
+		sourceColumn: location_region
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_country
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 63950bd9-910f-4c31-bb5a-5728294c0f65
+		summarizeBy: none
+		sourceColumn: location_country
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e5c86928-d6a3-4cbf-9e86-e20834985f55
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_04 = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_04_Table = swiplus_Schema{[Name="mapp_api_query_7241_04",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_04_Table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

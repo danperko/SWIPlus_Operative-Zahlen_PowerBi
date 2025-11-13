@@ -1,0 +1,82 @@
+table mapp_api_query_7241_07_PowerBI_Relation
+	lineageTag: 92734f7c-e68b-423c-89a0-c7387f6a8d88
+
+	column session_id
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: f8ee34cb-9a39-4665-80d1-7390ca72d5b2
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column events
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 36c424c8-0c1b-4aaa-b8f5-5040b2ce7aca
+		summarizeBy: none
+		sourceColumn: events
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_parameter_text_1
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 13393f38-c623-4440-b50a-c05bc046b8c3
+		summarizeBy: none
+		sourceColumn: event_parameter_text_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_parameter_text_2
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: bad64e6e-cbd5-4e1b-b13e-9ce108def5bc
+		summarizeBy: none
+		sourceColumn: event_parameter_text_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_parameter_text_3
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: ca83636d-533d-46db-8873-b89ea04473b5
+		summarizeBy: none
+		sourceColumn: event_parameter_text_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_parameter_text_4
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: de3886eb-3e11-4ed1-a9fe-ba9e29497fab
+		summarizeBy: none
+		sourceColumn: event_parameter_text_4
+
+		annotation SummarizationSetBy = Automatic
+
+	column events_clicks
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: ce485447-7f22-48e3-aca1-0ff490398aee
+		summarizeBy: sum
+		sourceColumn: events_clicks
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_07_PowerBI_Relation = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_07_Table = swiplus_Schema{[Name="mapp_api_query_7241_07",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_07_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

@@ -1,0 +1,73 @@
+Ahora quiero lo siguiente:
+
+Todos los campos que tengan "NULL" son campos vacíos
+
+Crear la tabla publication
+- Con los campos: 
+projectId, 
+publicationId, 
+isAbandoned(booleano que es true si abandonedLot es distinto de NULL), 
+todos los campos de base (excepto base_lots y base publishers),
+todos los campos de dates (excepto dates_otherAppointments y dates_qnas),
+- castear el tipo de [base_publicationDate,dates_initialPublicationDate,dates_offerOpening_dateTime,dates_offerValidityDeadlineDate,dates_publicationDate,dates_selectParticipants_dateTime] a datetime (formato YYYY-MM-DD)
+- Eliminar rows donde todos sus valores estén vacíos excepto publicationId
+- con los siguientes campos de tipo array: dates_documentsAvailable_dateRange
+-- obtener el valor [0] y nombrarlo como el <campo>_from y castear el tipo a datetime (formato YYYY-MM-DD)
+-- obtener el valor [1] y nombrarlo como el <campo>__to y castear el tipo a datetime (formato YYYY-MM-DD)
+
+- Crear las tablas dates_qnas(con FK = publicationId) y dates_otherAppointments(con FK = publicationId)
+-- Explotando los campos con el nombre de la tabla 
+-- Aplanando con: # Aplicar al DataFrame
+ flattened_cols = get_all_columns(df.schema)
+ df_flat = df.select(flattened_cols)
+--castear el tipo de [dates_otherAppointments_date, dates_qnas_date] a datetime (formato YYYY-MM-DD) 
+
+Crear tabla correction:
+- Con los campos de correction(con FK = publicationId)
+- Eliminar rows donde todos sus valores estén vacíos excepto publicationId
+- castear el tipo de [correction_initialPublicationDate] a datetime (formato YYYY-MM-DD)
+
+Crear tabla abandonment:
+- Con los campos de abandonedLot y abandonment y publicationId y excluyendo abandonment_reasons 
+- abandonment_publicationDate como datetime
+Crear tabla abandonment_reasons
+- Explotando abandonment_reasons y con abandonedLot_id y abandonment_reason como campos
+- Eliminar rows donde todos sus valores estén vacios
+
+Crear tabla lot
+- Explotando base_lots
+- Explotando lots
+- aplanando lots con: # Aplicar al DataFrame
+ flattened_cols = get_all_columns(df.schema)
+ df_flat = df.select(flattened_cols)
+- con los siguientes campos de tipo array: lots_contractPeriod_dateRange y lots_executionPeriod_dateRange
+-- obtener el valor [0] y nombrarlo como el <campo>_from y castear el tipo a datetime (formato YYYY-MM-DD)
+-- obtener el valor [1] y nombrarlo como el <campo>__to y castear el tipo a datetime (formato YYYY-MM-DD)
+- usa df_clean = language_multicolumn_treatment(df_flat, get_multilang_structs(df_flat.schema)) para tratar todos los campos con estructura de idiomas
+- Crear los siguientes tablas (lots_additionalCpvCodes(con FK = lotId), lots_awardCriteria(con FK = lotId), lot_weightedQualificationCriteria(con FK = lotId) y lot_qualificationCriteria(con FK = lotId)
+-- Explotando los campos con el nombre de la tabla 
+-- Aplanando con: # Aplicar al DataFrame
+ flattened_cols = get_all_columns(df.schema)
+ df_flat = df.select(flattened_cols)
+-- usa df_clean = language_multicolumn_treatment(df_flat, get_multilang_structs(df_flat.schema)) para tratar todos los campos con estructura de idiomas
+- Uniendo todos los campos de lots y base_lots por lotId en una tabla lots_united 
+
+Crear la tabla decision
+- con los campos decision (excepto decision_vendors)(con FK = publicationId) 
+-castear el tipo de [decision_awardDecisionDate] a datetime (formato YYYY-MM-DD) 
+- Crear los siguientes tablas (
+-- Explotando los campos con el nombre de la tabla 
+-- Aplanando con: # Aplicar al DataFrame
+ flattened_cols = get_all_columns(df.schema)
+ df_flat = df.select(flattened_cols)
+-- usa df_clean = language_multicolumn_treatment(df_flat, get_multilang_structs(df_flat.schema)) para tratar todos los campos con estructura de idiomas
+
+
+Crear la tabla publishers
+- Explotando base_publishers
+
+Crear la tabla c
+
+
+
+

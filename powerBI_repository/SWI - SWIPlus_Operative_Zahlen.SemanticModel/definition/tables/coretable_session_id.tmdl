@@ -1,0 +1,26 @@
+table coretable_session_id
+	lineageTag: 1c8a1f90-b91f-422a-a5c8-77941c359e44
+
+	column session_id
+		dataType: string
+		lineageTag: c964b5f1-b317-4f86-8910-9894c02ed71b
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	partition coretable_session_id = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_06_enriched_Table = swiplus_Schema{[Name="coretable_session_id",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_06_enriched_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

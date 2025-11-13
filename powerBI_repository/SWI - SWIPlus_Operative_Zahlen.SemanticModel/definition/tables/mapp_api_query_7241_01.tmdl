@@ -1,0 +1,109 @@
+table mapp_api_query_7241_01
+	lineageTag: 91ad9ba9-5116-4a78-bcd4-250f61173e43
+
+	column session_id
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: da9c84dc-88f6-4699-9e8d-2bfccd2f722b
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2d669cf9-bb67-47bf-ab90-43b61d744b79
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column events_clicks
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3d50c02a-e7b7-4fb9-a4bf-1c8161a58146
+		summarizeBy: sum
+		sourceColumn: events_clicks
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_duration
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6c76df57-71b1-4707-ae24-8c9c5873e3c3
+		summarizeBy: sum
+		sourceColumn: pages_duration
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_formula_1000222
+		dataType: double
+		sourceProviderType: double
+		lineageTag: bd0380db-2935-4fb0-81ad-2fafd1f670e9
+		summarizeBy: sum
+		sourceColumn: custom_formula_1000222
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column media_playbackTime
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3ece46c1-6b62-4d28-a2d0-fa2db643aab0
+		summarizeBy: sum
+		sourceColumn: media_playbackTime
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_formula_1000192
+		dataType: double
+		sourceProviderType: double
+		lineageTag: 700957bf-7e9e-41f6-ae74-bab5638a942d
+		summarizeBy: sum
+		sourceColumn: custom_formula_1000192
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column user_daysBetweenContacts_sum
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 96f6ab80-7505-414d-8b5c-fddb37f34bfe
+		summarizeBy: sum
+		sourceColumn: user_daysBetweenContacts_sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column media_views
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 48c0b470-0c05-4e4b-bf66-cf22a182706b
+		summarizeBy: sum
+		sourceColumn: media_views
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_01 = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_01_Table = swiplus_Schema{[Name="mapp_api_query_7241_01",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_01_Table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

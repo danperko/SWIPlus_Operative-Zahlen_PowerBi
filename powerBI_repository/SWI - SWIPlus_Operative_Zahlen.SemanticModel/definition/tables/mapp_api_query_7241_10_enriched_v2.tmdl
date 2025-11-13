@@ -1,0 +1,282 @@
+table mapp_api_query_7241_10_enriched_v2
+	lineageTag: 9fcad2b8-d845-4478-8822-bd4727e04c20
+
+	column time_days
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 216d1e53-1b9c-479d-9c03-4a0cf36f0161
+		summarizeBy: none
+		sourceColumn: time_days
+
+		variation Variation
+			isDefault
+			relationship: 75791978-bbfe-4589-9c5f-d79771ecf3f6
+			defaultHierarchy: LocalDateTable_545ec8b6-e0d7-4e88-a578-b3ee3cb88ccf.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column pages
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: ef7d33fe-aeba-4cf2-a2cf-628c2d45ee06
+		summarizeBy: none
+		sourceColumn: pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: c8b00342-ab00-4158-a708-bf6b1f172881
+		summarizeBy: none
+		sourceColumn: pages_preceeding1
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 52dd66cf-d2ce-4bbe-adf7-0e50c3b8e721
+		summarizeBy: none
+		sourceColumn: pages_preceeding2
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 6ad801ed-2d72-4813-8385-aa9bdae19540
+		summarizeBy: none
+		sourceColumn: pages_follower1
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: e8eeb4d5-34c4-4687-ae55-95380dc049a5
+		summarizeBy: none
+		sourceColumn: pages_follower2
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7bdd5b08-32d6-4d37-8563-813352f6bb58
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column visits
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b5c86bb4-5d75-4da8-b6e5-4ec6a0cd5b9a
+		summarizeBy: sum
+		sourceColumn: visits
+
+		annotation SummarizationSetBy = Automatic
+
+	column WpPostId
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 4ca20d32-54b1-4f4b-bce5-0ecc691e8c83
+		summarizeBy: none
+		sourceColumn: WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_WpPostId
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 65152d07-fa93-48a6-8b5e-a446a44a7d00
+		summarizeBy: none
+		sourceColumn: pages_WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1_WpPostId
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 049c95ba-8153-42ae-befe-b225633e7d00
+		summarizeBy: none
+		sourceColumn: pages_preceeding1_WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2_WpPostId
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 2e7c0637-36b7-4ff5-ac6c-717a33237ebb
+		summarizeBy: none
+		sourceColumn: pages_preceeding2_WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1_WpPostId
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 7dd09f5d-5e06-49a1-bd81-49870323a5ef
+		summarizeBy: none
+		sourceColumn: pages_follower1_WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2_WpPostId
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d8d3c1e9-af0b-4a88-927e-a7bb93c9e63e
+		summarizeBy: none
+		sourceColumn: pages_follower2_WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_title
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 14847145-9710-4d52-9d66-0f85844b3c6b
+		summarizeBy: none
+		sourceColumn: pages_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding1_title
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: b86e55b9-4a3b-4ce5-b6f4-acb89c28fa44
+		summarizeBy: none
+		sourceColumn: pages_preceeding1_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_preceeding2_title
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 513e081b-82d6-4908-8232-0b9d9e3b1bba
+		summarizeBy: none
+		sourceColumn: pages_preceeding2_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1_title
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 606fb099-4421-409d-ae5a-b7d4510c5f0b
+		summarizeBy: none
+		sourceColumn: pages_follower1_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2_title
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d9ffb6fc-2576-48e5-84f2-4c842af5ae97
+		summarizeBy: none
+		sourceColumn: pages_follower2_title
+
+		annotation SummarizationSetBy = Automatic
+
+	column local_solved_pages
+		dataType: string
+		lineageTag: 52ee36d5-34bd-41b0-bf1f-b97a8dbbc3a3
+		summarizeBy: none
+		sourceColumn: local_solved_pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column local_solved_pages_follower1
+		dataType: string
+		lineageTag: f7a1f185-edfe-44ed-aad4-f260e0dbf9fa
+		summarizeBy: none
+		sourceColumn: local_solved_pages_follower1
+
+		annotation SummarizationSetBy = Automatic
+
+	column local_solved_pages_follower2
+		dataType: string
+		lineageTag: cdc33531-1bfe-436a-b3a4-c3b54bbb0f0f
+		summarizeBy: none
+		sourceColumn: local_solved_pages_follower2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_10_enriched_v2 = m
+		mode: import
+		source = ```
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_10_enriched_v2_Table = swiplus_Schema{[Name="mapp_api_query_7241_10_enriched_v2",Kind="Table"]}[Data],
+				    #"Duplizierte Spalte" = Table.DuplicateColumn(mapp_api_query_7241_10_enriched_v2_Table, "pages", "local_solved_pages"),
+				    #"Duplizierte Spalte1" = Table.DuplicateColumn(#"Duplizierte Spalte", "pages_follower1", "local_solved_pages_follower1"),
+				    #"Duplizierte Spalte2" = Table.DuplicateColumn(#"Duplizierte Spalte1", "pages_follower2", "local_solved_pages_follower2"),
+				    #"Ersetzter Wert1" = let
+				    Clean = (v as any) as text =>
+				        let
+				            t0 = try Text.Trim(Text.From(v)) otherwise null,
+				            // "null" als Text ebenfalls wie null behandeln
+				            t = if t0<>null and Text.Lower(t0)="null" then null else t0,
+				
+				            // 1) Nach letztem "/"
+				            slashPos = if t=null then -1 else Text.PositionOf(t, "/", Occurrence.Last),
+				            afterSlash = if slashPos >= 0 then Text.Range(t, slashPos + 1) else t,
+				
+				            // 2) Nach letzter "swissinfo."
+				            lower = if afterSlash=null then null else Text.Lower(afterSlash),
+				            key = "swissinfo.",
+				            pos = if lower=null then -1 else Text.PositionOf(lower, key, Occurrence.Last),
+				            afterSwissinfo = if pos >= 0 then Text.Range(afterSlash, pos + Text.Length(key)) else afterSlash,
+				
+				            // 3) Zahlen-/GUID-Suffix entfernen
+				            lastDotPos = if afterSwissinfo=null then -1 else Text.PositionOf(afterSwissinfo, ".", Occurrence.Last),
+				            suffix = if lastDotPos = -1 then null else Text.Range(afterSwissinfo, lastDotPos + 1),
+				            isAllDigits = if suffix=null then false else Text.Length(Text.Remove(suffix, {"0".."9"})) = 0,
+				            isHexHyphen = if suffix=null then false else Text.Contains(suffix, "-") 
+				                          and Text.Length(Text.Remove(suffix, {"0".."9","a".."f","A".."F","-"})) = 0,
+				            stripId = if (lastDotPos >= 0) and (isAllDigits or isHexHyphen)
+				                        then Text.Range(afterSwissinfo, 0, lastDotPos)
+				                        else afterSwissinfo,
+				
+				            // 4) Doppelte Tokens "today.today"
+				            parts = if stripId=null then {} else Text.Split(stripId, "."),
+				            dedup = if List.Count(parts)=2 and Text.Lower(parts{0}) = Text.Lower(parts{1})
+				                        then parts{0} else stripId,
+				
+				            // 5) Trimmen; 6) null/leer -> "exit"
+				            interim = if dedup=null then null else Text.TrimEnd(dedup, {".", " "}),
+				            result = if interim=null or Text.Length(Text.Trim(interim))=0 then "exit" else interim
+				        in
+				            result
+				in
+				    Table.TransformColumns(
+				        #"Duplizierte Spalte2",
+				        {
+				            {"local_solved_pages", each Clean(_), type text},
+				            {"local_solved_pages_follower1", each Clean(_), type text},
+				            {"local_solved_pages_follower2", each Clean(_), type text}
+				        },
+				        null,
+				        MissingField.Ignore
+				    ),
+				    #"Ersetzter Wert" = Table.ReplaceValue(
+				    #"Ersetzter Wert1",           // oder: <Name deines vorherigen Schritts mit der Bereinigung>
+				    null,
+				    "exit",
+				    Replacer.ReplaceValue,
+				    {"local_solved_pages","local_solved_pages_follower1","local_solved_pages_follower2"}
+				)
+				in
+				    #"Ersetzter Wert"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

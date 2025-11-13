@@ -1,0 +1,315 @@
+table mapp_api_query_7241_11_clone_enriched
+	lineageTag: 9d456eec-fea1-4bb8-ae82-f3fb2005ee10
+
+	column WpPostId
+		dataType: string
+		lineageTag: d5cf79e7-64c8-4da0-a77f-d4d42b747a93
+		summarizeBy: none
+		sourceColumn: WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_id
+		dataType: string
+		lineageTag: a57fbb7d-8792-4e45-b0a4-73ecc23bc5a3
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages
+		dataType: string
+		lineageTag: 1970e1bb-9b78-4470-b8bc-c686ed26c19a
+		summarizeBy: none
+		sourceColumn: pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_1
+		dataType: string
+		lineageTag: ec1211c6-9306-4751-bdd6-aaf9df9d16e7
+		summarizeBy: none
+		sourceColumn: page_category_text_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_2
+		dataType: string
+		lineageTag: bdc35ab8-9e09-4b65-8253-7f668c8accfa
+		summarizeBy: none
+		sourceColumn: page_category_text_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_3
+		dataType: string
+		lineageTag: df54e9c1-76f7-4380-bb3d-f5663a8d3066
+		summarizeBy: none
+		sourceColumn: page_category_text_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_10
+		dataType: string
+		lineageTag: 5b9b792d-f2b6-4a3e-b9b1-91e5be728f78
+		summarizeBy: none
+		sourceColumn: page_category_text_10
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_14
+		dataType: string
+		lineageTag: ea383671-3ef1-4062-8e12-5a37cfbab075
+		summarizeBy: none
+		sourceColumn: page_parameter_text_14
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_12
+		dataType: string
+		lineageTag: 778aa4f1-1642-484b-b802-dfb2d046e311
+		summarizeBy: none
+		sourceColumn: page_parameter_text_12
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_32
+		dataType: string
+		lineageTag: 9c793d4c-0698-462c-9df3-6f623eab8bda
+		summarizeBy: none
+		sourceColumn: page_parameter_text_32
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_18
+		dataType: string
+		lineageTag: 7109efdc-aea3-4c2f-b213-c9754f59ba57
+		summarizeBy: none
+		sourceColumn: page_parameter_text_18
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_62
+		dataType: string
+		lineageTag: 2cc759be-e527-4f55-a850-9d5b58d61cda
+		summarizeBy: none
+		sourceColumn: page_parameter_text_62
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		lineageTag: eaefefe5-93f5-427d-9cee-2c13598c74f3
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column language
+		dataType: string
+		lineageTag: 1aa5da4e-7a8a-47a1-adf2-65c98df6630e
+		summarizeBy: none
+		sourceColumn: language
+
+		annotation SummarizationSetBy = Automatic
+
+	column url
+		dataType: string
+		lineageTag: dc91e1c0-992d-4c5c-bd74-24f6761de318
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = Automatic
+
+	column published
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 65fffbf8-55eb-4091-ad24-62ce2d34c5c9
+		summarizeBy: none
+		sourceColumn: published
+
+		variation Variación
+			isDefault
+			relationship: 9facb67e-3b7a-4bbc-8e9d-0142975edcc2
+			defaultHierarchy: LocalDateTable_29b53f94-b6b8-4ddc-a5f0-34dd7d159a27.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: string
+		lineageTag: 5a3072c3-e2c8-4060-9aca-124a3f8cfc72
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: string
+		lineageTag: f318dbb8-dd8d-4300-978e-e34da3155a99
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column validFrom
+		dataType: string
+		lineageTag: c67a64f3-2844-4a6f-9f7b-3d489b3ed933
+		summarizeBy: none
+		sourceColumn: validFrom
+
+		annotation SummarizationSetBy = Automatic
+
+	column day
+		dataType: string
+		lineageTag: d80db171-bd22-4dea-9b2e-a3eede10e028
+		summarizeBy: none
+		sourceColumn: day
+
+		annotation SummarizationSetBy = Automatic
+
+	column week
+		dataType: string
+		lineageTag: a5acb877-fed7-4bbf-b6f4-0310ca5d8313
+		summarizeBy: none
+		sourceColumn: week
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: 67cf5728-2e40-4ea4-a782-7c49465ffa50
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 9e0f88a3-d247-4060-8042-b9203db5a751
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: 3eb86314-a1ee-46be-b73b-e1282e0c4463
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column production
+		dataType: string
+		lineageTag: 1ce3f769-2512-4a89-955a-0eaea1db5656
+		summarizeBy: none
+		sourceColumn: production
+
+		annotation SummarizationSetBy = Automatic
+
+	column editorial
+		dataType: string
+		lineageTag: 77af7c94-fbf1-4081-bbb1-e70d8de4a165
+		summarizeBy: none
+		sourceColumn: editorial
+
+		annotation SummarizationSetBy = Automatic
+
+	column beat
+		dataType: string
+		lineageTag: fda76f15-67b7-4576-b73e-ebb77aedcdf9
+		summarizeBy: none
+		sourceColumn: beat
+
+		annotation SummarizationSetBy = Automatic
+
+	column authorsTag
+		dataType: string
+		lineageTag: 8240929d-81af-4639-b407-84772de45830
+		summarizeBy: none
+		sourceColumn: authorsTag
+
+		annotation SummarizationSetBy = Automatic
+
+	column source
+		dataType: string
+		lineageTag: 39060839-c98f-4a19-968a-e6f0d6d271f2
+		summarizeBy: none
+		sourceColumn: source
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		lineageTag: 8b443a80-8a7d-4fc2-9289-fd85ccbcbea5
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column wordCount
+		dataType: string
+		lineageTag: 02a2c7a9-632d-4ad6-8878-8faa7b4f4d67
+		summarizeBy: none
+		sourceColumn: wordCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column subject
+		dataType: string
+		lineageTag: f60d3b79-0d63-4c0c-9a9d-8c4a0c9967e2
+		summarizeBy: none
+		sourceColumn: subject
+
+		annotation SummarizationSetBy = Automatic
+
+	column organisation
+		dataType: string
+		lineageTag: d3c7809e-877b-4531-8b59-dc54ff8f904c
+		summarizeBy: none
+		sourceColumn: organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: c2a20ce1-ae61-4bb2-934e-4760aee30a7a
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column authors
+		dataType: string
+		lineageTag: 820544cc-ea39-47b3-a479-53703fcb582c
+		summarizeBy: none
+		sourceColumn: authors
+
+		annotation SummarizationSetBy = Automatic
+
+	column validTo
+		dataType: string
+		lineageTag: 507ee41f-4acc-4a48-9e48-ad9797a64699
+		summarizeBy: none
+		sourceColumn: validTo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_11_clone_enriched = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation=null]),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_08_Table = swiplus_Schema{[Name="mapp_api_query_7241_11_clone_enriched",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_08_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,386 @@
+table mapp_api_query_7241_09_enriched
+	lineageTag: 59e9f4a3-3022-4d5d-8098-3a3548ca68ee
+
+	measure Minutes =
+			
+			VAR Minutes = SUM('mapp_api_query_7241_09_enriched'[pages_pageImpressions])*mapp_api_query_7241_09_enriched[avg. time_minutes]
+			RETURN Minutes
+		lineageTag: 777208fa-dd65-4106-82f1-2051d220019d
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalMultiplication"
+				}
+
+		changedProperty = FormatString
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'avg. time' =
+			
+			VAR TotalSeconds = ROUND(AVERAGE('mapp_api_query_7241_09_enriched'[custom_formula_1000229]) * 60, 0)
+			VAR Minutes = TotalSeconds / 60
+			VAR Seconds = MOD(TotalSeconds, 60)
+			VAR MinutesText = RIGHT("0" & INT(Minutes), 2)
+			VAR SecondsText = RIGHT("0" & INT(Seconds), 2)
+			RETURN MinutesText & ":" & SecondsText
+		lineageTag: 1ef03c61-361b-4eca-937c-601309144f48
+
+	measure 'avg. time_minutes' =
+			
+			VAR TotalSeconds = ROUND(AVERAGE('mapp_api_query_7241_09_enriched'[custom_formula_1000229]) * 60, 0)
+			VAR Minutes = TotalSeconds / 60
+			RETURN Minutes
+		lineageTag: 6141769d-207c-4a25-aca1-c030dbd5aa83
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column WpPostId
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: c8967455-8d21-4675-85f8-2b5e9a05b107
+		summarizeBy: none
+		sourceColumn: WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_days
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 743d30ef-58a0-4116-9d42-3681dd442e2a
+		summarizeBy: none
+		sourceColumn: time_days
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 3ba6617b-0a79-4349-bc1b-cd9444969c70
+		summarizeBy: none
+		sourceColumn: pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3ea4d81a-f005-4f2d-b0df-2353bb9c2ca1
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column visits
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e644e87c-457e-4459-bd4e-19976e73d334
+		summarizeBy: sum
+		sourceColumn: visits
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_formula_1000229
+		dataType: double
+		sourceProviderType: double
+		lineageTag: e7a1f428-87ee-4e72-955d-8beed6105dc7
+		summarizeBy: sum
+		sourceColumn: custom_formula_1000229
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pages_entries
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 53268023-a703-4140-bb13-b4a21c15ec97
+		summarizeBy: sum
+		sourceColumn: pages_entries
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_exits
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 107b232d-3342-4b2f-a607-2193a696ba94
+		summarizeBy: sum
+		sourceColumn: pages_exits
+
+		annotation SummarizationSetBy = Automatic
+
+	column visits_bounces
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e5187cd7-e210-4c7f-8f4b-14c0ecb370d1
+		summarizeBy: sum
+		sourceColumn: visits_bounces
+
+		annotation SummarizationSetBy = Automatic
+
+	column visitors
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: ad9cd02c-6b68-4f1f-8284-76e5c4bfd27a
+		summarizeBy: sum
+		sourceColumn: visitors
+
+		annotation SummarizationSetBy = Automatic
+
+	column language
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 1f56bafb-7f85-4460-991b-be980f124d7b
+		summarizeBy: none
+		sourceColumn: language
+
+		annotation SummarizationSetBy = Automatic
+
+	column url
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 81ffb97e-1991-40c1-b36f-4689cb411729
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = Automatic
+
+	column published
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: 771c52bc-c0f3-492e-9996-bc8006f31bc6
+		summarizeBy: none
+		sourceColumn: published
+
+		variation Variation
+			isDefault
+			relationship: 715c60ab-72b3-442e-96d2-cbcaf4979c9b
+			defaultHierarchy: LocalDateTable_9aa54290-7caf-4e97-b50b-6fb10b4cf068.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: bd257687-6a25-43ef-b75e-c4decb401b71
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 42d9006e-4aee-42e3-8408-40606ca0c8a4
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column validFrom
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d1ee7469-28d0-432a-89bc-8ff2e49eee73
+		summarizeBy: none
+		sourceColumn: validFrom
+
+		annotation SummarizationSetBy = Automatic
+
+	column day
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 08427cc0-3f87-4ea0-95b8-55e0cd90aebe
+		summarizeBy: none
+		sourceColumn: day
+
+		annotation SummarizationSetBy = Automatic
+
+	column week
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: b4f1c463-0fbe-431f-ab1a-4571f3373f26
+		summarizeBy: none
+		sourceColumn: week
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 235ef36e-7f86-4d49-8dd2-eb0fd88e4995
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6d710659-8431-4592-8e1f-6190530f12e1
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 1c32a092-c537-4687-a97b-f4cb48e9b2a0
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column production
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: f54b4f8c-d36a-438c-8730-a7e003cc0d7a
+		summarizeBy: none
+		sourceColumn: production
+
+		annotation SummarizationSetBy = Automatic
+
+	column editorial
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: dc556a4a-b7d8-40fc-a0c4-19a4e25f94e5
+		summarizeBy: none
+		sourceColumn: editorial
+
+		annotation SummarizationSetBy = Automatic
+
+	column beat
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 4ae66917-5af5-478d-8614-8335b972fda2
+		summarizeBy: none
+		sourceColumn: beat
+
+		annotation SummarizationSetBy = Automatic
+
+	column authorsTag
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 597a6bfd-465a-4f75-8e99-cadda7d35295
+		summarizeBy: none
+		sourceColumn: authorsTag
+
+		annotation SummarizationSetBy = Automatic
+
+	column source
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 74a3a266-c277-4818-af3e-5aca77a78180
+		summarizeBy: none
+		sourceColumn: source
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: ff347da8-443a-48fb-885b-4ce95152046d
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column wordCount
+		dataType: int64
+		formatString: 0
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 532c65f6-332d-459e-90ce-8fbdcb898226
+		summarizeBy: sum
+		sourceColumn: wordCount
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column subject
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 0a7c2c0b-2a63-4b8f-b63d-2940da9b8220
+		summarizeBy: none
+		sourceColumn: subject
+
+		annotation SummarizationSetBy = Automatic
+
+	column organisation
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: c77a872e-24bf-4122-994c-676894f53ca4
+		summarizeBy: none
+		sourceColumn: organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: eb4b9e4d-b583-4980-980d-b10568fae237
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column authors
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 94f434a7-e573-416d-9c96-23c9034eb426
+		summarizeBy: none
+		sourceColumn: authors
+
+		annotation SummarizationSetBy = Automatic
+
+	column validTo
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: e77e9406-ff9a-4ccd-b739-7065da996591
+		summarizeBy: none
+		sourceColumn: validTo
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_days_formatted
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 93651d7d-1643-4ca9-9f5c-7e8a3a6ec21e
+		summarizeBy: none
+		sourceColumn: time_days_formatted
+
+		variation Variation
+			isDefault
+			relationship: e6726325-bfd9-4315-a734-d134937346f8
+			defaultHierarchy: LocalDateTable_b207c27d-4294-4dcf-ac49-1359ff154092.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	partition mapp_api_query_7241_09_enriched = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_09_enriched_Table = swiplus_Schema{[Name="mapp_api_query_7241_09_enriched",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_09_enriched_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

@@ -1,0 +1,325 @@
+table mapp_api_query_7241_09_clone_enriched
+	lineageTag: 28b37d13-6e4f-478a-a091-f3e24a1f9213
+
+	measure 'avg. time_minutes_clone' =
+			
+			VAR TotalSeconds = ROUND(AVERAGE('mapp_api_query_7241_09_clone_enriched'[custom_formula_1000229]) * 60, 0)
+			VAR Minutes = TotalSeconds / 60
+			RETURN Minutes
+		lineageTag: 345b6374-7d6c-44b6-bd40-4edbcf8459b7
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Minutes_clone =
+			
+			VAR Minutes = SUM('mapp_api_query_7241_09_clone_enriched'[pages_pageImpressions])*mapp_api_query_7241_09_clone_enriched[avg. time_minutes_clone]
+			RETURN Minutes
+		lineageTag: 8ffb9916-770b-465d-8939-99c3aea760d0
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'avg. time_clone' =
+			
+			VAR TotalSeconds = ROUND(AVERAGE('mapp_api_query_7241_09_clone_enriched'[custom_formula_1000229]) * 60, 0)
+			VAR Minutes = TotalSeconds / 60
+			VAR Seconds = MOD(TotalSeconds, 60)
+			VAR MinutesText = RIGHT("0" & INT(Minutes), 2)
+			VAR SecondsText = RIGHT("0" & INT(Seconds), 2)
+			RETURN MinutesText & ":" & SecondsText
+		lineageTag: 73e5273f-9f6a-4983-9812-47d8e49005da
+
+	column WpPostId
+		dataType: string
+		lineageTag: 6b7d40a7-4bd9-4fac-a2df-9a2a54240374
+		summarizeBy: none
+		sourceColumn: WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	column session_id
+		dataType: string
+		lineageTag: 17672cdb-fc56-4b23-bdec-16d7164d476d
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages
+		dataType: string
+		lineageTag: e7aff6b3-3672-40dc-ba33-acc265dc826e
+		summarizeBy: none
+		sourceColumn: pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		lineageTag: 1905381c-46e8-418b-a33e-0b3f80b7e94e
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column visits
+		dataType: int64
+		formatString: 0
+		lineageTag: eea8b21f-17f7-49f3-a47c-f40c3a11ee45
+		summarizeBy: sum
+		sourceColumn: visits
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_formula_1000229
+		dataType: double
+		lineageTag: 8564e878-f888-4ccd-917b-4c5b7ca19120
+		summarizeBy: sum
+		sourceColumn: custom_formula_1000229
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pages_entries
+		dataType: int64
+		formatString: 0
+		lineageTag: 81248bbb-ac39-43e0-8e00-9c077e115fae
+		summarizeBy: sum
+		sourceColumn: pages_entries
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_exits
+		dataType: int64
+		formatString: 0
+		lineageTag: a9af9b6c-a8fa-44ea-ac64-78c9a04afaea
+		summarizeBy: sum
+		sourceColumn: pages_exits
+
+		annotation SummarizationSetBy = Automatic
+
+	column visits_bounces
+		dataType: int64
+		formatString: 0
+		lineageTag: 33942e68-7882-4304-bd1e-fcbaad5b8755
+		summarizeBy: sum
+		sourceColumn: visits_bounces
+
+		annotation SummarizationSetBy = Automatic
+
+	column visitors
+		dataType: int64
+		formatString: 0
+		lineageTag: c08c37f0-e4c5-48b4-b797-9f98fe3876c8
+		summarizeBy: sum
+		sourceColumn: visitors
+
+		annotation SummarizationSetBy = Automatic
+
+	column language
+		dataType: string
+		lineageTag: 0a755881-1a42-4e0f-b9af-94d174a5582f
+		summarizeBy: none
+		sourceColumn: language
+
+		annotation SummarizationSetBy = Automatic
+
+	column url
+		dataType: string
+		lineageTag: 85638cbd-b97f-4cbd-9b92-207d9befeed3
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = Automatic
+
+	column published
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 5c63cb3f-ed5d-4f22-97f6-6875ae2cbeda
+		summarizeBy: none
+		sourceColumn: published
+
+		variation Variación
+			isDefault
+			relationship: d1ddc7f3-d6ae-4b9b-906c-b9ea4d8dce3c
+			defaultHierarchy: LocalDateTable_22cce2bc-0a88-4556-8047-b4096ffebb9a.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: string
+		lineageTag: 9021c526-5289-4b84-a078-1e863923669c
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: string
+		lineageTag: 94eb4fe1-0b3e-45ac-a7ad-ab2b8605cdea
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column validFrom
+		dataType: string
+		lineageTag: 2fa8ac4f-6c83-4130-9cfa-a94e8b536e76
+		summarizeBy: none
+		sourceColumn: validFrom
+
+		annotation SummarizationSetBy = Automatic
+
+	column day
+		dataType: string
+		lineageTag: d1005ac3-929b-4239-b803-8a53cc457ff0
+		summarizeBy: none
+		sourceColumn: day
+
+		annotation SummarizationSetBy = Automatic
+
+	column week
+		dataType: string
+		lineageTag: ccd7bfe0-e6df-4f1e-b6ef-920e10138ea1
+		summarizeBy: none
+		sourceColumn: week
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		lineageTag: 0500d6bd-58d3-46ad-aaf5-7e5dfdb71439
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		lineageTag: 5e8a867b-8382-4b36-9731-f550ebbace9d
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		lineageTag: b308c0b3-e2aa-4428-9a2b-a633e3593e5c
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column production
+		dataType: string
+		lineageTag: 81554fe5-93fb-402a-976b-7be7f9fa7f8c
+		summarizeBy: none
+		sourceColumn: production
+
+		annotation SummarizationSetBy = Automatic
+
+	column editorial
+		dataType: string
+		lineageTag: ab31b7a2-3867-480f-bdc0-34a1897c6ecf
+		summarizeBy: none
+		sourceColumn: editorial
+
+		annotation SummarizationSetBy = Automatic
+
+	column beat
+		dataType: string
+		lineageTag: 2484b07a-215c-4953-9fda-6f04e83c5d85
+		summarizeBy: none
+		sourceColumn: beat
+
+		annotation SummarizationSetBy = Automatic
+
+	column authorsTag
+		dataType: string
+		lineageTag: f038de19-de66-4691-8679-e99b068769f6
+		summarizeBy: none
+		sourceColumn: authorsTag
+
+		annotation SummarizationSetBy = Automatic
+
+	column source
+		dataType: string
+		lineageTag: 37277d5a-fec4-4fac-a780-16f01f243e34
+		summarizeBy: none
+		sourceColumn: source
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		lineageTag: 28bfdbae-5727-491e-8ad4-7c32ccdfb43d
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column wordCount
+		dataType: string
+		lineageTag: 030288db-71d3-4394-8898-d266659984ca
+		summarizeBy: none
+		sourceColumn: wordCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column subject
+		dataType: string
+		lineageTag: 50ba4752-a055-4569-a4df-b4f7fd3e5b86
+		summarizeBy: none
+		sourceColumn: subject
+
+		annotation SummarizationSetBy = Automatic
+
+	column organisation
+		dataType: string
+		lineageTag: d33e48fd-6951-4e69-a462-8a16cbf94813
+		summarizeBy: none
+		sourceColumn: organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		lineageTag: aa7848b7-6284-46d1-a601-4f542f6ba346
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column authors
+		dataType: string
+		lineageTag: b2d02e66-afaf-4f37-8e96-321bb15935d2
+		summarizeBy: none
+		sourceColumn: authors
+
+		annotation SummarizationSetBy = Automatic
+
+	column validTo
+		dataType: string
+		lineageTag: e96d7bb6-d44a-4a87-9a44-c9236a4df346
+		summarizeBy: none
+		sourceColumn: validTo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_09_clone_enriched = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation=null]),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_08_Table = swiplus_Schema{[Name="mapp_api_query_7241_09_clone_enriched",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_08_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,23 @@
+expression 'Fehler in mapping_table_Country' =
+		let
+		Quelle = mapping_table_Country,
+		  #"Typenkonflikte gefunden." = let
+		    tableWithOnlyPrimitiveTypes = Table.SelectColumns(Quelle, Table.ColumnsOfType(Quelle, {type nullable number, type nullable text, type nullable logical, type nullable date, type nullable datetime, type nullable datetimezone, type nullable time, type nullable duration})),
+		    recordTypeFields = Type.RecordFields(Type.TableRow(Value.Type(tableWithOnlyPrimitiveTypes))),
+		    fieldNames = Record.FieldNames(recordTypeFields),
+		    fieldTypes = List.Transform(Record.ToList(recordTypeFields), each [Type]),
+		    pairs = List.Transform(List.Positions(fieldNames), (i) => {fieldNames{i}, (v) => if v = null or Value.Is(v, fieldTypes{i}) then v else error [Message = "Der Werttyp stimmt nicht mit dem Typ der Spalte überein.", Detail = v], fieldTypes{i}})
+		in
+		    Table.TransformColumns(Quelle, pairs),
+		  #"Hinzugefügter Index" = Table.AddIndexColumn(#"Typenkonflikte gefunden.", "Zeilennummer" ,1),
+		  #"Beibehaltene Fehler" = Table.SelectRowsWithErrors(#"Hinzugefügter Index", {"WebtrekkCountry", "name", "alpha-2", "alpha-3", "country-code", "iso_3166-2", "region", "sub-region", "intermediate-region", "region-code", "sub-region-code", "intermediate-region-code", "Continent", "UN Member States", "SWI-Ländergruppe", "SWI-""193 UNO anerkannte Länder plus Vatikan und Palästina"""}),
+		  #"Neu angeordnete Spalten" = Table.ReorderColumns(#"Beibehaltene Fehler", {"Zeilennummer", "WebtrekkCountry", "name", "alpha-2", "alpha-3", "country-code", "iso_3166-2", "region", "sub-region", "intermediate-region", "region-code", "sub-region-code", "intermediate-region-code", "Continent", "UN Member States", "SWI-Ländergruppe", "SWI-""193 UNO anerkannte Länder plus Vatikan und Palästina"""})
+		in
+		  #"Neu angeordnete Spalten"
+	lineageTag: e2e901f8-e20e-41c8-baaa-17098e324d86
+	queryGroup: 'Abfragefehler: 16 10 2025 14:28:44'
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
