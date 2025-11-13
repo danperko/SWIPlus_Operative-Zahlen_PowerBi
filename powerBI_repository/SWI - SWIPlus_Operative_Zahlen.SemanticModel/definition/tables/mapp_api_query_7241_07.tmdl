@@ -1,0 +1,93 @@
+table mapp_api_query_7241_07
+	lineageTag: a0a0e331-bb79-46f9-b46d-b2fb4557211b
+
+	measure 'SessionFeatureNutzungsrate (%)' =
+			
+			VAR TotalSessions =
+			    CALCULATE(DISTINCTCOUNT('mapp_api_query_7241_merged'[session_id]))
+			VAR SessionsMitEvent =
+			    CALCULATE(DISTINCTCOUNT('mapp_api_query_7241_07'[session_id]))
+			RETURN
+			DIVIDE(SessionsMitEvent, TotalSessions, 0)
+		formatString: 0.00%;-0.00%;0.00%
+		lineageTag: 9110d56c-3223-427b-8166-8f495b7ff962
+
+	column session_id
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 955dc000-945d-4ee3-9b90-f3560e48291a
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column events
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: c3629733-14c0-4a89-8665-b9adc63c6007
+		summarizeBy: none
+		sourceColumn: events
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_parameter_text_1
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 37879aff-ccbd-4168-b27b-26705a73ff6a
+		summarizeBy: none
+		sourceColumn: event_parameter_text_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_parameter_text_2
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: e0359123-6900-4c52-991a-18b6b7f42f9d
+		summarizeBy: none
+		sourceColumn: event_parameter_text_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_parameter_text_3
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: c643c8ec-0e3d-4809-b465-aa3aff021e75
+		summarizeBy: none
+		sourceColumn: event_parameter_text_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column event_parameter_text_4
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 7477fe38-f4bb-492e-806f-894f0bd7d5a7
+		summarizeBy: none
+		sourceColumn: event_parameter_text_4
+
+		annotation SummarizationSetBy = Automatic
+
+	column events_clicks
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 7a7f2ea7-5b46-4cba-a926-e585f452ae95
+		summarizeBy: sum
+		sourceColumn: events_clicks
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_07 = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_07_Table = swiplus_Schema{[Name="mapp_api_query_7241_07",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_07_Table
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navigation
+

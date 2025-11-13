@@ -1,0 +1,116 @@
+table mapp_api_query_7241_09
+	lineageTag: 69374ed8-5400-46f9-bb8c-cf6c78d2f97c
+
+	column time_days
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 9308e1b9-2413-46c6-80e8-d5ad5da9f583
+		summarizeBy: none
+		sourceColumn: time_days
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d91e4cf3-4804-4fd4-aac8-1e0c9599ef7d
+		summarizeBy: none
+		sourceColumn: pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2edb028b-12df-4852-9ac9-807e70ecfd70
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column visits
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c94e1d84-57e8-4d0a-8673-319c2766a0ca
+		summarizeBy: sum
+		sourceColumn: visits
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_formula_1000229
+		dataType: double
+		sourceProviderType: double
+		lineageTag: b49089d5-1550-4b9d-9334-41a7d944943a
+		summarizeBy: sum
+		sourceColumn: custom_formula_1000229
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pages_entries
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: a1a76ae3-6813-4443-bd1b-9c33f68d532b
+		summarizeBy: sum
+		sourceColumn: pages_entries
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_exits
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: f9a04626-6a80-4977-9a9f-7260cf73a336
+		summarizeBy: sum
+		sourceColumn: pages_exits
+
+		annotation SummarizationSetBy = Automatic
+
+	column visits_bounces
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 72e41d83-890b-47c4-9add-50b34c98dbc5
+		summarizeBy: sum
+		sourceColumn: visits_bounces
+
+		annotation SummarizationSetBy = Automatic
+
+	column visitors
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: df4d627b-4e56-45f4-a10b-18e924215a67
+		summarizeBy: sum
+		sourceColumn: visitors
+
+		annotation SummarizationSetBy = Automatic
+
+	column WpPostId
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: fd98f165-ab6d-46f4-9b35-46b096e1659e
+		summarizeBy: none
+		sourceColumn: WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_09 = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_09_Table = swiplus_Schema{[Name="mapp_api_query_7241_09",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_09_Table
+
+	annotation PBI_ResultType = Exception
+
+	annotation PBI_NavigationStepName = Navigation
+

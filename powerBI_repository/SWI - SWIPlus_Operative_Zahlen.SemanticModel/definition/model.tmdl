@@ -1,0 +1,85 @@
+model Model
+	culture: de-CH
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: de-CH
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+/// Fehler in Abfragen, die am 16.10.2025 14:28:44 geladen wurden.
+queryGroup 'Abfragefehler: 16 10 2025 14:28:44'
+
+	annotation PBI_QueryGroupOrder = 0
+
+annotation PBI_QueryOrder = ["appstore_sales_merged","cdn_prod_swi_services_ch","mapp_api_query_7241_01","mapp_api_query_7241_02","mapp_api_query_7241_03","mapp_api_query_7241_04","mapp_api_query_7241_05","mapp_api_query_7241_06","mapp_api_query_7241_06_enriched","mapp_api_query_7241_07","mapp_api_query_7241_07_PowerBI_Relation","mapp_api_query_7241_08","mapp_api_query_7241_09","mapp_api_query_7241_09_enriched","mapp_api_query_7241_10","mapp_api_query_7241_10_splitted","mapp_api_query_7241_10_enriched_v2","mapp_api_query_7241_11","mapp_api_query_7241_11_enriched","mapp_api_query_7241_merged","mapp_api_query_7241_test","mapp_api_query_7241_10 (2)","playstore_installs_app_version_cleaned","playstore_installs_carrier_cleaned","playstore_installs_country_cleaned","playstore_installs_device_cleaned","playstore_installs_language_cleaned","playstore_installs_os_version_cleaned","playstore_installs_overview","playstore_installs_overview_cleaned","mapping_table_Country","Fehler in mapping_table_Country","mapp_api_query_7241_09_clone_enriched","mapp_api_query_7241_09_clone","mapp_api_query_7241_10_clone","mapp_api_query_7241_10_clone_enriched","mapp_api_query_7241_11_clone_enriched","mapp_api_query_7241_11_clone","coretable_session_id"]
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table mapp_api_query_7241_merged
+ref table mapp_api_query_7241_11
+ref table mapp_api_query_7241_10
+ref table mapp_api_query_7241_09
+ref table mapp_api_query_7241_08
+ref table mapp_api_query_7241_07
+ref table mapp_api_query_7241_06
+ref table mapp_api_query_7241_05
+ref table mapp_api_query_7241_04
+ref table mapp_api_query_7241_03
+ref table mapp_api_query_7241_02
+ref table mapp_api_query_7241_01
+ref table appstore_sales_merged
+ref table mapp_api_query_7241_test
+ref table 'Z - DateTable'
+ref table 'mapp_api_query_7241_10 (2)'
+ref table cdn_prod_swi_services_ch
+ref table mapp_api_query_7241_11_enriched
+ref table playstore_installs_app_version_cleaned
+ref table playstore_installs_carrier_cleaned
+ref table playstore_installs_country_cleaned
+ref table playstore_installs_device_cleaned
+ref table playstore_installs_language_cleaned
+ref table playstore_installs_os_version_cleaned
+ref table playstore_installs_overview_cleaned
+ref table playstore_installs_overview
+ref table mapp_api_query_7241_06_enriched
+ref table mapp_api_query_7241_09_enriched
+ref table mapp_api_query_7241_07_PowerBI_Relation
+ref table mapp_api_query_7241_10_enriched_v2
+ref table DateTableTemplate_a20e96ef-4a52-4095-8216-a55dbdf37800
+ref table LocalDateTable_c35423b2-99b5-493d-ab3b-8094dfc38396
+ref table LocalDateTable_5fa94160-e98a-494b-824b-5edc595e6fa2
+ref table LocalDateTable_a536c28c-0825-480a-bc53-132913c98bd5
+ref table LocalDateTable_a6b1a7e1-0286-4212-b39f-9fa4723c3005
+ref table LocalDateTable_16e6ae0e-bd10-48da-8a48-fa82d5ef67e2
+ref table LocalDateTable_5e2674d3-9890-45e5-bb00-f992170ce21f
+ref table LocalDateTable_3c6dc3c4-ee84-4c2e-a43d-9292d7c05440
+ref table LocalDateTable_f2e0e294-feaf-4802-ac51-24190ff8d84f
+ref table LocalDateTable_a6f39acf-5368-4115-94e8-0893b6f9a848
+ref table LocalDateTable_9aa54290-7caf-4e97-b50b-6fb10b4cf068
+ref table mapp_api_query_7241_10_splitted
+ref table mapping_table_Country
+ref table mapp_api_query_7241_09_clone_enriched
+ref table LocalDateTable_22cce2bc-0a88-4556-8047-b4096ffebb9a
+ref table mapp_api_query_7241_09_clone
+ref table mapp_api_query_7241_10_clone
+ref table mapp_api_query_7241_10_clone_enriched
+ref table LocalDateTable_729d6503-028a-4373-a121-20ef7c6de50f
+ref table mapp_api_query_7241_11_clone_enriched
+ref table LocalDateTable_29b53f94-b6b8-4ddc-a5f0-34dd7d159a27
+ref table mapp_api_query_7241_11_clone
+ref table LocalDateTable_27315aed-200e-4a09-8b9c-80b8e63ec450
+ref table LocalDateTable_de9f2057-ccd6-4c4e-8c1d-755156b67a52
+ref table LocalDateTable_be818ae8-5f55-4c1f-9561-a38e7b43d78d
+ref table LocalDateTable_546c5018-c43d-4e01-8521-105e40a7c73f
+ref table LocalDateTable_9b275863-7f61-4d53-bc86-376765c88a26
+ref table coretable_session_id
+ref table LocalDateTable_3a705272-88c8-4f26-8aa6-095a3aa33ba7
+ref table LocalDateTable_545ec8b6-e0d7-4e88-a578-b3ee3cb88ccf
+ref table LocalDateTable_b207c27d-4294-4dcf-ac49-1359ff154092
+ref table LocalDateTable_b65e814b-e63c-48ae-8993-ef848fc7ed61
+ref table LocalDateTable_f5d0e01f-cae0-4790-9e4d-dd79ae4bd3c6
+
+ref cultureInfo de-CH
+

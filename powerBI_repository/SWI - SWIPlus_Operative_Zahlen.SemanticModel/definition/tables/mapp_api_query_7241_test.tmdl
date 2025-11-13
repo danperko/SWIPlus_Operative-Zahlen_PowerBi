@@ -1,0 +1,80 @@
+table mapp_api_query_7241_test
+	lineageTag: 7e8dfce4-e9ce-4e68-8292-703b0a735efb
+
+	column time_days
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: dab5584b-7ffe-4090-b145-e99e7e9da4f8
+		summarizeBy: none
+		sourceColumn: time_days
+
+		annotation SummarizationSetBy = Automatic
+
+	column visits
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b5194c82-1039-4108-bb1d-76c55181b3a5
+		summarizeBy: sum
+		sourceColumn: visits
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 5fe1809e-e13c-40eb-b782-7059852e9067
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column visits_newShare
+		dataType: double
+		sourceProviderType: double
+		lineageTag: d5c9c45e-5550-4d3f-aa5a-4269414700d8
+		summarizeBy: sum
+		sourceColumn: visits_newShare
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column visit_duration_avg
+		dataType: double
+		sourceProviderType: double
+		lineageTag: 0de4744e-87b8-4132-abc2-a6ab48e2eb53
+		summarizeBy: sum
+		sourceColumn: visit_duration_avg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column visits_bounceRate
+		dataType: double
+		sourceProviderType: double
+		lineageTag: c0f1f42e-bb0f-48fb-8e49-2b62deea4ead
+		summarizeBy: sum
+		sourceColumn: visits_bounceRate
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition mapp_api_query_7241_test = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_test_Table = swiplus_Schema{[Name="mapp_api_query_7241_test",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_test_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

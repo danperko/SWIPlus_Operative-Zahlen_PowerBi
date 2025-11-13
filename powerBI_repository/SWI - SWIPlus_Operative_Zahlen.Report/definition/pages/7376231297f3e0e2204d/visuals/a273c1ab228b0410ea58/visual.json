@@ -1,0 +1,99 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "a273c1ab228b0410ea58",
+  "position": {
+    "x": 265,
+    "y": 568,
+    "z": 16000,
+    "height": 147,
+    "width": 488,
+    "tabOrder": 16000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Note:",
+                    "textStyle": {
+                      "fontWeight": "bold",
+                      "fontSize": "8pt"
+                    }
+                  },
+                  {
+                    "value": " The figures shown here represent so-called ",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  },
+                  {
+                    "value": "units",
+                    "textStyle": {
+                      "fontStyle": "italic",
+                      "fontSize": "8pt"
+                    }
+                  },
+                  {
+                    "value": ". As Apple does not provide an automatic interface for the metric \"downloads\" via its App Store, these figures cannot be retrieved programmatically. Instead, they must be manually downloaded from App Store Connect [",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  },
+                  {
+                    "value": "link",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    },
+                    "url": "https://appstoreconnect.apple.com/"
+                  },
+                  {
+                    "value": "]. This is done once a month by the Statistics Department. The data is available at the following location: [",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  },
+                  {
+                    "value": "link",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    },
+                    "url": "https://srgssr.sharepoint.com/sites/SWI_Statistics/SitePages/SWI-Plus.aspx"
+                  },
+                  {
+                    "value": "].",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": ""
+                  }
+                ]
+              },
+              {
+                "textRuns": [
+                  {
+                    "value": "If you require an update in between the monthly cycles, please send an email request. We will refresh the data as quickly as possible.",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

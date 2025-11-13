@@ -1,0 +1,183 @@
+table playstore_installs_country_cleaned
+	lineageTag: ec6b89cc-8c4f-4409-a0a3-d18e5aa87e3a
+
+	column Date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: 7edcac6c-a277-4e7f-bd87-b833e3372894
+		summarizeBy: none
+		sourceColumn: Date
+
+		variation Variation
+			isDefault
+			relationship: 162b4742-d611-4b03-a58d-a4946aaa1a1f
+			defaultHierarchy: LocalDateTable_de9f2057-ccd6-4c4e-8c1d-755156b67a52.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column Package_name
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: da3d0ad4-c8ff-4e8c-942c-3dfdb8a7f5dd
+		summarizeBy: none
+		sourceColumn: Package_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 0f02fb14-b8dc-4f9d-9cd0-c82206217638
+		summarizeBy: none
+		sourceColumn: Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_Device_Installs
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: c266bbf1-e8e0-4eac-95c5-d9164c62a00f
+		summarizeBy: none
+		sourceColumn: Daily_Device_Installs
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_Device_Uninstalls
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 0e50707e-f823-414a-8438-60829869701f
+		summarizeBy: sum
+		sourceColumn: Daily_Device_Uninstalls
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_Device_Upgrades
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 89667129-27eb-41f0-af87-1b854e828412
+		summarizeBy: sum
+		sourceColumn: Daily_Device_Upgrades
+
+		annotation SummarizationSetBy = Automatic
+
+	column Total_User_Installs
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: bcee245c-841d-4597-b7dc-d202fa5b4467
+		summarizeBy: sum
+		sourceColumn: Total_User_Installs
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_User_Installs
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 26b31ced-d2c1-4c6f-a085-51ebcddbeb6d
+		summarizeBy: sum
+		sourceColumn: Daily_User_Installs
+
+		annotation SummarizationSetBy = Automatic
+
+	column Daily_User_Uninstalls
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: e1dbe403-45c0-4c8f-ab23-b154db87f44f
+		summarizeBy: sum
+		sourceColumn: Daily_User_Uninstalls
+
+		annotation SummarizationSetBy = Automatic
+
+	column Active_Device_Installs
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 547e9f83-93c6-4a3b-b0f6-12303b7c31c3
+		summarizeBy: sum
+		sourceColumn: Active_Device_Installs
+
+		annotation SummarizationSetBy = Automatic
+
+	column Install_events
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 13d4c891-1d92-4602-b23b-4d72fc36dcff
+		summarizeBy: sum
+		sourceColumn: Install_events
+
+		annotation SummarizationSetBy = Automatic
+
+	column Update_events
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d22fa087-5479-4295-8733-07e0ac4fe763
+		summarizeBy: sum
+		sourceColumn: Update_events
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_file
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 95920781-f4f7-44a4-9bdc-b3ba58005fda
+		summarizeBy: none
+		sourceColumn: source_file
+
+		annotation SummarizationSetBy = Automatic
+
+	column Uninstall_events
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: c86016c7-add8-4af3-a616-a45bc3b340fa
+		summarizeBy: sum
+		sourceColumn: Uninstall_events
+
+		annotation SummarizationSetBy = Automatic
+
+	column Current_Device_Installs
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: 59f3b1e5-62a1-4b66-b9db-e501d45f438d
+		summarizeBy: sum
+		sourceColumn: Current_Device_Installs
+
+		annotation SummarizationSetBy = Automatic
+
+	column Current_User_Installs
+		dataType: int64
+		formatString: 0
+		sourceProviderType: int
+		lineageTag: d6f8595a-6216-4c34-9419-f5860f9d333e
+		summarizeBy: sum
+		sourceColumn: Current_User_Installs
+
+		annotation SummarizationSetBy = Automatic
+
+	partition playstore_installs_country_cleaned = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    playstore_installs_country_cleaned_Table = swiplus_Schema{[Name="playstore_installs_country_cleaned",Kind="Table"]}[Data]
+				in
+				    playstore_installs_country_cleaned_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Exception
+

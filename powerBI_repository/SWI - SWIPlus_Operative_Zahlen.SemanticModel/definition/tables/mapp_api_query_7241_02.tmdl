@@ -1,0 +1,73 @@
+table mapp_api_query_7241_02
+	lineageTag: e9763c65-2002-4e5d-81d8-5400af41c9aa
+
+	column session_id
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 67118aeb-39ab-4f31-a267-7c45ff1810c2
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_days
+		dataType: dateTime
+		formatString: dd/mm/yyyy
+		lineageTag: 1b74c80e-ef55-4717-8484-a227b816cd49
+		summarizeBy: none
+		sourceColumn: time_days
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column visit_time
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: b6c5ce68-f346-4d20-a9c4-f577fe610c40
+		summarizeBy: none
+		sourceColumn: visit_time
+
+		annotation SummarizationSetBy = Automatic
+
+	column visitors_newVsReturning
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: c1494d5d-0ffc-4153-ae20-24c730e798b5
+		summarizeBy: none
+		sourceColumn: visitors_newVsReturning
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0c91fb80-a1c6-4677-9c5c-ce2e8ab1e298
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_02 = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_02_Table = swiplus_Schema{[Name="mapp_api_query_7241_02",Kind="Table"]}[Data],
+				    #"Geänderter Typ" = Table.TransformColumnTypes(
+				    mapp_api_query_7241_02_Table,
+				    {{"time_days", type date}},
+				    "de-CH"
+				)
+				in
+				    #"Geänderter Typ"
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

@@ -1,0 +1,255 @@
+table cdn_prod_swi_services_ch
+	lineageTag: b7111e7a-6e7e-4d6c-8037-6ffe75f07ab8
+
+	measure avg_duration_mmss = ```
+			
+			VAR totalSeconds = [avg_duration_seconds]
+			VAR minutes = INT(totalSeconds / 60)
+			VAR seconds = MOD(ROUND(totalSeconds, 0), 60)
+			RETURN 
+			FORMAT(minutes, "00") & ":" & FORMAT(seconds, "00")
+			```
+		lineageTag: 2b5ceb0b-f7a6-4304-8bd2-7054485e7b83
+
+		changedProperty = IsHidden
+
+	column wpPostId
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 02a85441-38dc-44cd-9afc-2b8944e5a52f
+		summarizeBy: none
+		sourceColumn: wpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	column language
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 7e3e1e79-19f8-4598-b3ec-02b96d55bb75
+		summarizeBy: none
+		sourceColumn: language
+
+		annotation SummarizationSetBy = Automatic
+
+	column url
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 9b1e891c-78f6-4507-b6ff-025a1a208dbc
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = Automatic
+
+	column published
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: a977f288-f55a-4ad5-a740-0d3cfc89cdc8
+		summarizeBy: none
+		sourceColumn: published
+
+		variation Variation
+			isDefault
+			relationship: b5d83288-a980-479e-a63b-8c421fdd102d
+			defaultHierarchy: LocalDateTable_a6b1a7e1-0286-4212-b39f-9fa4723c3005.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column created
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 5e7d9cc0-2ff8-4e1a-a27c-bccbaf443f52
+		summarizeBy: none
+		sourceColumn: created
+
+		annotation SummarizationSetBy = Automatic
+
+	column modified
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 1e2f4617-9edf-4928-bc2a-96247624a192
+		summarizeBy: none
+		sourceColumn: modified
+
+		annotation SummarizationSetBy = Automatic
+
+	column validFrom
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 673a949c-8efa-46e0-9789-834bfa896289
+		summarizeBy: none
+		sourceColumn: validFrom
+
+		annotation SummarizationSetBy = Automatic
+
+	column day
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: f7cf0772-017f-4e79-a302-6a6c0483dae1
+		summarizeBy: none
+		sourceColumn: day
+
+		annotation SummarizationSetBy = Automatic
+
+	column week
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: c9274708-68dc-4548-ad60-adf5f3486e67
+		summarizeBy: none
+		sourceColumn: week
+
+		annotation SummarizationSetBy = Automatic
+
+	column month
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 3ed3a27e-b817-45a7-b0ca-764d1cf7d305
+		summarizeBy: sum
+		sourceColumn: month
+
+		annotation SummarizationSetBy = Automatic
+
+	column year
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d5d88e99-6ca6-431b-89d2-172136cc2396
+		summarizeBy: sum
+		sourceColumn: year
+
+		annotation SummarizationSetBy = Automatic
+
+	column type
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 2766b89a-0085-4049-b6c0-8b0a359dd13c
+		summarizeBy: none
+		sourceColumn: type
+
+		annotation SummarizationSetBy = Automatic
+
+	column production
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: bfd28f68-9bc0-4d96-afe6-984cc2d02b11
+		summarizeBy: none
+		sourceColumn: production
+
+		annotation SummarizationSetBy = Automatic
+
+	column editorial
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 9b2594df-dc39-4367-9910-6b31b13c4954
+		summarizeBy: none
+		sourceColumn: editorial
+
+		annotation SummarizationSetBy = Automatic
+
+	column beat
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: b6f9341c-3eb4-40d8-9449-a89cd7a8f896
+		summarizeBy: none
+		sourceColumn: beat
+
+		annotation SummarizationSetBy = Automatic
+
+	column authorsTag
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 96086429-b860-479b-9319-879d77e78b1e
+		summarizeBy: none
+		sourceColumn: authorsTag
+
+		annotation SummarizationSetBy = Automatic
+
+	column source
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 62d81ef9-4ef6-45a2-afb9-2593d537b00f
+		summarizeBy: none
+		sourceColumn: source
+
+		annotation SummarizationSetBy = Automatic
+
+	column title
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 4eac7c87-6a0b-4a0c-8546-47a96cfed918
+		summarizeBy: none
+		sourceColumn: title
+
+		annotation SummarizationSetBy = Automatic
+
+	column wordCount
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 9508dcca-1d01-4373-b5d2-37b4af150a54
+		summarizeBy: none
+		sourceColumn: wordCount
+
+		annotation SummarizationSetBy = Automatic
+
+	column subject
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 63fd30db-092f-4a6b-b9d8-56e6fe580acb
+		summarizeBy: none
+		sourceColumn: subject
+
+		annotation SummarizationSetBy = Automatic
+
+	column organisation
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: fdadd76c-1da5-4a2f-98f8-fb778a1d7563
+		summarizeBy: none
+		sourceColumn: organisation
+
+		annotation SummarizationSetBy = Automatic
+
+	column location
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 28a23214-734d-48bd-99d7-3022148814f1
+		summarizeBy: none
+		sourceColumn: location
+
+		annotation SummarizationSetBy = Automatic
+
+	column authors
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 4945060e-f5b3-4b4f-8750-447ee95b38c9
+		summarizeBy: none
+		sourceColumn: authors
+
+		annotation SummarizationSetBy = Automatic
+
+	column validTo
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: a600a29a-4b34-4e35-bc60-0eebfa16737a
+		summarizeBy: none
+		sourceColumn: validTo
+
+		annotation SummarizationSetBy = Automatic
+
+	partition cdn_prod_swi_services_ch = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    cdn_prod_swi_services_ch_Table = swiplus_Schema{[Name="cdn_prod_swi_services_ch",Kind="Table"]}[Data]
+				in
+				    cdn_prod_swi_services_ch_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

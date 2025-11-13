@@ -1,0 +1,348 @@
+table appstore_sales_merged
+	lineageTag: df18ab1a-83dd-4044-9dc7-d4e8185a8ce8
+
+	measure Kennzahl =
+			"Hinweis zur Datenquelle und Definition der Metriken
+			
+			Die in diesem Dashboard präsentierten Daten stammen aus der App Store Connect API von Apple. Bitte beachten Sie, dass die Metrik „Downloads“, wie sie im Statistik-Tool von App Store Connect angezeigt wird, über die API nicht verfügbar ist. Stattdessen werden hier sogenannte „Units“ dargestellt.
+			
+			Warum sind „Downloads“ nicht über die API verfügbar?
+			Apple stellt die Metrik „Downloads“, die sowohl Erstinstallationen als auch erneute Downloads umfasst, ausschließlich im Web-Interface von App Store Connect zur Verfügung. Diese Daten können nicht automatisiert über die API abgerufen werden. Daher muss das Data Team von SWI diese Informationen manuell herunterladen, was in der Regel einmal monatlich erfolgt.
+			
+			→ Das Statistik-Tool ist hier erreichbar:
+			https://appstoreconnect.apple.com/analytics/app/d30/1451174842/overview?iaemeasure=totalDownloads
+			(Zugriff kann durch die IT von SWI vergeben werden.)
+			
+			Was sind „Units“?
+			„Units“ repräsentieren die Anzahl der erstmaligen Käufe oder kostenlosen Downloads einer App oder eines App-Bundles durch einen Kunden. Nicht berücksichtigt werden:
+			
+			App-Updates
+			
+			Erneute Downloads auf dasselbe Gerät oder auf andere Geräte mit derselben Apple-ID
+			
+			Für kostenlose Apps werden Downloads über Family Sharing einbezogen, für kostenpflichtige Apps hingegen nicht.
+			
+			→ Die monatlich heruntergeladenen Daten sind hier einsehbar:
+			https://srgssr.sharepoint.com/sites/SWI_Statistics/SitePages/SWI-Plus.aspx
+			
+			Möchtest du eine kürzere Version für einen Mouseover-Tooltip oder eher für einen Infokasten im Dashboard?"
+		lineageTag: 10ffe866-e039-4327-b51c-8e39cf537adf
+
+	column Provider
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 9681ee38-532b-41b8-b2fb-27fa1ab7a5ae
+		summarizeBy: none
+		sourceColumn: Provider
+
+		annotation SummarizationSetBy = Automatic
+
+	column Provider_Country
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 46fd3890-3c5d-42ae-97a6-fb2f9b98b006
+		summarizeBy: none
+		sourceColumn: Provider_Country
+
+		annotation SummarizationSetBy = Automatic
+
+	column SKU
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: c8beb4c7-e9c7-4351-b5d3-5a7359517825
+		summarizeBy: none
+		sourceColumn: SKU
+
+		annotation SummarizationSetBy = Automatic
+
+	column Developer
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: fc926bba-5f26-421e-a09e-2d7f2cc0781e
+		summarizeBy: none
+		sourceColumn: Developer
+
+		annotation SummarizationSetBy = Automatic
+
+	column Title
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 80d5ae02-a51d-4b50-aa23-2fafb7882f0f
+		summarizeBy: none
+		sourceColumn: Title
+
+		annotation SummarizationSetBy = Automatic
+
+	column Version
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: aa84e10a-1c15-40da-968b-81f3a8abd8c9
+		summarizeBy: none
+		sourceColumn: Version
+
+		annotation SummarizationSetBy = Automatic
+
+	column Product_Type_Identifier
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 5d019381-b0df-4b06-9e1b-4774b9ea36fc
+		summarizeBy: none
+		sourceColumn: Product_Type_Identifier
+
+		annotation SummarizationSetBy = Automatic
+
+	column Units
+		dataType: int64
+		formatString: 0
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 1e123a00-f622-4258-963d-2bde50624f99
+		summarizeBy: sum
+		sourceColumn: Units
+
+		changedProperty = DataType
+
+		annotation SummarizationSetBy = Automatic
+
+	column Developer_Proceeds
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 0b07c75e-079b-4ba3-bdf4-871177ee79c9
+		summarizeBy: none
+		sourceColumn: Developer_Proceeds
+
+		annotation SummarizationSetBy = Automatic
+
+	column Begin_Date
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 8a50f59e-321b-4904-bf48-50218fc59f35
+		summarizeBy: none
+		sourceColumn: Begin_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column End_Date
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 390908c1-9f06-48f5-bc34-ccbb1bc120d5
+		summarizeBy: none
+		sourceColumn: End_Date
+
+		annotation SummarizationSetBy = Automatic
+
+	column Customer_Currency
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: cec3d922-cde4-4460-b786-9dc208135dd8
+		summarizeBy: none
+		sourceColumn: Customer_Currency
+
+		annotation SummarizationSetBy = Automatic
+
+	column Country_Code
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 96c0bf8f-06f9-4d66-81a1-6883603012cb
+		summarizeBy: none
+		sourceColumn: Country_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Currency_of_Proceeds
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 91939aef-2b06-4436-90bb-745c8be3ae4c
+		summarizeBy: none
+		sourceColumn: Currency_of_Proceeds
+
+		annotation SummarizationSetBy = Automatic
+
+	column Apple_Identifier
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 9de2ce26-d136-45e6-993c-23f7c22b2782
+		summarizeBy: none
+		sourceColumn: Apple_Identifier
+
+		annotation SummarizationSetBy = Automatic
+
+	column Customer_Price
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 769e8820-3751-4340-b7f5-35aa212d17a0
+		summarizeBy: none
+		sourceColumn: Customer_Price
+
+		annotation SummarizationSetBy = Automatic
+
+	column Promo_Code
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: db2d5ed8-5f36-437d-a2e6-0e34253cec5f
+		summarizeBy: none
+		sourceColumn: Promo_Code
+
+		annotation SummarizationSetBy = Automatic
+
+	column Parent_Identifier
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 63876344-ddfe-402b-bf22-fbeae0b6cfe0
+		summarizeBy: none
+		sourceColumn: Parent_Identifier
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subscription
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 360eda46-8ee1-4914-9af2-c43a7691f755
+		summarizeBy: none
+		sourceColumn: Subscription
+
+		annotation SummarizationSetBy = Automatic
+
+	column Period
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 27e4cc5b-be37-4952-9253-980c1bd869a7
+		summarizeBy: none
+		sourceColumn: Period
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 3408150d-5ebb-488f-8da0-ef67dba95b90
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	column CMB
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 2857107b-cc04-4871-9c81-079b51556224
+		summarizeBy: none
+		sourceColumn: CMB
+
+		annotation SummarizationSetBy = Automatic
+
+	column Device
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: d30f25c6-e2d6-42a8-92c7-f2c674561a01
+		summarizeBy: none
+		sourceColumn: Device
+
+		annotation SummarizationSetBy = Automatic
+
+	column Supported_Platforms
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: b0470728-bc74-4efc-a115-030fbc6a2cd7
+		summarizeBy: none
+		sourceColumn: Supported_Platforms
+
+		annotation SummarizationSetBy = Automatic
+
+	column Proceeds_Reason
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 6bf7cee4-b3ff-466b-91bf-970d236bf236
+		summarizeBy: none
+		sourceColumn: Proceeds_Reason
+
+		annotation SummarizationSetBy = Automatic
+
+	column Preserved_Pricing
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 32a9c2cb-4b40-4115-9983-bf0b350f3aa9
+		summarizeBy: none
+		sourceColumn: Preserved_Pricing
+
+		annotation SummarizationSetBy = Automatic
+
+	column Client
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: b3e19921-9267-4afa-9c32-4ab930eb660e
+		summarizeBy: none
+		sourceColumn: Client
+
+		annotation SummarizationSetBy = Automatic
+
+	column Order_Type
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 63d7bf2f-1958-4007-9a33-49eaf1f0afdc
+		summarizeBy: none
+		sourceColumn: Order_Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column Contingent_App_Name
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 31a94196-f742-45e2-8da4-a0258ef06626
+		summarizeBy: none
+		sourceColumn: Contingent_App_Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Source.Name'
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 9b8ce361-69b2-45cb-906d-f27dfb8910bd
+		summarizeBy: none
+		sourceColumn: Source.Name
+
+		annotation SummarizationSetBy = Automatic
+
+	column Begin_Date_Timestamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: b63dc647-4adb-4e39-89fa-d40a95972594
+		summarizeBy: none
+		sourceColumn: Begin_Date_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: f45ed5a0-a93f-4dd1-8433-dd57a85367b8
+			defaultHierarchy: LocalDateTable_27315aed-200e-4a09-8b9c-80b8e63ec450.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column End_Date_Timestamp
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: cd40a057-6d71-4905-a8d9-531165269ace
+		summarizeBy: none
+		sourceColumn: End_Date_Timestamp
+
+		variation Variation
+			isDefault
+			relationship: 9fd2ad37-e5be-4a58-a6ad-2a5bd728cdc0
+			defaultHierarchy: LocalDateTable_a536c28c-0825-480a-bc53-132913c98bd5.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	partition appstore_sales_merged = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    appstore_sales_merged_Table = swiplus_Schema{[Name="appstore_sales_merged",Kind="Table"]}[Data]
+				in
+				    appstore_sales_merged_Table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

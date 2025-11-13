@@ -1,0 +1,123 @@
+table mapp_api_query_7241_11_clone
+	lineageTag: dc70c87d-a3d4-41a4-bed6-f30f7f9e9e5f
+
+	column session_id
+		dataType: string
+		lineageTag: 48981cb9-35d7-4096-ab7b-09870eee05af
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages
+		dataType: string
+		lineageTag: cf975e28-35c2-4880-b48e-b5018d52a24d
+		summarizeBy: none
+		sourceColumn: pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_1
+		dataType: string
+		lineageTag: 4249a929-1722-4d5b-aef3-66e59a625824
+		summarizeBy: none
+		sourceColumn: page_category_text_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_2
+		dataType: string
+		lineageTag: 7710b063-508c-497e-b62c-4c668fc49d78
+		summarizeBy: none
+		sourceColumn: page_category_text_2
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_3
+		dataType: string
+		lineageTag: 06f988f5-9b68-4721-9689-9b94a0041323
+		summarizeBy: none
+		sourceColumn: page_category_text_3
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_10
+		dataType: string
+		lineageTag: 7292fd97-698d-4ca3-bfcc-e1ffee53b1fb
+		summarizeBy: none
+		sourceColumn: page_category_text_10
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_14
+		dataType: string
+		lineageTag: d15aaae5-504f-4bb8-b540-cc6f79360f89
+		summarizeBy: none
+		sourceColumn: page_parameter_text_14
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_12
+		dataType: string
+		lineageTag: 13ea111a-76b4-475a-9504-dfd833ea103b
+		summarizeBy: none
+		sourceColumn: page_parameter_text_12
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_32
+		dataType: string
+		lineageTag: ecf29721-38f4-453b-be5a-68bc552ccac4
+		summarizeBy: none
+		sourceColumn: page_parameter_text_32
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_18
+		dataType: string
+		lineageTag: dbec8e87-1810-45b3-99a5-b3dc211d4778
+		summarizeBy: none
+		sourceColumn: page_parameter_text_18
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_62
+		dataType: string
+		lineageTag: fe85a7c2-22f3-463f-967c-cdfaf471154a
+		summarizeBy: none
+		sourceColumn: page_parameter_text_62
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		lineageTag: a2215c3f-15aa-4302-99e3-e98beee3043d
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column WpPostId
+		dataType: string
+		lineageTag: 868f2863-9e0d-4043-bd96-0219237f1e32
+		summarizeBy: none
+		sourceColumn: WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_11_clone = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation=null]),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_08_Table = swiplus_Schema{[Name="mapp_api_query_7241_11_clone",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_08_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

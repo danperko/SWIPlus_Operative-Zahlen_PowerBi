@@ -1,0 +1,197 @@
+table 'Z - DateTable'
+	lineageTag: 99be61f7-b418-4602-af3b-0627fa89e15f
+
+	measure 'Summe von media_playbackTime geteilt durch Summe von media_views' =
+			
+			DIVIDE(
+				SUM('mapp_api_query_7241_08'[media_playbackTime]),
+				SUM('mapp_api_query_7241_08'[media_views])
+			)
+		formatString: 0
+		lineageTag: 00caa155-0979-4a3a-9dd5-00a1ef2d82e8
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+	measure 'avg time media' =
+			
+			DIVIDE(
+				SUM('mapp_api_query_7241_08'[media_playbackTime]),
+				SUM('mapp_api_query_7241_08'[media_views])
+			)
+		formatString: 0
+		lineageTag: 894f1b8a-8c83-407f-9196-e3340b5ca883
+
+		extendedProperty MeasureTemplate =
+				{
+				  "version": 0,
+				  "daxTemplateName": "MathematicalDivision"
+				}
+
+		annotation PBI_FormatHint = {"isDecimal":true}
+
+	column Date
+		formatString: dd/mm/yyyy
+		lineageTag: 5fabdc07-8dab-4c83-9adc-8bac7afa7ae9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		variation Variation
+			isDefault
+			relationship: f493b951-def6-4a93-b1bb-a01798b2b6c9
+			defaultHierarchy: LocalDateTable_b65e814b-e63c-48ae-8993-ef848fc7ed61.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column Year
+		formatString: 0
+		lineageTag: 8fc27b1e-fc7d-4d02-90c7-c34df09caec7
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Year]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Month
+		lineageTag: f2363926-a2a0-4109-a2c9-28ea35e79f84
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Name'
+		lineageTag: e31fc33f-e77f-4aea-9562-1594445d09e1
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Month Name]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Month Number'
+		formatString: 0
+		lineageTag: 94710df7-3596-43e1-a5ae-d661d84b4633
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Month Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Quarter
+		lineageTag: e8213c94-7cbe-4f00-8c2b-14f1bc761ad5
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Quarter]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Day
+		lineageTag: 1a565954-a60b-4d39-ab83-7fe864e656e0
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Day]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Weekday
+		lineageTag: 79d2273e-e8f2-476e-a422-25dee268f33a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Weekday]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Weekday Number'
+		formatString: 0
+		lineageTag: 851f5092-9605-4160-bd2c-7e1a4a77a9b5
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Weekday Number]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekNumber
+		lineageTag: c183ee44-e0f5-4b23-a14d-b1a461bd54e9
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [WeekNumber]
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekSort
+		formatString: 0
+		lineageTag: 24557aea-4eda-4032-af17-735ac4dac266
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [WeekSort]
+		sortByColumn: WeekNumber
+
+		annotation SummarizationSetBy = Automatic
+
+	column WeekMidWednesday
+		formatString: General Date
+		lineageTag: 5413a14d-1ca1-4941-8844-08c20eee72af
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [WeekMidWednesday]
+
+		variation Variation
+			isDefault
+			relationship: d4941ab8-ff89-438d-9714-9a9f534467ed
+			defaultHierarchy: LocalDateTable_f5d0e01f-cae0-4790-9e4d-dd79ae4bd3c6.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column MonthKey
+		formatString: 0
+		lineageTag: ba77a616-e407-478e-8f75-e2d65f517291
+		summarizeBy: count
+		isNameInferred
+		sourceColumn: [MonthKey]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition 'Z - DateTable' = calculated
+		mode: import
+		source = ```
+				
+				VAR MinDate = DATE(2020,1,1)
+				VAR MaxDate = DATE(2035,12,31)
+				RETURN
+				ADDCOLUMNS(
+				    CALENDAR(MinDate, MaxDate),
+				    "Year", YEAR([Date]),
+				    "Month", FORMAT([Date], "yyyy-MM"),
+				    "Month Name", FORMAT([Date], "MMMM"),
+				    "Month Number", MONTH([Date]),
+				    "MonthKey", YEAR([Date]) * 100 + MONTH([Date]),
+				    "Quarter", "Q" & FORMAT([Date], "Q"),
+				    "Day", FORMAT([Date], "yyyy-MM-dd"),
+				    "Weekday", FORMAT([Date], "dddd"),
+				    "Weekday Number", WEEKDAY([Date], 2),
+				    "WeekNumber",
+				        VAR ISOYear = YEAR([Date] - WEEKDAY([Date], 2) + 4)
+				        VAR ISOWeek = WEEKNUM([Date], 21)
+				        RETURN FORMAT(ISOYear, "0000") & "/" & FORMAT(ISOWeek, "00"),
+				    "WeekSort",
+				        VAR ISOYear2 = YEAR([Date] - WEEKDAY([Date], 2) + 4)
+				        VAR ISOWeek2 = WEEKNUM([Date], 21)
+				        RETURN ISOYear2 * 100 + ISOWeek2,
+				    "WeekMidWednesday",
+				        VAR d = [Date]
+				        VAR weekStart = d - WEEKDAY(d, 2) + 1   -- Montag
+				        RETURN weekStart + 2                    -- Mittwoch
+				)
+				
+				```
+
+	annotation PBI_Id = f279c4d1d9d8499aa45dfee464055320
+

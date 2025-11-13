@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "SWI - SWIPlus_Operative_Zahlen"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "5de3b10e-06be-47eb-802b-1f8996a44faa"
+  }
+}

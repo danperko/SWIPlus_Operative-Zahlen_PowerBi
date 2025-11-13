@@ -1,0 +1,124 @@
+table mapp_api_query_7241_06
+	lineageTag: a578f563-867e-449a-bd26-0bc39995e72c
+
+	column session_id
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: b53c20d2-5e81-4041-a949-157a98592df6
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: dfc42913-b4d7-4548-a123-5ba943062153
+		summarizeBy: none
+		sourceColumn: pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_62
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: b2f25047-5dd2-4b36-8039-ba9107ac8e14
+		summarizeBy: none
+		sourceColumn: page_parameter_text_62
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower1
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: a6c9eb5e-8d56-421a-beee-0918e8283395
+		summarizeBy: none
+		sourceColumn: pages_follower1
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_follower2
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 8e294edb-ff03-437a-9386-3852dd7b4bbf
+		summarizeBy: none
+		sourceColumn: pages_follower2
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: ccdf660c-74f7-4b6b-8ae5-5da807746521
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_durationAvg
+		dataType: double
+		sourceProviderType: double
+		lineageTag: 7a34eed9-4191-4d5b-b710-4818c8461116
+		summarizeBy: sum
+		sourceColumn: pages_durationAvg
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column custom_formula_1000229
+		dataType: double
+		sourceProviderType: double
+		lineageTag: a91672d5-50d8-4378-8605-bc933fa0bddd
+		summarizeBy: sum
+		sourceColumn: custom_formula_1000229
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column pages_entries
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c96291f6-4cba-4d7f-81b2-7ffbf679af29
+		summarizeBy: sum
+		sourceColumn: pages_entries
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_exits
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0dd16209-1ce5-47e9-8a41-0bde1ab41f8c
+		summarizeBy: sum
+		sourceColumn: pages_exits
+
+		annotation SummarizationSetBy = Automatic
+
+	column WpPostId
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 66160ca3-b216-4a9d-98ff-7bc7891427bc
+		summarizeBy: none
+		sourceColumn: WpPostId
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_06 = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_06_Table = swiplus_Schema{[Name="mapp_api_query_7241_06",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_06_Table
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+

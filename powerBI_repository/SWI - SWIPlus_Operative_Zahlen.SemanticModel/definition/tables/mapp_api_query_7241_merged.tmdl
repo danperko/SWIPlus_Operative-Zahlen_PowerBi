@@ -1,0 +1,1006 @@
+table mapp_api_query_7241_merged
+	lineageTag: 8086d321-420a-46c4-bcd8-2fbe553a0429
+
+	measure avg_duration_seconds = AVERAGE('mapp_api_query_7241_merged'[pages_duration_01])
+		lineageTag: 693a0b04-5798-42ae-8767-bdf16a4d22f8
+
+		changedProperty = IsHidden
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Return Rate' = ```
+			
+			VAR AllUsers = DISTINCTCOUNT(mapp_api_query_7241_merged[user_id_05])
+			VAR ReturningUsers = 
+			    CALCULATE(
+			        DISTINCTCOUNT(mapp_api_query_7241_merged[user_id_05]),
+			        VALUE(mapp_api_query_7241_merged[visitors_newVsReturning_02]) = 0
+			    )
+			RETURN 
+			DIVIDE(ReturningUsers, AllUsers)
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: a1204ab3-e135-44e1-946a-357ae8ef224a
+
+	measure avg_duration_mmss_mapp_api_query_7241_merged =
+			
+			VAR secondsTotal = AVERAGE('mapp_api_query_7241_merged'[pages_duration_01])
+			VAR minutes = INT(secondsTotal / 60)
+			VAR seconds = MOD(secondsTotal, 60)
+			RETURN
+			FORMAT(minutes, "00") & ":" & FORMAT(seconds, "00")
+		lineageTag: 197f7b06-b75c-4950-b457-0ae820f4cfdb
+
+	measure avg_duration_per_session_mmss =
+			
+			VAR secondsTotal = SUM('mapp_api_query_7241_merged'[pages_duration_01])
+			VAR sessionCount = DISTINCTCOUNT('mapp_api_query_7241_merged'[session_id])
+			VAR avgSeconds = DIVIDE(secondsTotal, sessionCount)
+			VAR minutes = INT(avgSeconds / 60)
+			VAR seconds = MOD(avgSeconds, 60)
+			RETURN
+			IF(
+			    ISBLANK(avgSeconds),
+			    BLANK(),
+			    FORMAT(minutes, "00") & ":" & FORMAT(seconds, "00")
+			)
+		lineageTag: 7564a3aa-0ac6-41ae-8a6e-3559cec052dc
+
+	measure avg_duration_per_user_mmss = ```
+			
+			VAR secondsTotal = SUM('mapp_api_query_7241_merged'[pages_duration_01])
+			VAR userCount = DISTINCTCOUNT('mapp_api_query_7241_merged'[user_id_05])
+			VAR avgSeconds = DIVIDE(secondsTotal, userCount)
+			VAR minutes = INT(avgSeconds / 60)
+			VAR seconds = MOD(avgSeconds, 60)
+			RETURN
+			FORMAT(minutes, "00") & ":" & FORMAT(seconds, "00")
+			
+			```
+		lineageTag: 14934a4e-d840-4edc-92e7-95504ad62318
+
+	measure sessions_per_user = VAR sessionCount = DISTINCTCOUNT('mapp_api_query_7241_merged'[session_id]) VAR userCount = DISTINCTCOUNT('mapp_api_query_7241_merged'[user_id_05]) RETURN DIVIDE(sessionCount, userCount)
+		lineageTag: 8d6492bc-e432-4056-8e20-3bceedc4faa3
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure interactions_per_user = ```
+			
+			VAR totalInteractions = 
+			    SUM('mapp_api_query_7241_merged'[events_clicks_01]) +
+			    SUM('mapp_api_query_7241_merged'[media_views_01]) +
+			    SUM('mapp_api_query_7241_merged'[pages_pageImpressions_05])
+			VAR userCount = DISTINCTCOUNT('mapp_api_query_7241_merged'[user_id_05])
+			RETURN DIVIDE(totalInteractions, userCount)
+			
+			```
+		lineageTag: 605a4ebe-36f4-474f-8d6b-0185b95a9faa
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure Returning_Visitors =
+			
+			CALCULATE(
+			        DISTINCTCOUNT(mapp_api_query_7241_merged[user_id_05]),
+			        VALUE(mapp_api_query_7241_merged[visitors_newVsReturning_02]) = 0
+			    )
+		formatString: 0
+		lineageTag: 58175d14-0812-4b55-862c-e6ba134b6ab5
+
+	measure Returning_Visit_Share = ```
+			
+			VAR AllVisits =
+			    DISTINCTCOUNT ( mapp_api_query_7241_merged[session_id] )
+			VAR ReturningVisits =
+			    CALCULATE (
+			        DISTINCTCOUNT ( mapp_api_query_7241_merged[session_id] ),
+			        TRIM ( mapp_api_query_7241_merged[visitors_newVsReturning_02] ) = "0"
+			    )
+			VAR ZeroInContext =
+			    CALCULATE (
+			        COUNTROWS (
+			            FILTER (
+			                VALUES ( mapp_api_query_7241_merged[visitors_newVsReturning_02] ),
+			                TRIM ( mapp_api_query_7241_merged[visitors_newVsReturning_02] ) = "0"
+			            )
+			        )
+			    ) > 0
+			RETURN
+			IF ( NOT ZeroInContext, BLANK(), DIVIDE ( ReturningVisits, AllVisits, BLANK() ) )
+			
+			```
+		formatString: 0%;-0%;0%
+		lineageTag: 16d35321-a18b-4cf9-9cf5-b9d56f7fa25c
+
+	measure Visits_per_ReturningVisitor = ```
+			
+			VAR ReturningVisitors =  
+			    CALCULATE(
+			        DISTINCTCOUNT('mapp_api_query_7241_merged'[user_id_05]),
+			        VALUE('mapp_api_query_7241_merged'[visitors_newVsReturning_02]) = 0
+			    )
+			
+			VAR ReturningVisits = 
+			    CALCULATE(
+			        DISTINCTCOUNT('mapp_api_query_7241_merged'[session_id]),
+			        VALUE('mapp_api_query_7241_merged'[visitors_newVsReturning_02]) = 0
+			    )
+			
+			RETURN 
+			DIVIDE(ReturningVisits, ReturningVisitors)
+			```
+		formatString: 0.00
+		lineageTag: 1f24e56d-c39a-4752-9484-cea230500033
+
+	measure Average_Weekly_Visits_By_Month = ```
+			
+			VAR WeeklyVisitsTable =
+			    ADDCOLUMNS(
+			        SUMMARIZE(
+			            'Z - DateTable',
+			            'Z - DateTable'[WeekMidWednesday]
+			        ),
+			        "WeekVisits",
+			        CALCULATE(
+			            DISTINCTCOUNT('mapp_api_query_7241_merged'[session_id]),
+			            FILTER(
+			                'mapp_api_query_7241_merged',
+			                'mapp_api_query_7241_merged'[visit_date] >= 'Z - DateTable'[WeekMidWednesday] - 3
+			                &&
+			                'mapp_api_query_7241_merged'[visit_date] <= 'Z - DateTable'[WeekMidWednesday] + 3
+			            )
+			        ),
+			        "WeekMonth",
+			        FORMAT('Z - DateTable'[WeekMidWednesday], "YYYY-MM")
+			    )
+			
+			VAR SelectedMonth = SELECTEDVALUE('Z - DateTable'[Month])
+			
+			RETURN
+			    AVERAGEX(
+			        FILTER(
+			            WeeklyVisitsTable,
+			            [WeekMonth] = SelectedMonth
+			        ),
+			        [WeekVisits]
+			    )
+			
+			```
+		formatString: 0
+		lineageTag: 8d9e490d-058f-4750-ae91-b895ba89d89a
+
+	measure Visits_Last24Months_2 = ```
+			
+			VAR ReferenceDate =
+			    MAX ( 'Z - DateTable'[Date] )
+			VAR Last24Months =
+			    DATESINPERIOD (
+			        'Z - DateTable'[Date],
+			        ReferenceDate,
+			        -25,
+			        MONTH
+			    )
+			
+			-- gleiche Weekly-Tabelle wie zuvor, aber nur im Zeitfenster
+			VAR WeeklyVisitsTable =
+			    ADDCOLUMNS (
+			        FILTER (
+			            SUMMARIZE ( 'Z - DateTable', 'Z - DateTable'[WeekMidWednesday] ),
+			            'Z - DateTable'[WeekMidWednesday] IN Last24Months
+			        ),
+			        "WeekVisits",
+			            CALCULATE (
+			                DISTINCTCOUNT ( 'mapp_api_query_7241_merged'[session_id] ),
+			                DATESBETWEEN (
+			                    'Z - DateTable'[Date],
+			                    'Z - DateTable'[WeekMidWednesday] - 3,
+			                    'Z - DateTable'[WeekMidWednesday] + 3
+			                )
+			            ),
+			        "WeekMonth",
+			            FORMAT ( 'Z - DateTable'[WeekMidWednesday], "YYYY-MM" )
+			    )
+			RETURN
+			    AVERAGEX ( WeeklyVisitsTable, [WeekVisits] )
+			
+			```
+		lineageTag: 969af1cb-f27b-4ae7-9815-1ffe1e2b382b
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Visits (Week Total by WeekMidWednesday)' = ```
+			
+			VAR WeeksInContext =
+			    VALUES ( 'Z - DateTable'[WeekMidWednesday] )
+			RETURN
+			SUMX (
+			    WeeksInContext,
+			    CALCULATE (
+			        DISTINCTCOUNT ( 'mapp_api_query_7241_merged'[session_id] ),
+			        ALLEXCEPT ( 'Z - DateTable', 'Z - DateTable'[WeekMidWednesday] )
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: c9711e18-6776-434b-acdd-8e7c5a6c245d
+
+	measure 'Visits (Week Total – Wed only)' = ```
+			
+			VAR HasWednesday =
+			    CALCULATE (
+			        COUNTROWS ( 'Z - DateTable' ),
+			        KEEPFILTERS ( 'Z - DateTable'[Weekday Number] = 3 )   -- 3 = Mittwoch bei WEEKDAY(...,2)
+			    ) > 0
+			RETURN
+			IF (
+			    NOT HasWednesday,
+			    BLANK(),
+			    VAR WeeksInContext =
+			        VALUES ( 'Z - DateTable'[WeekMidWednesday] )
+			    RETURN
+			    SUMX (
+			        WeeksInContext,
+			        CALCULATE (
+			            DISTINCTCOUNT ( 'mapp_api_query_7241_merged'[session_id] ),
+			            ALLEXCEPT ( 'Z - DateTable', 'Z - DateTable'[WeekMidWednesday] )
+			        )
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: 3f878a81-a08b-4758-bfa3-87b75d381972
+
+	measure 'Visits (Week Total – Wed only, Avg Total)' = ```
+			
+			VAR HasWednesday =
+			    CALCULATE (
+			        COUNTROWS ( 'Z - DateTable' ),
+			        KEEPFILTERS ( 'Z - DateTable'[Weekday Number] = 3 )   -- Mittwoch
+			    ) > 0
+			RETURN
+			IF (
+			    NOT HasWednesday,
+			    BLANK(),
+			    IF (
+			        ISINSCOPE ( 'Z - DateTable'[WeekMidWednesday] ),
+			        // Zeile: Wochenwert
+			        CALCULATE (
+			            DISTINCTCOUNT ( 'mapp_api_query_7241_merged'[session_id] ),
+			            ALLEXCEPT ( 'Z - DateTable', 'Z - DateTable'[WeekMidWednesday] )
+			        ),
+			        // Total: Durchschnitt über alle Wochen in der aktuellen Auswahl
+			        VAR WeekList = VALUES ( 'Z - DateTable'[WeekMidWednesday] )
+			        RETURN
+			            AVERAGEX (
+			                WeekList,
+			                CALCULATE (
+			                    DISTINCTCOUNT ( 'mapp_api_query_7241_merged'[session_id] ),
+			                    ALLEXCEPT ( 'Z - DateTable', 'Z - DateTable'[WeekMidWednesday] )
+			                )
+			            )
+			    )
+			)
+			
+			```
+		formatString: 0
+		lineageTag: bbdfcf71-f2ef-4c13-bb91-505e8a3bd5de
+
+	column session_id
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 26053d99-ce22-44a3-84b5-03ff6c8caed2
+		summarizeBy: none
+		sourceColumn: session_id
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions__01
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 2b7ed4ca-8f42-4790-9e2c-7e92a5a6a91e
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions__01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column events_clicks__01
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: fcc47ca3-2555-4d5f-a0a6-baf3230929ab
+		summarizeBy: sum
+		sourceColumn: events_clicks__01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_duration__01
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 9948204d-0738-4856-94a3-020323692288
+		summarizeBy: sum
+		sourceColumn: pages_duration__01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_formula_1000222__01
+		dataType: double
+		sourceProviderType: double
+		lineageTag: 978e564f-c24f-480d-92b1-2595f68e62fe
+		summarizeBy: sum
+		sourceColumn: custom_formula_1000222__01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column media_playbackTime__01
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b569c44f-fb02-463a-bce7-2d67febc7f5e
+		summarizeBy: sum
+		sourceColumn: media_playbackTime__01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_formula_1000192__01
+		dataType: double
+		sourceProviderType: double
+		lineageTag: 9d98256c-a965-44a7-958b-73eed9fb124a
+		summarizeBy: sum
+		sourceColumn: custom_formula_1000192__01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column user_daysBetweenContacts_sum__01
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d2af10f2-ccb2-47ab-9d1e-c1373a449742
+		summarizeBy: sum
+		sourceColumn: user_daysBetweenContacts_sum__01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column media_views__01
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 1dc7e94f-12ec-4833-9639-1846e2dc47e9
+		summarizeBy: sum
+		sourceColumn: media_views__01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_days__02
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 80b1b692-3539-4047-a8c7-a2e1636515f5
+		summarizeBy: none
+		sourceColumn: time_days__02
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column visit_time__02
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 88c9b78d-74b7-4115-b6d4-210b555f25a3
+		summarizeBy: none
+		sourceColumn: visit_time__02
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column visitors_newVsReturning__02
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 2656cddb-57c4-479c-a816-f09b2421bc27
+		summarizeBy: none
+		sourceColumn: visitors_newVsReturning__02
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions__02
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 8417a2b3-55ac-4fc2-8162-59537ab933fb
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions__02
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_fullName__03
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: e74ba829-ea05-40ae-90d1-84810bfddb49
+		summarizeBy: none
+		sourceColumn: device_fullName__03
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_name__03
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: eb90a330-ee30-44e2-b6a7-16f1e5f2e81d
+		summarizeBy: none
+		sourceColumn: device_name__03
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_model__03
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 7edf634e-1eae-438a-9aaf-e2f9635fa58d
+		summarizeBy: none
+		sourceColumn: device_model__03
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_family__03
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 424770b5-f330-4e8f-b15d-76c0bedae858
+		summarizeBy: none
+		sourceColumn: device_family__03
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_deviceClass__03
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 48ee99c1-fe6f-4b6f-a728-bbdf13a51d24
+		summarizeBy: none
+		sourceColumn: device_deviceClass__03
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions__03
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: a30b2db5-94ee-4441-a4f4-3d2b469006c0
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions__03
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_city__04
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: a24f99c5-aed5-4a50-ade7-2c51e77c6a73
+		summarizeBy: none
+		sourceColumn: location_city__04
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_region__04
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 9522193b-d4cc-4ccb-be42-b9ed9fb72bb3
+		summarizeBy: none
+		sourceColumn: location_region__04
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_country__04
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 74fda7b3-fe3c-4875-9376-987aaa4b799a
+		summarizeBy: none
+		sourceColumn: location_country__04
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions__04
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: d2e19ba8-3a0e-4569-9f28-bb99bc6d1a41
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions__04
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id__05
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 30e1344c-2ff1-4aee-8cd9-9a386b5e5a78
+		summarizeBy: none
+		sourceColumn: user_id__05
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions__05
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: b6312f95-93d8-426b-a0cd-aa305e13b63a
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions__05
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions_01
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6332d97a-9f65-4f10-9e63-af1cb93e984c
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions_01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column events_clicks_01
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6509ecb2-2ac5-4d2f-ba2f-3551f9eb3421
+		summarizeBy: sum
+		sourceColumn: events_clicks_01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_duration_01
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: c00aa21a-04ea-462d-ba5e-1b414a74e46b
+		summarizeBy: sum
+		sourceColumn: pages_duration_01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_formula_1000222_01
+		dataType: double
+		sourceProviderType: double
+		lineageTag: a7483061-aa28-4482-b3cf-e057ec4ae390
+		summarizeBy: sum
+		sourceColumn: custom_formula_1000222_01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column media_playbackTime_01
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 1e17ce3a-17b9-4934-bf1d-06d6cb30e3b8
+		summarizeBy: sum
+		sourceColumn: media_playbackTime_01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column custom_formula_1000192_01
+		dataType: double
+		sourceProviderType: double
+		lineageTag: c7607aed-4f51-44d7-a519-970a86aa74be
+		summarizeBy: sum
+		sourceColumn: custom_formula_1000192_01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column user_daysBetweenContacts_sum_01
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 739f8570-004f-4a2b-bd64-478aeb94b18d
+		summarizeBy: sum
+		sourceColumn: user_daysBetweenContacts_sum_01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column media_views_01
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 82d53e8e-bab1-4225-a8fe-4743c16fc054
+		summarizeBy: sum
+		sourceColumn: media_views_01
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column time_days_02
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 7da6dafd-1de7-4794-b202-19bad98b3199
+		summarizeBy: none
+		sourceColumn: time_days_02
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column visit_time_02
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: ae42e549-3d3b-47a6-8ee8-9b62885e69e2
+		summarizeBy: none
+		sourceColumn: visit_time_02
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column visitors_newVsReturning_02
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: a8a75312-d773-49cf-a01d-88f44dc49ba9
+		summarizeBy: none
+		sourceColumn: visitors_newVsReturning_02
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions_02
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 8d25717e-4ef8-48f8-8683-f3ef71d9ecbc
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions_02
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_fullName_03
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: a290867a-9f2d-4486-a626-dca33476b3ae
+		summarizeBy: none
+		sourceColumn: device_fullName_03
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_name_03
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 74b980dd-69cc-41df-8b90-c3cf709bc0f1
+		summarizeBy: none
+		sourceColumn: device_name_03
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_model_03
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 033d58ba-43f4-4e64-9412-ccb35461dd59
+		summarizeBy: none
+		sourceColumn: device_model_03
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_family_03
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 58dd8a5a-ea6e-4970-a2aa-3b3b83360620
+		summarizeBy: none
+		sourceColumn: device_family_03
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column device_deviceClass_03
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 6059f1c3-7eae-4eb4-a36b-6e24aa256b66
+		summarizeBy: none
+		sourceColumn: device_deviceClass_03
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions_03
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 0d910371-f118-4000-96e2-f6218bf17c97
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions_03
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_city_04
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 44dae22c-c974-451f-9c25-66cb14d677ff
+		summarizeBy: none
+		sourceColumn: location_city_04
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_region_04
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: c85e653c-c2fb-4be9-be62-9ef0c482e164
+		summarizeBy: none
+		sourceColumn: location_region_04
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column location_country_04
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 0085dd36-196d-4ad3-8147-fabddae3d072
+		summarizeBy: none
+		sourceColumn: location_country_04
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions_04
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: 6fe83a30-fc26-4994-9a45-6f19eb713f13
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions_04
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column user_id_05
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 6ec979db-64ef-4db9-8389-202b1ae2239a
+		summarizeBy: none
+		sourceColumn: user_id_05
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions_05
+		dataType: int64
+		formatString: 0
+		sourceProviderType: bigint
+		lineageTag: e8894813-98c3-4f9c-a512-73e3cdf4c06e
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions_05
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column visit_time_iso
+		dataType: string
+		sourceProviderType: nvarchar(65535)
+		lineageTag: 484e44ac-928a-4b96-9dca-7bd28b70b6c9
+		summarizeBy: none
+		sourceColumn: visit_time_iso
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column visit_time_ts
+		dataType: dateTime
+		formatString: yyyy"-"mm"-"dd"T"hh":"nn":"ss
+		sourceProviderType: datetime2
+		lineageTag: 6c259593-6ac6-4383-8582-cdcef9e3f55f
+		summarizeBy: none
+		sourceColumn: visit_time_ts
+
+		variation Variation
+			isDefault
+			relationship: 39a2ea9f-8851-4a9f-b1a8-5788accdfa32
+			defaultHierarchy: LocalDateTable_c35423b2-99b5-493d-ab3b-8094dfc38396.Datumshierarchie
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isDateTimeCustom":true}
+
+	column visit_date
+		dataType: dateTime
+		formatString: Long Date
+		sourceProviderType: date
+		lineageTag: af7a561c-7bcb-4d2f-81fe-530169914e23
+		summarizeBy: none
+		sourceColumn: visit_date
+
+		variation Variation
+			isDefault
+			relationship: db8dc99b-cc66-40a8-995d-febe7f658fa0
+			defaultHierarchy: LocalDateTable_3a705272-88c8-4f26-8aa6-095a3aa33ba7.Datumshierarchie
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column 'visit_time_ts - Kopie'
+		dataType: dateTime
+		formatString: General Date
+		sourceProviderType: datetime2
+		lineageTag: f2975af5-cfd8-4db7-a6e9-feabd8225b99
+		summarizeBy: none
+		sourceColumn: visit_time_ts - Kopie
+
+		variation Variation
+			isDefault
+			relationship: cd3cdb0f-4571-4e99-b88f-18cb3ebf79a0
+			defaultHierarchy: LocalDateTable_5fa94160-e98a-494b-824b-5edc595e6fa2.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column Days_Bin = ```
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(mapp_api_query_7241_merged[user_daysBetweenContacts_sum_01]), "No return visit",
+			    mapp_api_query_7241_merged[user_daysBetweenContacts_sum_01] <= 1, "0–1 days",
+			    mapp_api_query_7241_merged[user_daysBetweenContacts_sum_01] <= 3, "2–3 days",
+			    mapp_api_query_7241_merged[user_daysBetweenContacts_sum_01] <= 7, "4–7 days",
+			    mapp_api_query_7241_merged[user_daysBetweenContacts_sum_01] <= 30, "8–30 days",
+			    "31+ days"
+			)
+			
+			```
+		lineageTag: 82ebd049-02f0-495f-ba3a-3fc7d080b3c2
+		summarizeBy: none
+		sortByColumn: Days_Bin_Order
+
+		changedProperty = SortByColumn
+
+		annotation SummarizationSetBy = Automatic
+
+	column Days_Bin_Order =
+			
+			SWITCH(
+			    TRUE(),
+			    ISBLANK(mapp_api_query_7241_merged[user_daysBetweenContacts_sum_01]), 0,
+			    mapp_api_query_7241_merged[user_daysBetweenContacts_sum_01] <= 1, 1,
+			    mapp_api_query_7241_merged[user_daysBetweenContacts_sum_01] <= 3, 2,
+			    mapp_api_query_7241_merged[user_daysBetweenContacts_sum_01] <= 7, 3,
+			    mapp_api_query_7241_merged[user_daysBetweenContacts_sum_01] <= 30, 4,
+			    5
+			)
+		formatString: 0
+		lineageTag: 514e6a98-951b-45cf-8463-6334b6a48131
+		summarizeBy: sum
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Device Class Label' = ```
+			
+			SWITCH(
+			    TRUE(),
+			    'mapp_api_query_7241_merged'[device_deviceClass_03] = "1", "Mobile",
+			    'mapp_api_query_7241_merged'[device_deviceClass_03] = "2", "Tablet",
+			    'mapp_api_query_7241_merged'[device_deviceClass_03] = "100", "Other / Unknown",
+			    "Unbekannt"
+			)
+			
+			```
+		lineageTag: e2c51d05-3271-4b33-9ca4-bf25f95421da
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'New VS Returning' =
+			
+			IF (
+			    mapp_api_query_7241_merged[visitors_newVsReturning_02] = "0",
+			    "returning",
+			    "new"
+			)
+		lineageTag: 9e866676-819c-4bb8-acc4-1cfa427a88d0
+		summarizeBy: none
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_merged = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_merged_Table = swiplus_Schema{[Name="mapp_api_query_7241_merged",Kind="Table"]}[Data],
+				    #"Duplizierte Spalte" = Table.DuplicateColumn(mapp_api_query_7241_merged_Table, "visit_time_ts", "visit_time_ts - Kopie"),
+				    #"Entfernte Duplikate" = Table.Distinct(#"Duplizierte Spalte", {"session_id"})
+				in
+				    #"Entfernte Duplikate"
+
+	changedProperty = IsHidden
+
+	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
+
