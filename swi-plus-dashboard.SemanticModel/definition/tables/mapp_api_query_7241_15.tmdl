@@ -1,0 +1,55 @@
+table mapp_api_query_7241_15
+	lineageTag: 3a4b7b79-6abb-400f-bcba-da9d13a82aaa
+
+	column session_id
+		dataType: string
+		lineageTag: 9ca86aaa-eb30-4cb9-b11d-ea5a4b902a1c
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_62
+		dataType: string
+		lineageTag: 3f6057db-a948-4901-a41f-659d3f5ad41d
+		summarizeBy: none
+		sourceColumn: page_parameter_text_62
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'App Language'
+		dataType: string
+		lineageTag: 1d156823-9992-40cd-8c38-19b0281e5412
+		summarizeBy: none
+		sourceColumn: App Language
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_15 = m
+		mode: import
+		source = ```
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_08_Table = swiplus_Schema{[Name="mapp_api_query_7241_15",Kind="Table"]}[Data],
+				    #"Gefilterte Zeilen" = Table.SelectRows(mapp_api_query_7241_08_Table, each true),
+				    #"Duplizierte Spalte" = Table.DuplicateColumn(#"Gefilterte Zeilen", "page_parameter_text_62", "page_parameter_text_62 - Kopie"),
+				    #"Spalte nach Position teilen" = Table.SplitColumn(#"Duplizierte Spalte", "page_parameter_text_62 - Kopie", Splitter.SplitTextByPositions({0, 2}, false), {"page_parameter_text_62 - Kopie.1", "page_parameter_text_62 - Kopie.2"}),
+				    #"Entfernte Spalten" = Table.RemoveColumns(#"Spalte nach Position teilen",{"page_parameter_text_62 - Kopie.2"}),
+				    #"Umbenannte Spalten" = Table.RenameColumns(#"Entfernte Spalten",{{"page_parameter_text_62 - Kopie.1", "App Language"}}),
+				    #"Ersetzte Werte" = Table.ReplaceValue(#"Umbenannte Spalten", each [App Language],
+				    each if List.Contains({"de","en","fr","it"}, Text.Lower([App Language])) 
+				         then Text.Lower([App Language]) 
+				         else "other/unknown",
+				    Replacer.ReplaceValue,
+				    {"App Language"}
+				)
+				in
+				    #"Ersetzte Werte"
+				```
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

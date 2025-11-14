@@ -1,0 +1,65 @@
+table articles_contributors_base
+	lineageTag: 19695aa0-2e65-46a4-8a41-4caad1c9ec14
+
+	column article_id
+		dataType: string
+		lineageTag: fc032eb5-bdf7-44b1-a0d3-9dc3f4dc8541
+		summarizeBy: none
+		sourceColumn: article_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pos
+		dataType: int64
+		formatString: 0
+		lineageTag: 27723730-837b-44ff-9d5e-aa12b17c000b
+		summarizeBy: sum
+		sourceColumn: pos
+
+		annotation SummarizationSetBy = Automatic
+
+	column contrib_name
+		dataType: string
+		lineageTag: 94a8ddea-7e00-4441-af35-fec6fad55c24
+		summarizeBy: none
+		sourceColumn: contrib_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column person_name
+		dataType: string
+		lineageTag: e465f294-e788-4372-b229-71aa53baf3af
+		summarizeBy: none
+		sourceColumn: person_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column team_name
+		dataType: string
+		lineageTag: 8628dcb2-9362-4d05-b522-faf198738451
+		summarizeBy: none
+		sourceColumn: team_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column department_name
+		dataType: string
+		lineageTag: 078e534a-b96e-415d-857c-7f9047531870
+		summarizeBy: none
+		sourceColumn: department_name
+
+		annotation SummarizationSetBy = Automatic
+
+	partition articles_contributors_base = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", [Catalog = "swi_audience_prd", Database = "pdp_articles_v2_silver"]),
+				    keywords_pdp_articles_v2_silver_swi_audience_prd = Quelle{[Item="contributors_base",Schema="pdp_articles_v2_silver",Catalog="swi_audience_prd"]}[Data]
+				in
+				    keywords_pdp_articles_v2_silver_swi_audience_prd
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

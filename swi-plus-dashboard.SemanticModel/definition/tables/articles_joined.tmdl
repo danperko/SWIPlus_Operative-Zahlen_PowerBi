@@ -1,0 +1,433 @@
+table articles_joined
+	lineageTag: e2ab3c42-2321-446e-aef5-84b541a5ea0d
+
+	column article_id
+		dataType: string
+		lineageTag: d7edb290-8c2b-4155-81a9-0c66db798327
+		summarizeBy: none
+		sourceColumn: article_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column publisher
+		dataType: string
+		lineageTag: 9a3557ee-48f3-42e3-bd25-6b84e472c14f
+		summarizeBy: none
+		sourceColumn: publisher
+
+		annotation SummarizationSetBy = Automatic
+
+	column provenance
+		dataType: string
+		lineageTag: d3069ae0-df67-4bba-8db1-d93487605b9c
+		summarizeBy: none
+		sourceColumn: provenance
+
+		annotation SummarizationSetBy = Automatic
+
+	column releaseDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 76c4411a-654f-40a6-b7c1-6d2e23918576
+		summarizeBy: none
+		sourceColumn: releaseDate
+
+		variation Variation
+			isDefault
+			relationship: 6fbae692-6ecb-44da-9dc6-eda21154e638
+			defaultHierarchy: LocalDateTable_6a99ac1e-a20d-413a-8320-881c49de6f07.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column modificationDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 222e8bfd-9887-4b04-8c1c-3e88c66459bd
+		summarizeBy: none
+		sourceColumn: modificationDate
+
+		variation Variation
+			isDefault
+			relationship: e81b7190-e371-4f4d-a4e0-8a9d97f9f96e
+			defaultHierarchy: LocalDateTable_04b17f3a-d006-4968-a8b3-ef3a2dfd0301.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column topic
+		dataType: string
+		lineageTag: a36e6f94-229f-4178-99ee-f4deaa9dd29a
+		summarizeBy: none
+		sourceColumn: topic
+
+		annotation SummarizationSetBy = Automatic
+
+	column kicker_default
+		dataType: string
+		lineageTag: d69281fb-4666-4c81-9d10-e30bc913dbd7
+		summarizeBy: none
+		sourceColumn: kicker_default
+
+		annotation SummarizationSetBy = Automatic
+
+	column lead_default
+		dataType: string
+		lineageTag: 4ce7a2e5-9db0-40b0-9882-38cee25aa3f3
+		summarizeBy: none
+		sourceColumn: lead_default
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_partition
+		dataType: int64
+		formatString: 0
+		lineageTag: 6ca1eaa0-dd32-460d-a6fc-7d263d647963
+		summarizeBy: sum
+		sourceColumn: source_partition
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_offset
+		dataType: int64
+		formatString: 0
+		lineageTag: 92439502-23bc-46b8-89d8-88dc61954555
+		summarizeBy: sum
+		sourceColumn: source_offset
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 977f2fa3-6247-404f-9a47-0c7d7967ebc6
+		summarizeBy: none
+		sourceColumn: source_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 665fe289-0614-4ef0-8289-ef3b1107ab6a
+			defaultHierarchy: LocalDateTable_35245474-8369-43a9-847a-1eaf8dfe7e71.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column atomic_ts
+		dataType: int64
+		formatString: 0
+		lineageTag: 38ce742d-8010-44e1-9b42-723ed02046d3
+		summarizeBy: sum
+		sourceColumn: atomic_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_10
+		dataType: string
+		lineageTag: 86af59ee-554f-48da-b7aa-b68e9c1cef8c
+		summarizeBy: none
+		sourceColumn: page_category_text_10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_contributors_base.article_id'
+		dataType: string
+		lineageTag: 846fee6a-58ec-46cf-a9e4-067f8ba5de34
+		summarizeBy: none
+		sourceColumn: articles_contributors_base.article_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_contributors_base.pos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 7b48d760-6841-4ad6-91c6-10b0681aca8d
+		summarizeBy: sum
+		sourceColumn: articles_contributors_base.pos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_contributors_base.contrib_name'
+		dataType: string
+		lineageTag: e6e80f86-70c0-4b83-9222-ba288ca74db1
+		summarizeBy: none
+		sourceColumn: articles_contributors_base.contrib_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_contributors_base.person_name'
+		dataType: string
+		lineageTag: 782cc1dd-cb82-44d4-90a9-b1a6694eb0f2
+		summarizeBy: none
+		sourceColumn: articles_contributors_base.person_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_contributors_base.team_name'
+		dataType: string
+		lineageTag: 1b4d92b0-cce9-4a2b-938e-b899b3f0fe5a
+		summarizeBy: none
+		sourceColumn: articles_contributors_base.team_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_contributors_base.department_name'
+		dataType: string
+		lineageTag: 7bccfa79-0453-475e-8ce7-3e06a2f45dff
+		summarizeBy: none
+		sourceColumn: articles_contributors_base.department_name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_keywords.article_id'
+		dataType: string
+		lineageTag: 04a8f649-d13a-459f-9dc4-a6d3b8e49829
+		summarizeBy: none
+		sourceColumn: articles_keywords.article_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_keywords.pos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 48e083b1-17c3-4ba0-b9b5-8fa081d46d12
+		summarizeBy: sum
+		sourceColumn: articles_keywords.pos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_keywords.keyword'
+		dataType: string
+		lineageTag: 40d4e736-badd-4092-9450-7d621b2511f4
+		summarizeBy: none
+		sourceColumn: articles_keywords.keyword
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_links.article_id'
+		dataType: string
+		lineageTag: d985c365-e0bb-4ecc-b547-9a6a667eb2dc
+		summarizeBy: none
+		sourceColumn: articles_resources_links.article_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_links.pos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 432ba030-5b00-43dd-9918-4b3354990c1c
+		summarizeBy: sum
+		sourceColumn: articles_resources_links.pos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_links.name'
+		dataType: string
+		lineageTag: 2dd5800f-d010-44f2-be9f-adbe26ff4260
+		summarizeBy: none
+		sourceColumn: articles_resources_links.name
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_links.url'
+		dataType: string
+		lineageTag: ed3b97b3-d4b7-4bc5-826d-6c470b0c544a
+		dataCategory: WebUrl
+		summarizeBy: none
+		sourceColumn: articles_resources_links.url
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_links.urn'
+		dataType: string
+		lineageTag: 7278fa90-09c3-4320-a336-924d6ee25101
+		summarizeBy: none
+		sourceColumn: articles_resources_links.urn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.article_id'
+		dataType: string
+		lineageTag: 988891a1-4c03-4fb9-bb34-2be6ae782e5d
+		summarizeBy: none
+		sourceColumn: articles_resources_pictures.article_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.pos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 72bb25b9-28df-4605-ba13-8e34c3defee4
+		summarizeBy: sum
+		sourceColumn: articles_resources_pictures.pos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.name_language'
+		dataType: string
+		lineageTag: 3878aa25-8ae2-4dce-a971-cebe8813a2f9
+		summarizeBy: none
+		sourceColumn: articles_resources_pictures.name_language
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.name_content'
+		dataType: string
+		lineageTag: 7789dfcb-f02a-47b9-8bfc-ab83bbb83ea3
+		summarizeBy: none
+		sourceColumn: articles_resources_pictures.name_content
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.description_language'
+		dataType: string
+		lineageTag: 0448911d-73ef-4a6a-888b-41747c7935fb
+		summarizeBy: none
+		sourceColumn: articles_resources_pictures.description_language
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.description_content'
+		dataType: string
+		lineageTag: 7f090873-49f8-4fc1-bf39-37e3d688ab36
+		summarizeBy: none
+		sourceColumn: articles_resources_pictures.description_content
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.url'
+		dataType: string
+		lineageTag: 380a24c9-7f43-42d3-9b38-80b0eb2baea5
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: articles_resources_pictures.url
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.urn'
+		dataType: string
+		lineageTag: 15c06f51-1783-42ae-886b-9444986079fd
+		summarizeBy: none
+		sourceColumn: articles_resources_pictures.urn
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.width'
+		dataType: int64
+		formatString: 0
+		lineageTag: 3c340ab9-f71b-474d-9ab9-ec64cbbe0194
+		summarizeBy: sum
+		sourceColumn: articles_resources_pictures.width
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.height'
+		dataType: int64
+		formatString: 0
+		lineageTag: 05667259-d559-48c5-92cf-4a1a7c0bb17c
+		summarizeBy: sum
+		sourceColumn: articles_resources_pictures.height
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.copyright'
+		dataType: string
+		lineageTag: 81dd56ee-2ef6-4a1a-9b38-3d1e0a92cb15
+		summarizeBy: none
+		sourceColumn: articles_resources_pictures.copyright
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.alt_language'
+		dataType: string
+		lineageTag: 889c6c42-055a-4412-9c3a-5d87a6c52609
+		summarizeBy: none
+		sourceColumn: articles_resources_pictures.alt_language
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.alt_content'
+		dataType: string
+		lineageTag: 53dc308f-3631-46a1-acc1-318d2d0ec24a
+		summarizeBy: none
+		sourceColumn: articles_resources_pictures.alt_content
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_resources_pictures.usage_sourceValue'
+		dataType: string
+		lineageTag: de909572-7544-4b97-be39-a13453812f4d
+		summarizeBy: none
+		sourceColumn: articles_resources_pictures.usage_sourceValue
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_title_items.article_id'
+		dataType: string
+		lineageTag: a75c0b21-bf56-4de7-af7a-e02cf9e04a51
+		summarizeBy: none
+		sourceColumn: articles_title_items.article_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_title_items.pos'
+		dataType: int64
+		formatString: 0
+		lineageTag: 5d40d0be-736b-459c-abed-fdd2ccbe5f45
+		summarizeBy: sum
+		sourceColumn: articles_title_items.pos
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_title_items.language'
+		dataType: string
+		lineageTag: ac1f6c41-1239-4b3b-9e7a-263938feabaa
+		summarizeBy: none
+		sourceColumn: articles_title_items.language
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_title_items.content'
+		dataType: string
+		lineageTag: c41549bc-451a-4064-aaf8-92a695623223
+		summarizeBy: none
+		sourceColumn: articles_title_items.content
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_title_items.formatted_content'
+		dataType: string
+		lineageTag: 2ad654c3-ac15-48e8-a94e-15243a3ee20a
+		summarizeBy: none
+		sourceColumn: articles_title_items.formatted_content
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'articles_title_items.contentType'
+		dataType: string
+		lineageTag: 0fa36698-7816-405b-a7d4-101da18029b4
+		summarizeBy: none
+		sourceColumn: articles_title_items.contentType
+
+		annotation SummarizationSetBy = Automatic
+
+	partition articles_joined = m
+		mode: import
+		source =
+				let
+				    Quelle = Table.NestedJoin(coretable_article_id, {"article_id"}, articles_contributors_base, {"article_id"}, "articles_contributors_base", JoinKind.LeftOuter),
+				    #"Erweiterte articles_contributors_base" = Table.ExpandTableColumn(Quelle, "articles_contributors_base", {"article_id", "pos", "contrib_name", "person_name", "team_name", "department_name"}, {"articles_contributors_base.article_id", "articles_contributors_base.pos", "articles_contributors_base.contrib_name", "articles_contributors_base.person_name", "articles_contributors_base.team_name", "articles_contributors_base.department_name"}),
+				    #"Zusammengeführte Abfragen" = Table.NestedJoin(#"Erweiterte articles_contributors_base", {"article_id"}, articles_keywords, {"article_id"}, "articles_keywords", JoinKind.LeftOuter),
+				    #"Erweiterte articles_keywords" = Table.ExpandTableColumn(#"Zusammengeführte Abfragen", "articles_keywords", {"article_id", "pos", "keyword"}, {"articles_keywords.article_id", "articles_keywords.pos", "articles_keywords.keyword"}),
+				    #"Zusammengeführte Abfragen1" = Table.NestedJoin(#"Erweiterte articles_keywords", {"article_id"}, articles_resources_links, {"article_id"}, "articles_resources_links", JoinKind.LeftOuter),
+				    #"Erweiterte articles_resources_links" = Table.ExpandTableColumn(#"Zusammengeführte Abfragen1", "articles_resources_links", {"article_id", "pos", "name", "url", "urn"}, {"articles_resources_links.article_id", "articles_resources_links.pos", "articles_resources_links.name", "articles_resources_links.url", "articles_resources_links.urn"}),
+				    #"Zusammengeführte Abfragen2" = Table.NestedJoin(#"Erweiterte articles_resources_links", {"article_id"}, articles_resources_pictures, {"article_id"}, "articles_resources_pictures", JoinKind.LeftOuter),
+				    #"Erweiterte articles_resources_pictures" = Table.ExpandTableColumn(#"Zusammengeführte Abfragen2", "articles_resources_pictures", {"article_id", "pos", "name_language", "name_content", "description_language", "description_content", "url", "urn", "width", "height", "copyright", "alt_language", "alt_content", "usage_sourceValue"}, {"articles_resources_pictures.article_id", "articles_resources_pictures.pos", "articles_resources_pictures.name_language", "articles_resources_pictures.name_content", "articles_resources_pictures.description_language", "articles_resources_pictures.description_content", "articles_resources_pictures.url", "articles_resources_pictures.urn", "articles_resources_pictures.width", "articles_resources_pictures.height", "articles_resources_pictures.copyright", "articles_resources_pictures.alt_language", "articles_resources_pictures.alt_content", "articles_resources_pictures.usage_sourceValue"}),
+				    #"Zusammengeführte Abfragen3" = Table.NestedJoin(#"Erweiterte articles_resources_pictures", {"article_id"}, articles_title_items, {"article_id"}, "articles_title_items", JoinKind.LeftOuter),
+				    #"Erweiterte articles_title_items" = Table.ExpandTableColumn(#"Zusammengeführte Abfragen3", "articles_title_items", {"article_id", "pos", "language", "content", "formatted_content", "contentType"}, {"articles_title_items.article_id", "articles_title_items.pos", "articles_title_items.language", "articles_title_items.content", "articles_title_items.formatted_content", "articles_title_items.contentType"}),
+				    #"Entfernte Duplikate" = Table.Distinct(#"Erweiterte articles_title_items", {"page_category_text_10"}),
+				    #"Ersetzter Wert" = Table.ReplaceValue(#"Entfernte Duplikate","[""","",Replacer.ReplaceText,{"articles_title_items.content"}),
+				    #"Ersetzter Wert1" = Table.ReplaceValue(#"Ersetzter Wert","""]","",Replacer.ReplaceText,{"articles_title_items.content"})
+				in
+				    #"Ersetzter Wert1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,65 @@
+table mapp_api_query_joined_7241_16_7241_13
+	lineageTag: ca38c208-b4a0-47ea-b9b8-80b037ad98e9
+
+	column session_id
+		dataType: string
+		lineageTag: a531bd34-fb86-4e42-941f-89324a3cfeb9
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		lineageTag: 7873e975-974a-466d-b8e1-d0cb29b9a265
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column PageType_Entry
+		dataType: string
+		lineageTag: 2039f149-f2d5-455b-bbbd-224ff59ca935
+		summarizeBy: none
+		sourceColumn: PageType_Entry
+
+		annotation SummarizationSetBy = Automatic
+
+	column PageType_Follower1
+		dataType: string
+		lineageTag: 9bb4ffb9-d6ca-440d-88b5-48df60a7b43e
+		summarizeBy: none
+		sourceColumn: PageType_Follower1
+
+		annotation SummarizationSetBy = Automatic
+
+	column PageType_Follower2
+		dataType: string
+		lineageTag: ad5af028-a02b-4860-aef1-246b736a77db
+		summarizeBy: none
+		sourceColumn: PageType_Follower2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_joined_7241_16_7241_13 = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_joined_7241_16_7241_13_Table = swiplus_Schema{[Name="mapp_api_query_joined_7241_16_7241_13",Kind="Table"]}[Data],
+				    #"Entfernte Spalten" = Table.RemoveColumns(mapp_api_query_joined_7241_16_7241_13_Table,{"pages_entryPage", "pages_follower1", "pages_follower2", "entryPage_page_parameter_text_62", "entryPage_page_category_text_5", "entryPage_page_parameter_text_52", "entryPage_page_category_text_10", "follower1Page_page_parameter_text_62", "follower1Page_page_category_text_5", "follower1Page_page_parameter_text_52", "follower1Page_page_category_text_10", "follower2Page_page_parameter_text_62", "follower2Page_page_category_text_5", "follower2Page_page_parameter_text_52", "follower2Page_page_category_text_10"}),
+				    #"Ersetzter Wert" = Table.ReplaceValue(#"Entfernte Spalten",null,"exit",Replacer.ReplaceValue,{"follower1Page_page_category_text_12"}),
+				    #"Ersetzter Wert1" = Table.ReplaceValue(#"Ersetzter Wert",null,"exit",Replacer.ReplaceValue,{"follower2Page_page_category_text_12"}),
+				    #"Zusammengeführte Spalten" = Table.CombineColumns(#"Ersetzter Wert1",{"entryPage_page_category_text_12", "entryPage_page_parameter_text_1"},Combiner.CombineTextByDelimiter(":", QuoteStyle.None),"PageType_Entry"),
+				    #"Zusammengeführte Spalten1" = Table.CombineColumns(#"Zusammengeführte Spalten",{"follower1Page_page_category_text_12", "follower1Page_page_parameter_text_1"},Combiner.CombineTextByDelimiter(":", QuoteStyle.None),"PageType_Follower1"),
+				    #"Zusammengeführte Spalten2" = Table.CombineColumns(#"Zusammengeführte Spalten1",{"follower2Page_page_category_text_12", "follower2Page_page_parameter_text_1"},Combiner.CombineTextByDelimiter(":", QuoteStyle.None),"PageType_Follower2")
+				in
+				    #"Zusammengeführte Spalten2"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

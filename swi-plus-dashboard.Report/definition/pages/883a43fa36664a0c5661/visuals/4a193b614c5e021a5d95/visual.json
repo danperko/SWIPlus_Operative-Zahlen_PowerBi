@@ -1,0 +1,114 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "4a193b614c5e021a5d95",
+  "position": {
+    "x": 264.14274631497284,
+    "y": 619.64313421256782,
+    "z": 5000,
+    "height": 100.29480217222653,
+    "width": 947.33902249806044,
+    "tabOrder": 5000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "Achtung:",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " Die Kennzahl "
+                  },
+                  {
+                    "value": "„Total Visits / Week“",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " ist ähnlich, aber "
+                  },
+                  {
+                    "value": "nicht identisch",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": " mit der von der SRG verwendeten Kennzahl. Die entsprechende SRG-Kennzahl findest du hier: ["
+                  },
+                  {
+                    "value": "Link",
+                    "textStyle": {},
+                    "url": "https://srgssr.sharepoint.com/sites/ADIInsightHub/SitePages/GL%20Reports.aspx?CT=1750945197632&OR=OWA-NT-Mail&CID=28b2d7a9-d8ac-8506-b724-723900e86d81"
+                  },
+                  {
+                    "value": "]. "
+                  },
+                  {
+                    "value": "Downloadzahlen ",
+                    "textStyle": {
+                      "fontWeight": "bold"
+                    }
+                  },
+                  {
+                    "value": "sind derzeit nicht automatisiert verfügbar. Die aktuellen Werte finden Sie"
+                  },
+                  {
+                    "value": " in diesem Dashboard",
+                    "textStyle": {},
+                    "url": "https://srgssr.sharepoint.com/sites/SWI_Statistics/SitePages/SWI-Plus.aspx"
+                  },
+                  {
+                    "value": " oder direkt in den App Stores. Eine Anleitung zur manuellen Aktualisierung finden Sie unter:  "
+                  },
+                  {
+                    "value": "https://srgssr.sharepoint.com/sites/SWI_Statistics/SitePages/SWI.aspx#kann-ich-die-zahlen-auch-selbst-aktualisieren",
+                    "textStyle": {},
+                    "url": "https://srgssr.sharepoint.com/sites/SWI_Statistics/SitePages/SWI.aspx#kann-ich-die-zahlen-auch-selbst-aktualisieren"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "background": [
+        {
+          "properties": {
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 8,
+                      "Percent": 0.6
+                    }
+                  }
+                }
+              }
+            },
+            "transparency": {
+              "expr": {
+                "Literal": {
+                  "Value": "34D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  }
+}

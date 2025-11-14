@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "swi-plus-dashboard"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "67037df5-0fa2-46a8-8700-df259853afe2"
+  }
+}

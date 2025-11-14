@@ -1,0 +1,131 @@
+table articles_resources_pictures
+	lineageTag: ac3862d4-ceea-4f77-8b11-45115e2443f8
+
+	column article_id
+		dataType: string
+		lineageTag: 0eda4237-50ca-4f85-85f5-5a5e5e6aadf6
+		summarizeBy: none
+		sourceColumn: article_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pos
+		dataType: int64
+		formatString: 0
+		lineageTag: bb72e07c-352b-4699-89f8-4269997a2ecd
+		summarizeBy: sum
+		sourceColumn: pos
+
+		annotation SummarizationSetBy = Automatic
+
+	column name_language
+		dataType: string
+		lineageTag: 77949c5a-fcee-4c63-80b6-38b36d9b2739
+		summarizeBy: none
+		sourceColumn: name_language
+
+		annotation SummarizationSetBy = Automatic
+
+	column name_content
+		dataType: string
+		lineageTag: 24c5f25e-480d-4c5a-9114-695031c6ef65
+		summarizeBy: none
+		sourceColumn: name_content
+
+		annotation SummarizationSetBy = Automatic
+
+	column description_language
+		dataType: string
+		lineageTag: d94873c2-7562-44d0-8413-8dcc2b283021
+		summarizeBy: none
+		sourceColumn: description_language
+
+		annotation SummarizationSetBy = Automatic
+
+	column description_content
+		dataType: string
+		lineageTag: 3ee8160a-daf3-424a-8861-1b886c47134b
+		summarizeBy: none
+		sourceColumn: description_content
+
+		annotation SummarizationSetBy = Automatic
+
+	column url
+		dataType: string
+		lineageTag: de267c5e-36eb-4f60-bbc9-683300bc27d4
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = Automatic
+
+	column urn
+		dataType: string
+		lineageTag: 6e6cefe4-934b-4d7a-a5b5-ef3ee7bf28f5
+		summarizeBy: none
+		sourceColumn: urn
+
+		annotation SummarizationSetBy = Automatic
+
+	column width
+		dataType: int64
+		formatString: 0
+		lineageTag: 459ce7b9-6ac7-4f3c-b0be-ee1db8b95d0d
+		summarizeBy: sum
+		sourceColumn: width
+
+		annotation SummarizationSetBy = Automatic
+
+	column height
+		dataType: int64
+		formatString: 0
+		lineageTag: 1f814161-deef-4377-85ad-bfea93e62f0c
+		summarizeBy: sum
+		sourceColumn: height
+
+		annotation SummarizationSetBy = Automatic
+
+	column copyright
+		dataType: string
+		lineageTag: 8f88acd1-5cc6-4668-99b0-916989b35f31
+		summarizeBy: none
+		sourceColumn: copyright
+
+		annotation SummarizationSetBy = Automatic
+
+	column alt_language
+		dataType: string
+		lineageTag: f938086a-70dc-4ffb-8c9c-cf7c8a15bb92
+		summarizeBy: none
+		sourceColumn: alt_language
+
+		annotation SummarizationSetBy = Automatic
+
+	column alt_content
+		dataType: string
+		lineageTag: a60328c7-5dc8-450b-a36a-af2f2b105e51
+		summarizeBy: none
+		sourceColumn: alt_content
+
+		annotation SummarizationSetBy = Automatic
+
+	column usage_sourceValue
+		dataType: string
+		lineageTag: 3c28af44-b778-400d-b863-7da6625847ef
+		summarizeBy: none
+		sourceColumn: usage_sourceValue
+
+		annotation SummarizationSetBy = Automatic
+
+	partition articles_resources_pictures = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", [Catalog = "swi_audience_prd", Database = "pdp_articles_v2_silver"]),
+				    keywords_pdp_articles_v2_silver_swi_audience_prd = Quelle{[Item="resources_pictures",Schema="pdp_articles_v2_silver",Catalog="swi_audience_prd"]}[Data]
+				in
+				    keywords_pdp_articles_v2_silver_swi_audience_prd
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

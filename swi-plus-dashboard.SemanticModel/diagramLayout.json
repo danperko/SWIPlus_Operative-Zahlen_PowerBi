@@ -1,0 +1,671 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 7800.7691097505694,
+        "y": 967.515906916938
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 6613.16868302575,
+            "y": 2036.4744784351624
+          },
+          "nodeIndex": "mapp_api_query_7241_merged",
+          "nodeLineageTag": "8086d321-420a-46c4-bcd8-2fbe553a0429",
+          "size": {
+            "height": 300,
+            "width": 442.91299551188968
+          },
+          "zIndex": 38
+        },
+        {
+          "location": {
+            "x": 2321.9835708210258,
+            "y": 2821.9055740219242
+          },
+          "nodeIndex": "mapp_api_query_7241_11",
+          "nodeLineageTag": "426b2675-bf8d-4a82-8477-d1e31f884a52",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 21
+        },
+        {
+          "location": {
+            "x": 678.86344074756926,
+            "y": 2998.0822133936049
+          },
+          "nodeIndex": "mapp_api_query_7241_10",
+          "nodeLineageTag": "1d5971d0-b658-48e4-8a0e-2dff63722dd1",
+          "size": {
+            "height": 272,
+            "width": 360.87599274476474
+          },
+          "zIndex": 22
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 319.53252596928536
+          },
+          "nodeIndex": "mapp_api_query_7241_09",
+          "nodeLineageTag": "69374ed8-5400-46f9-bb8c-cf6c78d2f97c",
+          "size": {
+            "height": 296,
+            "width": 405.85143388343971
+          },
+          "zIndex": 31
+        },
+        {
+          "location": {
+            "x": 1521.7920832934494,
+            "y": 1846.6755652583515
+          },
+          "nodeIndex": "mapp_api_query_7241_08",
+          "nodeLineageTag": "46c82ecc-4db6-4201-ba1e-ba2d6f0c0deb",
+          "size": {
+            "height": 662.34319716555137,
+            "width": 231.11222296945061
+          },
+          "zIndex": 44
+        },
+        {
+          "location": {
+            "x": 1188.2022434331152,
+            "y": 2128.6723856606486
+          },
+          "nodeIndex": "mapp_api_query_7241_07",
+          "nodeLineageTag": "a0a0e331-bb79-46f9-b46d-b2fb4557211b",
+          "size": {
+            "height": 465.63869917051079,
+            "width": 275.63118511937591
+          },
+          "zIndex": 23
+        },
+        {
+          "location": {
+            "x": 4550.1171997481006,
+            "y": 2024.1069750679233
+          },
+          "nodeIndex": "mapp_api_query_7241_06",
+          "nodeLineageTag": "a578f563-867e-449a-bd26-0bc39995e72c",
+          "size": {
+            "height": 300,
+            "width": 482.99993738816192
+          },
+          "zIndex": 39
+        },
+        {
+          "location": {
+            "x": 49.0618664237827,
+            "y": 2239.2875308163175
+          },
+          "nodeIndex": "mapp_api_query_7241_05",
+          "nodeLineageTag": "8e02c4f0-0d1f-4a00-9bf3-27d527f34c25",
+          "size": {
+            "height": 276.31186509798385,
+            "width": 372.86450624084097
+          },
+          "zIndex": 24
+        },
+        {
+          "location": {
+            "x": 796.9392335993964,
+            "y": 2094.9141999521576
+          },
+          "nodeIndex": "mapp_api_query_7241_04",
+          "nodeLineageTag": "6efaea20-b965-482f-bb7e-146b56f4000a",
+          "size": {
+            "height": 281.14802305007277,
+            "width": 234
+          },
+          "zIndex": 25
+        },
+        {
+          "location": {
+            "x": 3798.4800428901767,
+            "y": 2055.7592573534357
+          },
+          "nodeIndex": "mapp_api_query_7241_03",
+          "nodeLineageTag": "2523cfcd-a17d-44d9-b61f-2aec72ab1587",
+          "size": {
+            "height": 292.8903957298275,
+            "width": 234
+          },
+          "zIndex": 26
+        },
+        {
+          "location": {
+            "x": 6045.6023541074392,
+            "y": 2051.9541740194131
+          },
+          "nodeIndex": "mapp_api_query_7241_02",
+          "nodeLineageTag": "e9763c65-2002-4e5d-81d8-5400af41c9aa",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 43
+        },
+        {
+          "location": {
+            "x": 4078.2161848080168,
+            "y": 2025.3266510210992
+          },
+          "nodeIndex": "mapp_api_query_7241_01",
+          "nodeLineageTag": "91ad9ba9-5116-4a78-bcd4-250f61173e43",
+          "size": {
+            "height": 296,
+            "width": 261.441167242152
+          },
+          "zIndex": 27
+        },
+        {
+          "location": {
+            "x": 543.08592083318047,
+            "y": 640.55141599100011
+          },
+          "nodeIndex": "appstore_sales_merged",
+          "nodeLineageTag": "df18ab1a-83dd-4044-9dc7-d4e8185a8ce8",
+          "size": {
+            "height": 300,
+            "width": 338.55680469898618
+          },
+          "zIndex": 36
+        },
+        {
+          "location": {
+            "x": 2.807899005400202,
+            "y": 661.65030976264075
+          },
+          "nodeIndex": "mapp_api_query_7241_test",
+          "nodeLineageTag": "7e8dfce4-e9ce-4e68-8292-703b0a735efb",
+          "size": {
+            "height": 298.241808322407,
+            "width": 428.41030873717739
+          },
+          "zIndex": 28
+        },
+        {
+          "location": {
+            "x": 542.40572411072,
+            "y": 327.86730648597279
+          },
+          "nodeIndex": "mapp_api_query_7241_10 (2)",
+          "nodeLineageTag": "0e059947-9d02-40f0-9e16-8600c974d1af",
+          "size": {
+            "height": 274.41355986923713,
+            "width": 366.32970594715437
+          },
+          "zIndex": 29
+        },
+        {
+          "location": {
+            "x": 7135.3745628416291,
+            "y": 2025.3014663428128
+          },
+          "nodeIndex": "mapp_api_query_7241_11_enriched",
+          "nodeLineageTag": "9b7954d7-5a93-4c72-b05f-2c72864c5beb",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 30
+        },
+        {
+          "location": {
+            "x": 6436.6737123320991,
+            "y": 1514.5668251018651
+          },
+          "nodeIndex": "Z - DateTable",
+          "nodeLineageTag": "99be61f7-b418-4602-af3b-0627fa89e15f",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 42
+        },
+        {
+          "location": {
+            "x": 492.07688395144896,
+            "y": 2595.6588746409802
+          },
+          "nodeIndex": "playstore_installs_app_version_cleaned",
+          "nodeLineageTag": "31d353f3-9cb6-434c-9075-70fcb1b64da9",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 13
+        },
+        {
+          "location": {
+            "x": 278.57876786851375,
+            "y": 1016.3662923892125
+          },
+          "nodeIndex": "playstore_installs_carrier_cleaned",
+          "nodeLineageTag": "0d40b4fa-2e8a-4481-b540-2e9179ee212c",
+          "size": {
+            "height": 300,
+            "width": 413.56158291931024
+          },
+          "zIndex": 14
+        },
+        {
+          "location": {
+            "x": 508.00386698756711,
+            "y": 2293.0926182993053
+          },
+          "nodeIndex": "playstore_installs_country_cleaned",
+          "nodeLineageTag": "ec6b89cc-8c4f-4409-a0a3-d18e5aa87e3a",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 15
+        },
+        {
+          "location": {
+            "x": 0,
+            "y": 1008.8989501138407
+          },
+          "nodeIndex": "playstore_installs_device_cleaned",
+          "nodeLineageTag": "5e6be8bd-94ff-419b-8ece-13f9f2b27b7c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 33
+        },
+        {
+          "location": {
+            "x": 10.842995403470923,
+            "y": 1467.3883776034747
+          },
+          "nodeIndex": "playstore_installs_language_cleaned",
+          "nodeLineageTag": "b1e3c399-8ac7-44c6-bde7-dbf533c06115",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 16
+        },
+        {
+          "location": {
+            "x": 354.00292153116607,
+            "y": 1459.9933868375128
+          },
+          "nodeIndex": "playstore_installs_os_version_cleaned",
+          "nodeLineageTag": "31732994-3c13-4f43-984b-85eeed147b90",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 17
+        },
+        {
+          "location": {
+            "x": 104.32881717200962,
+            "y": 2537.1616467203926
+          },
+          "nodeIndex": "playstore_installs_overview_cleaned",
+          "nodeLineageTag": "a317bca1-2b5a-4a30-9e26-244131545706",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 18
+        },
+        {
+          "location": {
+            "x": 94.471100232970457,
+            "y": 1866.717878965414
+          },
+          "nodeIndex": "playstore_installs_overview",
+          "nodeLineageTag": "a6531716-db22-4f67-a78d-3ff82af31068",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 19
+        },
+        {
+          "location": {
+            "x": 2087.8631056112176,
+            "y": 2027.3708437738039
+          },
+          "nodeIndex": "mapp_api_query_7241_06_enriched",
+          "nodeLineageTag": "55b067ba-d3d6-432f-bc04-58dc357b0cef",
+          "size": {
+            "height": 300,
+            "width": 309.27905083828182
+          },
+          "zIndex": 20
+        },
+        {
+          "location": {
+            "x": 124.02009665442074,
+            "y": 2973.9732071856783
+          },
+          "nodeIndex": "mapp_api_query_7241_09_enriched",
+          "nodeLineageTag": "59e9f4a3-3022-4d5d-8098-3a3548ca68ee",
+          "size": {
+            "height": 370.78870095857428,
+            "width": 376.07157224862448
+          },
+          "zIndex": 40
+        },
+        {
+          "location": {
+            "x": 5504.6015129593716,
+            "y": 2056.1946003362682
+          },
+          "nodeIndex": "mapp_api_query_7241_07_PowerBI_Relation",
+          "nodeLineageTag": "92734f7c-e68b-423c-89a0-c7387f6a8d88",
+          "size": {
+            "height": 248,
+            "width": 422.194351328892
+          },
+          "zIndex": 10
+        },
+        {
+          "location": {
+            "x": 7.9370872554163725,
+            "y": 0
+          },
+          "nodeIndex": "mapp_api_query_7241_10_enriched_v2",
+          "nodeLineageTag": "9fcad2b8-d845-4478-8822-bd4727e04c20",
+          "size": {
+            "height": 311.09248614894278,
+            "width": 559.1197314084593
+          },
+          "zIndex": 45
+        },
+        {
+          "location": {
+            "x": 385.15894650940209,
+            "y": 1877.8103651143565
+          },
+          "nodeIndex": "mapp_api_query_7241_10_splitted",
+          "nodeLineageTag": "a963c133-4736-4dc6-b97d-bac2b932bd23",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 11
+        },
+        {
+          "location": {
+            "x": 961.449406725308,
+            "y": 1420.8925894668557
+          },
+          "nodeIndex": "mapping_table_Country",
+          "nodeLineageTag": "e9d10954-7ac3-4f24-b376-0a1a28eb15fc",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 12
+        },
+        {
+          "location": {
+            "x": 5139.0495930091538,
+            "y": 2064.2159608363868
+          },
+          "nodeIndex": "mapp_api_query_7241_09_clone",
+          "nodeLineageTag": "07e379a0-02e5-4f8b-adc7-a567f968ae29",
+          "size": {
+            "height": 300,
+            "width": 228.8203389542507
+          },
+          "zIndex": 9
+        },
+        {
+          "location": {
+            "x": 2688.1221726071335,
+            "y": 2049.6432956531221
+          },
+          "nodeIndex": "mapp_api_query_7241_09_clone_enriched",
+          "nodeLineageTag": "28b37d13-6e4f-478a-a091-f3e24a1f9213",
+          "size": {
+            "height": 358.51840231392271,
+            "width": 239.43431180285916
+          },
+          "zIndex": 37
+        },
+        {
+          "location": {
+            "x": 3244.8596818614183,
+            "y": 2045.6368545550838
+          },
+          "nodeIndex": "mapp_api_query_7241_10_clone",
+          "nodeLineageTag": "a11050d4-c688-4f79-88ea-e1b370659f45",
+          "size": {
+            "height": 296,
+            "width": 234
+          },
+          "zIndex": 34
+        },
+        {
+          "location": {
+            "x": 2436.7310315170157,
+            "y": 2068.4008541827584
+          },
+          "nodeIndex": "mapp_api_query_7241_10_clone_enriched",
+          "nodeLineageTag": "dbf43fe7-7695-44f7-8cd3-ffaaae57336c",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 46
+        },
+        {
+          "location": {
+            "x": 4240.2095328921387,
+            "y": 2605.6837246438618
+          },
+          "nodeIndex": "mapp_api_query_7241_11_clone",
+          "nodeLineageTag": "dc70c87d-a3d4-41a4-bed6-f30f7f9e9e5f",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 35
+        },
+        {
+          "location": {
+            "x": 4607.64679638916,
+            "y": 2631.6923943841548
+          },
+          "nodeIndex": "mapp_api_query_7241_11_clone_enriched",
+          "nodeLineageTag": "9d456eec-fea1-4bb8-ae82-f3fb2005ee10",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 32
+        },
+        {
+          "location": {
+            "x": 3081.8058333721488,
+            "y": 0
+          },
+          "nodeIndex": "coretable_session_id",
+          "nodeLineageTag": "1c8a1f90-b91f-422a-a5c8-77941c359e44",
+          "size": {
+            "height": 104,
+            "width": 234
+          },
+          "zIndex": 41
+        },
+        {
+          "location": {
+            "x": 9123.9385096346341,
+            "y": 914.15352391509941
+          },
+          "nodeIndex": "mapp_api_query_7241_13",
+          "nodeLineageTag": "e9fb1202-2338-4f6a-8d1d-3870bedac97e",
+          "size": {
+            "height": 472.01542468997519,
+            "width": 354.92868058485419
+          },
+          "zIndex": 49
+        },
+        {
+          "location": {
+            "x": 9043.2897105148841,
+            "y": 401.56004179796855
+          },
+          "nodeIndex": "coretable_article_id",
+          "nodeLineageTag": "8b2a9021-225b-4f63-ba54-280a153e814e",
+          "size": {
+            "height": 339.64874773273891,
+            "width": 547.22510708863774
+          },
+          "zIndex": 47
+        },
+        {
+          "location": {
+            "x": 9176.85118183452,
+            "y": 0
+          },
+          "nodeIndex": "articles_contributors_base",
+          "nodeLineageTag": "19695aa0-2e65-46a4-8a41-4caad1c9ec14",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 9498.4046797670126,
+            "y": 0
+          },
+          "nodeIndex": "articles_keywords",
+          "nodeLineageTag": "fce010a1-4dfe-4dfb-a2bc-a10c8289d86f",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 8893.0954150067864,
+            "y": 0
+          },
+          "nodeIndex": "articles_resources_links",
+          "nodeLineageTag": "7796a2b0-464e-4071-b9db-0efb7b10e6c7",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 6
+        },
+        {
+          "location": {
+            "x": 9839.5168782398378,
+            "y": 0
+          },
+          "nodeIndex": "articles_resources_pictures",
+          "nodeLineageTag": "ac3862d4-ceea-4f77-8b11-45115e2443f8",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 10112.383744403987,
+            "y": 0
+          },
+          "nodeIndex": "articles_title_items",
+          "nodeLineageTag": "54f22e51-df54-4c7d-9c98-f7f5a3751e89",
+          "size": {
+            "height": 224,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 8538.1433342988148,
+            "y": 0
+          },
+          "nodeIndex": "articles_joined",
+          "nodeLineageTag": "e2ab3c42-2321-446e-aef5-84b541a5ea0d",
+          "size": {
+            "height": 504.61715888672148,
+            "width": 347.12168133574778
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 7904.7616570247892,
+            "y": 1482.7769527081548
+          },
+          "nodeIndex": "mapp_api_query_7241_14",
+          "nodeLineageTag": "ae73d79f-d0e8-4a69-9c94-36dc37450253",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 10680.383744403987,
+            "y": 1608.3809540721263
+          },
+          "nodeIndex": "mapp_api_query_7241_15",
+          "nodeLineageTag": "3a4b7b79-6abb-400f-bcba-da9d13a82aaa",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 48
+        },
+        {
+          "location": {
+            "x": 10396.383744403987,
+            "y": 1522.3809540721263
+          },
+          "nodeIndex": "mapp_api_query_10_clone_joining_13",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 10964.383744403987,
+            "y": 1572.3809540721263
+          },
+          "nodeIndex": "mapp_api_query_joined_7241_16_7241_13",
+          "nodeLineageTag": "ca38c208-b4a0-47ea-b9b8-80b037ad98e9",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 50
+        }
+      ],
+      "name": "Alle Tabellen",
+      "zoomValue": 48.371297738278756,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Alle Tabellen",
+  "defaultDiagram": "Alle Tabellen"
+}

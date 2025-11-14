@@ -1,0 +1,469 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "b4370dc9ad6c2b8fd21f",
+  "position": {
+    "x": 0,
+    "y": 269.39770472879553,
+    "z": 8000,
+    "height": 407.17372384263297,
+    "width": 821.45054945054949,
+    "tabOrder": 2000
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "articles_joined"
+                    }
+                  },
+                  "Property": "articles_title_items.content"
+                }
+              },
+              "queryRef": "articles_joined.articles_title_items.content",
+              "nativeQueryRef": "post",
+              "displayName": "post"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "articles_joined"
+                    }
+                  },
+                  "Property": "releaseDate"
+                }
+              },
+              "queryRef": "articles_joined.releaseDate",
+              "nativeQueryRef": "published (web)",
+              "displayName": "published (web)"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "mapp_api_query_7241_09_clone"
+                        }
+                      },
+                      "Property": "pages_pageImpressions"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(mapp_api_query_7241_09_clone.pages_pageImpressions)",
+              "nativeQueryRef": "Views",
+              "displayName": "Views"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mapp_api_query_7241_09_clone"
+                    }
+                  },
+                  "Property": "avg. time_clone"
+                }
+              },
+              "queryRef": "mapp_api_query_7241_09_clone.avg. time_clone",
+              "nativeQueryRef": "avg. time",
+              "displayName": "avg. time"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mapp_api_query_7241_09_clone"
+                    }
+                  },
+                  "Property": "Minutes_clone"
+                }
+              },
+              "queryRef": "mapp_api_query_7241_09_clone.Minutes_clone",
+              "nativeQueryRef": "Minutes",
+              "displayName": "Minutes"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "articles_joined"
+                  }
+                },
+                "Property": "releaseDate"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        },
+        {
+          "properties": {
+            "webURL": {
+              "expr": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "articles_joined"
+                        }
+                      },
+                      "Property": "articles_resources_links.url"
+                    }
+                  },
+                  "Function": 3
+                }
+              }
+            }
+          },
+          "selector": {
+            "data": [
+              {
+                "dataViewWildcard": {
+                  "matchingOption": 1
+                }
+              }
+            ],
+            "metadata": "articles_joined.articles_title_items.content"
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {
+            "totals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#AC041A'"
+                    }
+                  }
+                }
+              }
+            },
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "431.1976200221511D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "articles_joined.articles_title_items.content"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Minimal'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "5d134c7de38f9f79c3ce",
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "69d2d26e01eaae5469c7",
+        "ordinal": 0,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "articles_joined"
+              }
+            },
+            "Property": "articles_resources_pictures.url"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "18f065280fc693af393a",
+        "ordinal": 1,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "articles_joined"
+              }
+            },
+            "Property": "articles_title_items.content"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "e068ffa344d3cf773f96",
+        "ordinal": 2,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "articles_joined"
+              }
+            },
+            "Property": "articles_title_items.language"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "5bc5d2119c1eff24e943",
+        "ordinal": 3,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mapp_api_query_7241_09_clone_enriched"
+              }
+            },
+            "Property": "avg. time_clone_enriched"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "7111b4ff3a095e65e8ea",
+        "ordinal": 4,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mapp_api_query_7241_09_clone_enriched"
+              }
+            },
+            "Property": "Minutes_clone_enriched"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "78a20fd41d7a97f35eae",
+        "ordinal": 5,
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "articles_joined"
+              }
+            },
+            "Property": "releaseDate"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "1dcc1a19f6bed5474849",
+        "ordinal": 6,
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "mapp_api_query_7241_09_clone"
+                  }
+                },
+                "Property": "pages_pageImpressions"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "mapp_api_query_7241_09_clone",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Aggregation": {
+                          "Expression": {
+                            "Column": {
+                              "Expression": {
+                                "SourceRef": {
+                                  "Source": "m"
+                                }
+                              },
+                              "Property": "pages_pageImpressions"
+                            }
+                          },
+                          "Function": 0
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "b23f44f9f114752fec08",
+        "ordinal": 7,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mapp_api_query_7241_09_clone"
+              }
+            },
+            "Property": "avg. time_clone"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "111c0523ce7152b0cd2e",
+        "ordinal": 8,
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mapp_api_query_7241_09_clone"
+              }
+            },
+            "Property": "Minutes_clone"
+          }
+        },
+        "type": "Advanced"
+      }
+    ],
+    "filterSortOrder": "Custom"
+  }
+}

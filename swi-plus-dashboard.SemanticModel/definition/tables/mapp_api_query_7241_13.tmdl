@@ -1,0 +1,83 @@
+table mapp_api_query_7241_13
+	lineageTag: e9fb1202-2338-4f6a-8d1d-3870bedac97e
+
+	column pages
+		dataType: string
+		lineageTag: 76cbce60-d512-4c35-a3f2-b45302131ed0
+		summarizeBy: none
+		sourceColumn: pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_12
+		dataType: string
+		lineageTag: e0b71099-c943-4275-9c27-1bf613718002
+		summarizeBy: none
+		sourceColumn: page_category_text_12
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_1
+		dataType: string
+		lineageTag: f81d38ef-37a2-474f-9dd6-4b7fb10ac8c6
+		summarizeBy: none
+		sourceColumn: page_parameter_text_1
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_62
+		dataType: string
+		lineageTag: d472c147-f343-4e0a-9819-c2916be64586
+		summarizeBy: none
+		sourceColumn: page_parameter_text_62
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_5
+		dataType: string
+		lineageTag: 48d2b5fd-991f-43f5-83d8-8c514132770b
+		summarizeBy: none
+		sourceColumn: page_category_text_5
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_parameter_text_52
+		dataType: string
+		lineageTag: 3a8cbe12-32eb-4f56-a9bd-a93e0b4bb8e8
+		summarizeBy: none
+		sourceColumn: page_parameter_text_52
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		lineageTag: 18c7c2c7-2f98-4709-98b5-5eab3cffb1d7
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_10
+		dataType: string
+		lineageTag: 77862f31-f136-4a6d-aa60-c7c49e88f05f
+		summarizeBy: none
+		sourceColumn: page_category_text_10
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_13 = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_08_Table = swiplus_Schema{[Name="mapp_api_query_7241_13",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_08_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

@@ -1,0 +1,43 @@
+table mapp_api_query_7241_14
+	lineageTag: ae73d79f-d0e8-4a69-9c94-36dc37450253
+
+	column session_id
+		dataType: string
+		lineageTag: d185b716-9f31-47f0-ac62-7ae32635f091
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column application_version_PC67
+		dataType: string
+		lineageTag: f887d7b6-2bef-4b1a-ae69-dbc9b576b319
+		summarizeBy: none
+		sourceColumn: application_version_PC67
+
+		annotation SummarizationSetBy = Automatic
+
+	column application_version_qty_PC67
+		dataType: int64
+		formatString: 0
+		lineageTag: c31f3671-71b1-422e-9f09-1a1b7c77d120
+		summarizeBy: sum
+		sourceColumn: application_version_qty_PC67
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_7241_14 = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", null),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_08_Table = swiplus_Schema{[Name="mapp_api_query_7241_14",Kind="Table"]}[Data]
+				in
+				    mapp_api_query_7241_08_Table
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

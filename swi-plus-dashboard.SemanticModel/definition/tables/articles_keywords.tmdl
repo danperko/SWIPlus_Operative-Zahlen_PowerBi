@@ -1,0 +1,41 @@
+table articles_keywords
+	lineageTag: fce010a1-4dfe-4dfb-a2bc-a10c8289d86f
+
+	column article_id
+		dataType: string
+		lineageTag: 988d0e3d-1dcf-4c86-862f-ae760af55666
+		summarizeBy: none
+		sourceColumn: article_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pos
+		dataType: int64
+		formatString: 0
+		lineageTag: 4af2d19e-89d4-40f9-9942-bf8717b2e709
+		summarizeBy: sum
+		sourceColumn: pos
+
+		annotation SummarizationSetBy = Automatic
+
+	column keyword
+		dataType: string
+		lineageTag: bb0dbbd2-1c0f-4f36-98fd-02ca73ea8887
+		summarizeBy: none
+		sourceColumn: keyword
+
+		annotation SummarizationSetBy = Automatic
+
+	partition articles_keywords = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", [Catalog = "swi_audience_prd", Database = "pdp_articles_v2_silver"]),
+				    keywords_pdp_articles_v2_silver_swi_audience_prd = Quelle{[Item="keywords",Schema="pdp_articles_v2_silver",Catalog="swi_audience_prd"]}[Data]
+				in
+				    keywords_pdp_articles_v2_silver_swi_audience_prd
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

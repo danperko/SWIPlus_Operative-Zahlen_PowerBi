@@ -1,0 +1,147 @@
+table coretable_article_id
+	lineageTag: 8b2a9021-225b-4f63-ba54-280a153e814e
+
+	column article_id
+		dataType: string
+		lineageTag: ad66e8d6-2f1c-4d23-939f-2f5ceed1e647
+		summarizeBy: none
+		sourceColumn: article_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column publisher
+		dataType: string
+		lineageTag: eaab3434-cc57-437f-bbca-e4998d1190f9
+		summarizeBy: none
+		sourceColumn: publisher
+
+		annotation SummarizationSetBy = Automatic
+
+	column provenance
+		dataType: string
+		lineageTag: 60f5bf61-223f-4ed7-9daa-2da8e75caa0b
+		summarizeBy: none
+		sourceColumn: provenance
+
+		annotation SummarizationSetBy = Automatic
+
+	column releaseDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 3acdb53f-08ef-4817-8181-b320d55e719e
+		summarizeBy: none
+		sourceColumn: releaseDate
+
+		variation Variation
+			isDefault
+			relationship: 476848a5-7d38-4f5e-8ef0-d7b3936df476
+			defaultHierarchy: LocalDateTable_c0d5186a-54cb-4cbe-a6c9-04b98f5b9b4c.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column modificationDate
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 42c788f6-c296-46ec-9b0d-5a2137ad2d5f
+		summarizeBy: none
+		sourceColumn: modificationDate
+
+		variation Variation
+			isDefault
+			relationship: b040a174-c21a-41c9-9981-e4202d14e655
+			defaultHierarchy: LocalDateTable_dbe26bbb-1acb-418d-b977-779f6ed37cc2.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column topic
+		dataType: string
+		lineageTag: 3bcff572-eca5-4f68-b622-b1cdfd1d052c
+		summarizeBy: none
+		sourceColumn: topic
+
+		annotation SummarizationSetBy = Automatic
+
+	column kicker_default
+		dataType: string
+		lineageTag: a2235f2e-b27e-4992-8484-82e722d65dd6
+		summarizeBy: none
+		sourceColumn: kicker_default
+
+		annotation SummarizationSetBy = Automatic
+
+	column lead_default
+		dataType: string
+		lineageTag: b8096468-afe5-4b86-a855-4a59be04ea01
+		summarizeBy: none
+		sourceColumn: lead_default
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_partition
+		dataType: int64
+		formatString: 0
+		lineageTag: b38e723e-e4a6-4e5b-b352-b5a398d004c0
+		summarizeBy: sum
+		sourceColumn: source_partition
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_offset
+		dataType: int64
+		formatString: 0
+		lineageTag: 32615496-85fc-407d-b66a-ce0a732250bc
+		summarizeBy: sum
+		sourceColumn: source_offset
+
+		annotation SummarizationSetBy = Automatic
+
+	column source_timestamp
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: c7cdca27-0f62-469e-89a3-a7702e1095fe
+		summarizeBy: none
+		sourceColumn: source_timestamp
+
+		variation Variation
+			isDefault
+			relationship: 5315b0e0-a39e-4fa7-9868-2bfe27dc01fd
+			defaultHierarchy: LocalDateTable_77567de1-19d7-4852-a55b-cc1ec3149697.Datumshierarchie
+
+		annotation SummarizationSetBy = Automatic
+
+	column atomic_ts
+		dataType: int64
+		formatString: 0
+		lineageTag: 86cc858b-f92e-4f16-911f-9f98ddf5a0c9
+		summarizeBy: sum
+		sourceColumn: atomic_ts
+
+		annotation SummarizationSetBy = Automatic
+
+	column page_category_text_10
+		dataType: string
+		lineageTag: 304cf95f-e2ff-44e3-8595-fdb51d07e50a
+		summarizeBy: none
+		sourceColumn: page_category_text_10
+
+		annotation SummarizationSetBy = Automatic
+
+	partition coretable_article_id = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", [Catalog = "swi_audience_prd", Database = "pdp_articles_v2_silver"]),
+				    core_pdp_articles_v2_silver_swi_audience_prd = Quelle{[Item="core",Schema="pdp_articles_v2_silver",Catalog="swi_audience_prd"]}[Data],
+				    #"Duplizierte Spalte" = Table.DuplicateColumn(core_pdp_articles_v2_silver_swi_audience_prd, "article_id", "page_category_text_10"),
+				    #"Spalte nach Trennzeichen teilen" = Table.SplitColumn(#"Duplizierte Spalte", "page_category_text_10", Splitter.SplitTextByEachDelimiter({":"}, QuoteStyle.Csv, true), {"page_category_text_10.1", "page_category_text_10"}),
+				    #"Entfernte Spalten" = Table.RemoveColumns(#"Spalte nach Trennzeichen teilen",{"page_category_text_10.1"}),
+				    #"Entfernte Duplikate" = Table.Distinct(#"Entfernte Spalten", {"article_id"}),
+				    #"Gefilterte Zeilen" = Table.SelectRows(#"Entfernte Duplikate", each ([publisher] = "SWI")),
+				    #"Entfernte Duplikate1" = Table.Distinct(#"Gefilterte Zeilen", {"page_category_text_10"})
+				in
+				    #"Entfernte Duplikate1"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

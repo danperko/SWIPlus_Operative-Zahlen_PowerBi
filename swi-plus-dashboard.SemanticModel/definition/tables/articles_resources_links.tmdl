@@ -1,0 +1,57 @@
+table articles_resources_links
+	lineageTag: 7796a2b0-464e-4071-b9db-0efb7b10e6c7
+
+	column article_id
+		dataType: string
+		lineageTag: 12011a21-c410-4076-ac11-38ced2bc05f1
+		summarizeBy: none
+		sourceColumn: article_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pos
+		dataType: int64
+		formatString: 0
+		lineageTag: 979d2249-c7b9-4ca2-b952-4f26f2eb28bd
+		summarizeBy: sum
+		sourceColumn: pos
+
+		annotation SummarizationSetBy = Automatic
+
+	column name
+		dataType: string
+		lineageTag: 65462821-510c-452c-b8f5-824148d74ef8
+		summarizeBy: none
+		sourceColumn: name
+
+		annotation SummarizationSetBy = Automatic
+
+	column url
+		dataType: string
+		lineageTag: 2b4bc43b-97dc-4db3-9a3a-9d4cc804b43c
+		summarizeBy: none
+		sourceColumn: url
+
+		annotation SummarizationSetBy = Automatic
+
+	column urn
+		dataType: string
+		lineageTag: 89fe7df0-7f62-4ed0-9bec-f822bac1fa3f
+		summarizeBy: none
+		sourceColumn: urn
+
+		annotation SummarizationSetBy = Automatic
+
+	partition articles_resources_links = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", [Catalog = "swi_audience_prd", Database = "pdp_articles_v2_silver"]),
+				    keywords_pdp_articles_v2_silver_swi_audience_prd = Quelle{[Item="resources_links",Schema="pdp_articles_v2_silver",Catalog="swi_audience_prd"]}[Data]
+				in
+				    keywords_pdp_articles_v2_silver_swi_audience_prd
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

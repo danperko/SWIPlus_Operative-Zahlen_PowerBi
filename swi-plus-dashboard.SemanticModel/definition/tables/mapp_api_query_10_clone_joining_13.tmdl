@@ -1,0 +1,222 @@
+table mapp_api_query_10_clone_joining_13
+	lineageTag: 6dd927b2-6558-45d9-83f1-cfd069be6b06
+
+	measure '% Page Impr. (Total)_' = ```
+			
+			DIVIDE (
+			    [Page Impressions_],
+			    CALCULATE ( [Page Impressions_], ALLSELECTED ( 'mapp_api_query_10_clone_joining_13' ) )
+			)
+			
+			
+			```
+		formatString: 0.0%;-0.0%;0.0%
+		lineageTag: 8513c4a0-7eb6-4c20-8fb1-d581e3f6ba6e
+
+	measure 'Page Impressions_' =
+			
+			SUM ( 'mapp_api_query_10_clone_joining_13'[pages_pageImpressions] )
+		formatString: 0
+		lineageTag: 53336883-7aea-4266-982c-484a5b064bab
+
+	column session_id
+		dataType: string
+		lineageTag: 484c3a8b-0dcd-4a3f-a9b6-d2f3e9655d01
+		summarizeBy: none
+		sourceColumn: session_id
+
+		annotation SummarizationSetBy = Automatic
+
+	column pages_pageImpressions
+		dataType: int64
+		formatString: 0
+		lineageTag: 31949c70-ac09-44e7-b1a4-cca657c2769d
+		summarizeBy: sum
+		sourceColumn: pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'pages.page_parameter_text_62'
+		dataType: string
+		lineageTag: f51e380d-81ee-4baa-9615-e5888db4c9dc
+		summarizeBy: none
+		sourceColumn: pages.page_parameter_text_62
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'pages.page_category_text_5'
+		dataType: string
+		lineageTag: 0b97d54e-c82d-4cc2-9fe9-d141dec9b94e
+		summarizeBy: none
+		sourceColumn: pages.page_category_text_5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'pages.page_parameter_text_52'
+		dataType: string
+		lineageTag: 0d20e2a2-4133-45d9-baf9-c8a3b671b263
+		summarizeBy: none
+		sourceColumn: pages.page_parameter_text_52
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'pages.page_category_text_10'
+		dataType: string
+		lineageTag: ff260eac-7d19-44c1-8428-3bfdb658cde2
+		summarizeBy: none
+		sourceColumn: pages.page_category_text_10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'pages.pages_pageImpressions'
+		dataType: int64
+		formatString: 0
+		lineageTag: 716ffa7e-00bf-42fe-ace3-169d4a4d2691
+		summarizeBy: sum
+		sourceColumn: pages.pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'follower01.pages'
+		dataType: string
+		lineageTag: 6cf4d939-c054-4929-aab1-d568b248e73f
+		summarizeBy: none
+		sourceColumn: follower01.pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'follower01.page_parameter_text_62'
+		dataType: string
+		lineageTag: e9ad5993-9254-4b22-a854-a2d5a596e4cb
+		summarizeBy: none
+		sourceColumn: follower01.page_parameter_text_62
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'follower01.page_category_text_5'
+		dataType: string
+		lineageTag: 01fca361-2465-4fd9-9813-55285ef9a231
+		summarizeBy: none
+		sourceColumn: follower01.page_category_text_5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'follower01.page_parameter_text_52'
+		dataType: string
+		lineageTag: afc2a915-27b9-423c-8f50-b20d187d659a
+		summarizeBy: none
+		sourceColumn: follower01.page_parameter_text_52
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'follower01.page_category_text_10'
+		dataType: string
+		lineageTag: 69eaac90-db86-48e0-abcb-dcacf9413341
+		summarizeBy: none
+		sourceColumn: follower01.page_category_text_10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'follower02.pages'
+		dataType: string
+		lineageTag: fd9d7195-1b3b-4d2e-b247-dce26e64d2ee
+		summarizeBy: none
+		sourceColumn: follower02.pages
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'follower02.page_parameter_text_62'
+		dataType: string
+		lineageTag: c9722de5-f32c-416a-9c5b-3c9c49b4d759
+		summarizeBy: none
+		sourceColumn: follower02.page_parameter_text_62
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'follower02.page_category_text_5'
+		dataType: string
+		lineageTag: 837eb721-4c6b-4764-9bc1-da8a5c70ff79
+		summarizeBy: none
+		sourceColumn: follower02.page_category_text_5
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'follower02.page_parameter_text_52'
+		dataType: string
+		lineageTag: 00719aae-dae3-4171-ad02-e0679569f3a7
+		summarizeBy: none
+		sourceColumn: follower02.page_parameter_text_52
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'follower02.page_category_text_10'
+		dataType: string
+		lineageTag: 4d0d78dd-3309-4a56-b717-d58c988de2ba
+		summarizeBy: none
+		sourceColumn: follower02.page_category_text_10
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'follower02.pages_pageImpressions'
+		dataType: int64
+		formatString: 0
+		lineageTag: b3817f0b-d43a-427b-a481-f2e3ad717afe
+		summarizeBy: sum
+		sourceColumn: follower02.pages_pageImpressions
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Screen Type'
+		dataType: string
+		lineageTag: e41aa205-a696-4e2f-bc3f-b8f6beb67576
+		summarizeBy: none
+		sourceColumn: Screen Type
+
+		annotation SummarizationSetBy = Automatic
+
+	column '... next Screen Type 1'
+		dataType: string
+		lineageTag: e5df1e87-f65f-4008-af37-f97994b5d475
+		summarizeBy: none
+		sourceColumn: ... next Screen Type 1
+
+		annotation SummarizationSetBy = Automatic
+
+	column '... Next Screen Type 2'
+		dataType: string
+		lineageTag: 6a46865a-bbc1-4af1-bdaf-07dd585b71ef
+		summarizeBy: none
+		sourceColumn: ... Next Screen Type 2
+
+		annotation SummarizationSetBy = Automatic
+
+	partition mapp_api_query_10_clone_joining_13 = m
+		mode: import
+		source =
+				let
+				    Quelle = Databricks.Catalogs("adb-4119964566130471.11.azuredatabricks.net", "/sql/1.0/warehouses/59a74cf19690258c", [Catalog=null, Database=null, QueryTags=null, EnableAutomaticProxyDiscovery=null, Implementation=null]),
+				    swi_audience_prd_Database = Quelle{[Name="swi_audience_prd",Kind="Database"]}[Data],
+				    swiplus_Schema = swi_audience_prd_Database{[Name="swiplus",Kind="Schema"]}[Data],
+				    mapp_api_query_7241_08_Table = swiplus_Schema{[Name="mapp_api_query_7241_10_clone",Kind="Table"]}[Data],
+				    #"Zusammengeführte Abfragen" = Table.NestedJoin(mapp_api_query_7241_08_Table, {"pages"}, mapp_api_query_7241_13, {"pages"}, "mapp_api_query_7241_13", JoinKind.LeftOuter),
+				    #"Erweiterte mapp_api_query_7241_13" = Table.ExpandTableColumn(#"Zusammengeführte Abfragen", "mapp_api_query_7241_13", {"pages", "page_category_text_12", "page_parameter_text_1", "page_parameter_text_62", "page_category_text_5", "page_parameter_text_52", "page_category_text_10", "pages_pageImpressions"}, {"pages.pages", "pages.page_category_text_12", "pages.page_parameter_text_1", "pages.page_parameter_text_62", "pages.page_category_text_5", "pages.page_parameter_text_52", "pages.page_category_text_10", "pages.pages_pageImpressions"}),
+				    #"Zusammengeführte Abfragen1" = Table.NestedJoin(#"Erweiterte mapp_api_query_7241_13", {"pages_follower1"}, mapp_api_query_7241_13, {"pages"}, "mapp_api_query_7241_13", JoinKind.LeftOuter),
+				    #"Erweiterte mapp_api_query_7241_1" = Table.ExpandTableColumn(#"Zusammengeführte Abfragen1", "mapp_api_query_7241_13", {"pages", "page_category_text_12", "page_parameter_text_1", "page_parameter_text_62", "page_category_text_5", "page_parameter_text_52", "page_category_text_10"}, {"follower01.pages", "follower01.page_category_text_12", "follower01.page_parameter_text_1", "follower01.page_parameter_text_62", "follower01.page_category_text_5", "follower01.page_parameter_text_52", "follower01.page_category_text_10"}),
+				    #"Zusammengeführte Abfragen2" = Table.NestedJoin(#"Erweiterte mapp_api_query_7241_1", {"pages_follower2"}, mapp_api_query_7241_13, {"pages"}, "mapp_api_query_7241_13", JoinKind.LeftOuter),
+				    #"Erweiterte mapp_api_query_7241_2" = Table.ExpandTableColumn(#"Zusammengeführte Abfragen2", "mapp_api_query_7241_13", {"pages", "page_category_text_12", "page_parameter_text_1", "page_parameter_text_62", "page_category_text_5", "page_parameter_text_52", "page_category_text_10", "pages_pageImpressions"}, {"follower02.pages", "follower02.page_category_text_12", "follower02.page_parameter_text_1", "follower02.page_parameter_text_62", "follower02.page_category_text_5", "follower02.page_parameter_text_52", "follower02.page_category_text_10", "follower02.pages_pageImpressions"}),
+				    #"Entfernte Spalten" = Table.RemoveColumns(#"Erweiterte mapp_api_query_7241_2",{"pages", "pages_preceeding1", "pages_preceeding2", "pages_follower1", "pages_follower2", "visits", "WpPostId", "pages.pages"}),
+				    #"Zusammengeführte Spalten" = Table.CombineColumns(#"Entfernte Spalten",{"pages.page_category_text_12", "pages.page_parameter_text_1"},Combiner.CombineTextByDelimiter(" ", QuoteStyle.None),"Screen Type"),
+				    #"Zusammengeführte Spalten1" = Table.CombineColumns(#"Zusammengeführte Spalten",{"follower01.page_category_text_12", "follower01.page_parameter_text_1"},Combiner.CombineTextByDelimiter(" ", QuoteStyle.None),"... next Screen Type 1"),
+				    #"Zusammengeführte Spalten2" = Table.CombineColumns(#"Zusammengeführte Spalten1",{"follower02.page_category_text_12", "follower02.page_parameter_text_1"},Combiner.CombineTextByDelimiter(" ", QuoteStyle.None),"... Next Screen Type 2"),
+				    #"Ersetzter Wert" = Table.ReplaceValue(#"Zusammengeführte Spalten2",null,"exit",Replacer.ReplaceValue,{"... next Screen Type 1"}),
+				    #"Ersetzter Wert1" = Table.ReplaceValue(#"Ersetzter Wert"," ","exit",Replacer.ReplaceValue,{"... next Screen Type 1"}),
+				    #"Ersetzter Wert2" = Table.ReplaceValue(#"Ersetzter Wert1",null,"exit",Replacer.ReplaceValue,{"... Next Screen Type 2"}),
+				    #"Ersetzter Wert3" = Table.ReplaceValue(#"Ersetzter Wert2"," ","exit",Replacer.ReplaceValue,{"... Next Screen Type 2"}),
+				    #"Sortierte Zeilen" = Table.Sort(#"Ersetzter Wert3",{{"pages_pageImpressions", Order.Descending}})
+				in
+				    #"Sortierte Zeilen"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
