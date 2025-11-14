@@ -1201,12 +1201,6 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "visitors": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "returning friend": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -1234,36 +1228,6 @@ cultureInfo de-CH
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.5
-			          }
-			        },
-			        {
-			          "friend": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "invitee": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
-			          "person": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
 			          }
 			        },
 			        {
@@ -1297,13 +1261,33 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "company": {
+			          "returning caller": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "returning tourist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "returning sightseer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
 			          }
 			        }
 			      ]
@@ -6869,12 +6853,6 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "sessions": {
-			            "State": "Generated",
-			            "Weight": 0.97
-			          }
-			        },
-			        {
 			          "assembly per user": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -6935,16 +6913,6 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "assembly": {
-			            "Type": "Noun",
-			            "State": "Suggested",
-			            "Source": {
-			              "Agent": "Thesaurus"
-			            },
-			            "Weight": 0.491
-			          }
-			        },
-			        {
 			          "semester per user": {
 			            "Type": "Noun",
 			            "State": "Suggested",
@@ -6965,13 +6933,23 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "meeting": {
+			          "term per user": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
-			            "Weight": 0.476
+			            "Weight": 0.468
+			          }
+			        },
+			        {
+			          "period per user": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.468
 			          }
 			        }
 			      ]
@@ -9629,7 +9607,7 @@ cultureInfo de-CH
 			        }
 			      ]
 			    },
-			    "mapp_api_query_7241_09.visitor": {
+			    "mapp_api_query_7241_09.visitors": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "mapp_api_query_7241_09",
@@ -9639,12 +9617,19 @@ cultureInfo de-CH
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "visitor": {
+			          "visitors": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "caller": {
+			          "visitor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "friend": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -9654,7 +9639,7 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "tourist": {
+			          "invitee": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -9664,13 +9649,23 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "sightseer": {
+			          "person": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
 			          }
 			        },
 			        {
@@ -9684,13 +9679,43 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "company": {
+			          "companion": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "caller": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "tourist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "sightseer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
 			          }
 			        }
 			      ]
@@ -44797,7 +44822,7 @@ cultureInfo de-CH
 			        }
 			      ]
 			    },
-			    "mapp_api_query_7241_09_enriched.visitor": {
+			    "mapp_api_query_7241_09_enriched.visitors": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "mapp_api_query_7241_09_enriched",
@@ -44807,12 +44832,19 @@ cultureInfo de-CH
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "visitor": {
+			          "visitors": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "caller": {
+			          "visitor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "friend": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -44822,7 +44854,7 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "tourist": {
+			          "invitee": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -44832,13 +44864,23 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "sightseer": {
+			          "person": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
 			          }
 			        },
 			        {
@@ -44852,13 +44894,43 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "company": {
+			          "companion": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "caller": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "tourist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "sightseer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
 			          }
 			        }
 			      ]
@@ -57239,7 +57311,7 @@ cultureInfo de-CH
 			        }
 			      ]
 			    },
-			    "mapp_api_query_7241_09_clone_enriched.visitor": {
+			    "mapp_api_query_7241_09_clone_enriched.visitors": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "mapp_api_query_7241_09_clone_enriched",
@@ -57249,12 +57321,19 @@ cultureInfo de-CH
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "visitor": {
+			          "visitors": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "caller": {
+			          "visitor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "friend": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -57264,7 +57343,7 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "tourist": {
+			          "invitee": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -57274,13 +57353,23 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "sightseer": {
+			          "person": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
 			          }
 			        },
 			        {
@@ -57294,13 +57383,43 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "company": {
+			          "companion": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "caller": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "tourist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "sightseer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
 			          }
 			        }
 			      ]
@@ -60203,7 +60322,7 @@ cultureInfo de-CH
 			        }
 			      ]
 			    },
-			    "mapp_api_query_7241_09_clone.visitor": {
+			    "mapp_api_query_7241_09_clone.visitors": {
 			      "Definition": {
 			        "Binding": {
 			          "ConceptualEntity": "mapp_api_query_7241_09_clone",
@@ -60213,12 +60332,19 @@ cultureInfo de-CH
 			      "State": "Generated",
 			      "Terms": [
 			        {
-			          "visitor": {
+			          "visitors": {
 			            "State": "Generated"
 			          }
 			        },
 			        {
-			          "caller": {
+			          "visitor": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.78
+			          }
+			        },
+			        {
+			          "friend": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -60228,7 +60354,7 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "tourist": {
+			          "invitee": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
@@ -60238,13 +60364,23 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "sightseer": {
+			          "person": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
 			          }
 			        },
 			        {
@@ -60258,13 +60394,43 @@ cultureInfo de-CH
 			          }
 			        },
 			        {
-			          "company": {
+			          "companion": {
 			            "Type": "Noun",
 			            "State": "Suggested",
 			            "Source": {
 			              "Agent": "Thesaurus"
 			            },
 			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "caller": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "tourist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "sightseer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
 			          }
 			        }
 			      ]
@@ -68326,141 +68492,1599 @@ cultureInfo de-CH
 			          }
 			        }
 			      ]
+			    },
+			    "mapp_api_query_7241_merged.MoM_Returning_Visitors": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "MoM Returning_Visitors"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "MoM Returning_Visitors": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.sessions": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "sessions"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sessions": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "assembly": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "meeting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "sitting": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "conference": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "gathering": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "hearing": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "semester": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "trimester": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "term": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.452
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.sessions_mo_M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "sessions_MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sessions mo M": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sessions_MoM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "M": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "mo M": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.MoM_Returning_Visit_Share": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "MoM Returning_Visit_Share"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "MoM Returning_Visit_Share": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.sessions_LTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "sessions_LTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sessions LTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sessions_LTD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "LTD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "assembly ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "meeting ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "sitting ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "conference ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "gathering ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "hearing ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "semester ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "trimester ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "term ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "period ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.461
+			          }
+			        },
+			        {
+			          "LaunchTD": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.distinct_count_session_id_march_2025": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "Distinct Count session_id (March 2025)"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "distinct count session_id (march 2025)": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "distinct count session_id": {
+			            "State": "Generated",
+			            "Weight": 0.75
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.visitors_mo_M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "visitors_MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visitors mo M": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "visitors_MoM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "M": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "mo M": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.visitors_LTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "visitors_LTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visitors LTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "visitors_LTD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "LTD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "friend ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "invitee ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "person ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.5
+			          }
+			        },
+			        {
+			          "company ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "guest ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "companion ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.485
+			          }
+			        },
+			        {
+			          "caller ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "tourist ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "sightseer ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.475
+			          }
+			        },
+			        {
+			          "LaunchTD": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.visitors": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "visitors"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visitors": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "friend": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "invitee": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "person": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.491
+			          }
+			        },
+			        {
+			          "company": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "guest": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "companion": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.476
+			          }
+			        },
+			        {
+			          "caller": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "tourist": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        },
+			        {
+			          "sightseer": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.466
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.visits_week_total__wed_only_avg_total_MoM": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "Visits (Week Total – Wed only, Avg Total)_MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visits (week total – wed only, avg total)_MoM": {
+			            "State": "Generated"
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.sgr_total_visits_per_week_LTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "sgr_total_visits_per_week_LTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sgr total visits per week LTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sgr_total_visits_per_week_LTD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "LaunchTD": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.visitors_with_mo_M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "visitors_with_MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visitors with mo M": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "visitors_with_MoM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "friend with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "invitee with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "person with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "company with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "guest with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "companion with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "caller with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "tourist with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "sightseer with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "Visitors + MoM": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.avg_duration_per_session_mmss_LTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "avg_duration_per_session_mmss_LTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg duration per session mmss LTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "avg_duration_per_session_mmss_LTD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "LaunchTD": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.visits_per_returning_visitor_LTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "visits_per_returning_visitor_LTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visits per returning visitor LTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "visits_per_returning_visitor_LTD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "appointment per returning visitor ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "call per returning visitor ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "stopover per returning visitor ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "stay per returning visitor ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "holiday per returning visitor ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "vacation per returning visitor ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "break per returning visitor ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "trip per returning visitor ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "outing per returning visitor ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.479
+			          }
+			        },
+			        {
+			          "LaunchTD": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.returning_visit_share_LTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "returning_visit_share_LTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "returning visit share LTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "returning_visit_share_LTD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "LTD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "share LTD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "visit share LTD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "returning visit part ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "returning visit portion ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "returning visit segment ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "returning visit cut ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "returning visit stake ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "returning visit bit ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "returning visit piece ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "visit part ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "visit portion ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "visit segment ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.returning_visitors_LTD": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "returning_visitors_LTD"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "returning visitors LTD": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "returning_visitors_LTD": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "LTD": {
+			            "State": "Generated",
+			            "Weight": 0.97
+			          }
+			        },
+			        {
+			          "returning friend ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "returning invitee ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "returning person ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.508
+			          }
+			        },
+			        {
+			          "returning company ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "returning guest ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "returning companion ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.492
+			          }
+			        },
+			        {
+			          "returning caller ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "returning tourist ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "returning sightseer ltd": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.482
+			          }
+			        },
+			        {
+			          "LaunchTD": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.sgr_total_visits_per_week_with_mo_M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "sgr_total_visits_per_week_with_MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sgr total visits per week with mo M": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sgr_total_visits_per_week_with_MoM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "SGR Total Visits per Week + MoM": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.avg_duration_per_session_mmss_with_mo_M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "avg_duration_per_session_mmss_with_MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "avg duration per session mmss with mo M": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "avg_duration_per_session_mmss_with_MoM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Average Duration per Session + MoM": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.visits_per_returning_visitor_with_mo_M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "visits_per_returning_visitor_with_MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "visits per returning visitor with mo M": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "visits_per_returning_visitor_with_MoM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Visits per Returning Visitor + MoM": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.returning_visit_share_with_mo_M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "returning_visit_share_with_MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "returning visit share with mo M": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "returning_visit_share_with_MoM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "Returning Visit Share + MoM": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.returning_visitors_with_mo_M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "returning_visitors_with_MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "returning visitors with mo M": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "returning_visitors_with_MoM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "returning friend with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "returning invitee with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "returning person with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.52
+			          }
+			        },
+			        {
+			          "returning company with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "returning guest with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "returning companion with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.504
+			          }
+			        },
+			        {
+			          "returning caller with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "returning tourist with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "returning sightseer with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.494
+			          }
+			        },
+			        {
+			          "Returning Visitors + MoM": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged.sessions_with_mo_M": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "mapp_api_query_7241_merged",
+			          "ConceptualProperty": "sessions_with_MoM"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "sessions with mo M": {
+			            "State": "Generated"
+			          }
+			        },
+			        {
+			          "sessions_with_MoM": {
+			            "Type": "Noun",
+			            "State": "Generated",
+			            "Weight": 0.99
+			          }
+			        },
+			        {
+			          "assembly with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.514
+			          }
+			        },
+			        {
+			          "meeting with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "sitting with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "conference with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "gathering with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "hearing with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.499
+			          }
+			        },
+			        {
+			          "semester with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "trimester with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.489
+			          }
+			        },
+			        {
+			          "term with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "period with mo m": {
+			            "Type": "Noun",
+			            "State": "Suggested",
+			            "Source": {
+			              "Agent": "Thesaurus"
+			            },
+			            "Weight": 0.474
+			          }
+			        },
+			        {
+			          "App Reach (Visits) + MoM": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
 			    }
 			  },
 			  "Relationships": {
-			    "mapp_api_query_7241_10_clone_enriched_published_quartal_has_mapp_api_query_7241_10_clone_enriched_published_monat": {
-			      "Binding": {
-			        "ConceptualEntity": "mapp_api_query_7241_10_clone_enriched"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mapp_api_query_7241_10_clone_enriched.published.quartal": {
-			          "Target": {
-			            "Entity": "mapp_api_query_7241_10_clone_enriched.published.quartal"
-			          }
-			        },
-			        "mapp_api_query_7241_10_clone_enriched.published.monat": {
-			          "Target": {
-			            "Entity": "mapp_api_query_7241_10_clone_enriched.published.monat"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.quartal"
-			            },
-			            "Object": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.monat"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "quartals_have_monats"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.monat"
-			            },
-			            "Object": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.quartal"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "monats_have_quartals"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.monat"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.quartal"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "monats_are_in_quartals21"
-			        }
-			      ]
-			    },
-			    "mapp_api_query_7241_10_clone_enriched_published_jahr_has_mapp_api_query_7241_10_clone_enriched_published_quartal": {
-			      "Binding": {
-			        "ConceptualEntity": "mapp_api_query_7241_10_clone_enriched"
-			      },
-			      "State": "Generated",
-			      "Roles": {
-			        "mapp_api_query_7241_10_clone_enriched.published.jahr": {
-			          "Target": {
-			            "Entity": "mapp_api_query_7241_10_clone_enriched.published.jahr"
-			          }
-			        },
-			        "mapp_api_query_7241_10_clone_enriched.published.quartal": {
-			          "Target": {
-			            "Entity": "mapp_api_query_7241_10_clone_enriched.published.quartal"
-			          }
-			        }
-			      },
-			      "Phrasings": [
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.jahr"
-			            },
-			            "Object": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.quartal"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals"
-			        },
-			        {
-			          "Attribute": {
-			            "Subject": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.quartal"
-			            },
-			            "Object": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.jahr"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs"
-			        },
-			        {
-			          "Preposition": {
-			            "Subject": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.quartal"
-			            },
-			            "Prepositions": [
-			              {
-			                "in": {
-			                  "State": "Generated"
-			                }
-			              }
-			            ],
-			            "Object": {
-			              "Role": "mapp_api_query_7241_10_clone_enriched.published.jahr"
-			            }
-			          },
-			          "State": "Generated",
-			          "Weight": 0.99,
-			          "ID": "quartals_are_in_jahrs21"
-			        }
-			      ]
-			    },
 			    "mapp_api_query_7241_10_clone_enriched_published_datumshierarchie_has_mapp_api_query_7241_10_clone_enriched_published_tag": {
 			      "Binding": {
 			        "ConceptualEntity": "mapp_api_query_7241_10_clone_enriched"
@@ -68721,7 +70345,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats1"
+			          "ID": "quartals_have_monats"
 			        },
 			        {
 			          "Attribute": {
@@ -68734,7 +70358,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals1"
+			          "ID": "monats_have_quartals"
 			        },
 			        {
 			          "Preposition": {
@@ -68787,7 +70411,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals1"
+			          "ID": "jahrs_have_quartals"
 			        },
 			        {
 			          "Attribute": {
@@ -68800,7 +70424,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs1"
+			          "ID": "quartals_have_jahrs"
 			        },
 			        {
 			          "Preposition": {
@@ -69084,7 +70708,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats2"
+			          "ID": "quartals_have_monats1"
 			        },
 			        {
 			          "Attribute": {
@@ -69097,7 +70721,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals2"
+			          "ID": "monats_have_quartals1"
 			        },
 			        {
 			          "Preposition": {
@@ -69150,7 +70774,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals2"
+			          "ID": "jahrs_have_quartals1"
 			        },
 			        {
 			          "Attribute": {
@@ -69163,7 +70787,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs2"
+			          "ID": "quartals_have_jahrs1"
 			        },
 			        {
 			          "Preposition": {
@@ -69447,7 +71071,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats3"
+			          "ID": "quartals_have_monats2"
 			        },
 			        {
 			          "Attribute": {
@@ -69460,7 +71084,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals3"
+			          "ID": "monats_have_quartals2"
 			        },
 			        {
 			          "Preposition": {
@@ -69513,7 +71137,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals3"
+			          "ID": "jahrs_have_quartals2"
 			        },
 			        {
 			          "Attribute": {
@@ -69526,7 +71150,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs3"
+			          "ID": "quartals_have_jahrs2"
 			        },
 			        {
 			          "Preposition": {
@@ -69810,7 +71434,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats4"
+			          "ID": "quartals_have_monats3"
 			        },
 			        {
 			          "Attribute": {
@@ -69823,7 +71447,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals4"
+			          "ID": "monats_have_quartals3"
 			        },
 			        {
 			          "Preposition": {
@@ -69876,7 +71500,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals4"
+			          "ID": "jahrs_have_quartals3"
 			        },
 			        {
 			          "Attribute": {
@@ -69889,7 +71513,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs4"
+			          "ID": "quartals_have_jahrs3"
 			        },
 			        {
 			          "Preposition": {
@@ -70173,7 +71797,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats5"
+			          "ID": "quartals_have_monats4"
 			        },
 			        {
 			          "Attribute": {
@@ -70186,7 +71810,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals5"
+			          "ID": "monats_have_quartals4"
 			        },
 			        {
 			          "Preposition": {
@@ -70239,7 +71863,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals5"
+			          "ID": "jahrs_have_quartals4"
 			        },
 			        {
 			          "Attribute": {
@@ -70252,7 +71876,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs5"
+			          "ID": "quartals_have_jahrs4"
 			        },
 			        {
 			          "Preposition": {
@@ -70536,7 +72160,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats6"
+			          "ID": "quartals_have_monats5"
 			        },
 			        {
 			          "Attribute": {
@@ -70549,7 +72173,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals6"
+			          "ID": "monats_have_quartals5"
 			        },
 			        {
 			          "Preposition": {
@@ -70602,7 +72226,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals6"
+			          "ID": "jahrs_have_quartals5"
 			        },
 			        {
 			          "Attribute": {
@@ -70615,7 +72239,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs6"
+			          "ID": "quartals_have_jahrs5"
 			        },
 			        {
 			          "Preposition": {
@@ -70899,7 +72523,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats7"
+			          "ID": "quartals_have_monats6"
 			        },
 			        {
 			          "Attribute": {
@@ -70912,7 +72536,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals7"
+			          "ID": "monats_have_quartals6"
 			        },
 			        {
 			          "Preposition": {
@@ -70965,7 +72589,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals7"
+			          "ID": "jahrs_have_quartals6"
 			        },
 			        {
 			          "Attribute": {
@@ -70978,7 +72602,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs7"
+			          "ID": "quartals_have_jahrs6"
 			        },
 			        {
 			          "Preposition": {
@@ -71262,7 +72886,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats8"
+			          "ID": "quartals_have_monats7"
 			        },
 			        {
 			          "Attribute": {
@@ -71275,7 +72899,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals8"
+			          "ID": "monats_have_quartals7"
 			        },
 			        {
 			          "Preposition": {
@@ -71328,7 +72952,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals8"
+			          "ID": "jahrs_have_quartals7"
 			        },
 			        {
 			          "Attribute": {
@@ -71341,7 +72965,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs8"
+			          "ID": "quartals_have_jahrs7"
 			        },
 			        {
 			          "Preposition": {
@@ -71625,7 +73249,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats9"
+			          "ID": "quartals_have_monats8"
 			        },
 			        {
 			          "Attribute": {
@@ -71638,7 +73262,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals9"
+			          "ID": "monats_have_quartals8"
 			        },
 			        {
 			          "Preposition": {
@@ -71691,7 +73315,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals9"
+			          "ID": "jahrs_have_quartals8"
 			        },
 			        {
 			          "Attribute": {
@@ -71704,7 +73328,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs9"
+			          "ID": "quartals_have_jahrs8"
 			        },
 			        {
 			          "Preposition": {
@@ -71988,7 +73612,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats10"
+			          "ID": "quartals_have_monats9"
 			        },
 			        {
 			          "Attribute": {
@@ -72001,7 +73625,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals10"
+			          "ID": "monats_have_quartals9"
 			        },
 			        {
 			          "Preposition": {
@@ -72054,7 +73678,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals10"
+			          "ID": "jahrs_have_quartals9"
 			        },
 			        {
 			          "Attribute": {
@@ -72067,7 +73691,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs10"
+			          "ID": "quartals_have_jahrs9"
 			        },
 			        {
 			          "Preposition": {
@@ -72351,7 +73975,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats11"
+			          "ID": "quartals_have_monats10"
 			        },
 			        {
 			          "Attribute": {
@@ -72364,7 +73988,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals11"
+			          "ID": "monats_have_quartals10"
 			        },
 			        {
 			          "Preposition": {
@@ -72417,7 +74041,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals11"
+			          "ID": "jahrs_have_quartals10"
 			        },
 			        {
 			          "Attribute": {
@@ -72430,7 +74054,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs11"
+			          "ID": "quartals_have_jahrs10"
 			        },
 			        {
 			          "Preposition": {
@@ -72714,7 +74338,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats12"
+			          "ID": "quartals_have_monats11"
 			        },
 			        {
 			          "Attribute": {
@@ -72727,7 +74351,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals12"
+			          "ID": "monats_have_quartals11"
 			        },
 			        {
 			          "Preposition": {
@@ -72780,7 +74404,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals12"
+			          "ID": "jahrs_have_quartals11"
 			        },
 			        {
 			          "Attribute": {
@@ -72793,7 +74417,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs12"
+			          "ID": "quartals_have_jahrs11"
 			        },
 			        {
 			          "Preposition": {
@@ -73077,7 +74701,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats13"
+			          "ID": "quartals_have_monats12"
 			        },
 			        {
 			          "Attribute": {
@@ -73090,7 +74714,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals13"
+			          "ID": "monats_have_quartals12"
 			        },
 			        {
 			          "Preposition": {
@@ -73143,7 +74767,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals13"
+			          "ID": "jahrs_have_quartals12"
 			        },
 			        {
 			          "Attribute": {
@@ -73156,7 +74780,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs13"
+			          "ID": "quartals_have_jahrs12"
 			        },
 			        {
 			          "Preposition": {
@@ -73440,7 +75064,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats14"
+			          "ID": "quartals_have_monats13"
 			        },
 			        {
 			          "Attribute": {
@@ -73453,7 +75077,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals14"
+			          "ID": "monats_have_quartals13"
 			        },
 			        {
 			          "Preposition": {
@@ -73506,7 +75130,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals14"
+			          "ID": "jahrs_have_quartals13"
 			        },
 			        {
 			          "Attribute": {
@@ -73519,7 +75143,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs14"
+			          "ID": "quartals_have_jahrs13"
 			        },
 			        {
 			          "Preposition": {
@@ -73803,7 +75427,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats15"
+			          "ID": "quartals_have_monats14"
 			        },
 			        {
 			          "Attribute": {
@@ -73816,7 +75440,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals15"
+			          "ID": "monats_have_quartals14"
 			        },
 			        {
 			          "Preposition": {
@@ -73869,7 +75493,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals15"
+			          "ID": "jahrs_have_quartals14"
 			        },
 			        {
 			          "Attribute": {
@@ -73882,7 +75506,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs15"
+			          "ID": "quartals_have_jahrs14"
 			        },
 			        {
 			          "Preposition": {
@@ -74166,7 +75790,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats16"
+			          "ID": "quartals_have_monats15"
 			        },
 			        {
 			          "Attribute": {
@@ -74179,7 +75803,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals16"
+			          "ID": "monats_have_quartals15"
 			        },
 			        {
 			          "Preposition": {
@@ -74232,7 +75856,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals16"
+			          "ID": "jahrs_have_quartals15"
 			        },
 			        {
 			          "Attribute": {
@@ -74245,7 +75869,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs16"
+			          "ID": "quartals_have_jahrs15"
 			        },
 			        {
 			          "Preposition": {
@@ -74529,7 +76153,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats17"
+			          "ID": "quartals_have_monats16"
 			        },
 			        {
 			          "Attribute": {
@@ -74542,7 +76166,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals17"
+			          "ID": "monats_have_quartals16"
 			        },
 			        {
 			          "Preposition": {
@@ -74595,7 +76219,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals17"
+			          "ID": "jahrs_have_quartals16"
 			        },
 			        {
 			          "Attribute": {
@@ -74608,7 +76232,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs17"
+			          "ID": "quartals_have_jahrs16"
 			        },
 			        {
 			          "Preposition": {
@@ -74892,7 +76516,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats18"
+			          "ID": "quartals_have_monats17"
 			        },
 			        {
 			          "Attribute": {
@@ -74905,7 +76529,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals18"
+			          "ID": "monats_have_quartals17"
 			        },
 			        {
 			          "Preposition": {
@@ -74958,7 +76582,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals18"
+			          "ID": "jahrs_have_quartals17"
 			        },
 			        {
 			          "Attribute": {
@@ -74971,7 +76595,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs18"
+			          "ID": "quartals_have_jahrs17"
 			        },
 			        {
 			          "Preposition": {
@@ -75255,7 +76879,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats19"
+			          "ID": "quartals_have_monats18"
 			        },
 			        {
 			          "Attribute": {
@@ -75268,7 +76892,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals19"
+			          "ID": "monats_have_quartals18"
 			        },
 			        {
 			          "Preposition": {
@@ -75321,7 +76945,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals19"
+			          "ID": "jahrs_have_quartals18"
 			        },
 			        {
 			          "Attribute": {
@@ -75334,7 +76958,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs19"
+			          "ID": "quartals_have_jahrs18"
 			        },
 			        {
 			          "Preposition": {
@@ -75618,7 +77242,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats20"
+			          "ID": "quartals_have_monats19"
 			        },
 			        {
 			          "Attribute": {
@@ -75631,7 +77255,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals20"
+			          "ID": "monats_have_quartals19"
 			        },
 			        {
 			          "Preposition": {
@@ -75684,7 +77308,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals20"
+			          "ID": "jahrs_have_quartals19"
 			        },
 			        {
 			          "Attribute": {
@@ -75697,7 +77321,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs20"
+			          "ID": "quartals_have_jahrs19"
 			        },
 			        {
 			          "Preposition": {
@@ -75981,7 +77605,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_monats21"
+			          "ID": "quartals_have_monats20"
 			        },
 			        {
 			          "Attribute": {
@@ -75994,7 +77618,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "monats_have_quartals21"
+			          "ID": "monats_have_quartals20"
 			        },
 			        {
 			          "Preposition": {
@@ -76047,7 +77671,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "jahrs_have_quartals21"
+			          "ID": "jahrs_have_quartals20"
 			        },
 			        {
 			          "Attribute": {
@@ -76060,7 +77684,7 @@ cultureInfo de-CH
 			          },
 			          "State": "Generated",
 			          "Weight": 0.99,
-			          "ID": "quartals_have_jahrs21"
+			          "ID": "quartals_have_jahrs20"
 			        },
 			        {
 			          "Preposition": {
@@ -77580,6 +79204,1254 @@ cultureInfo de-CH
 			          "State": "Generated",
 			          "Weight": 0.99,
 			          "ID": "mapp_api_query_7241_merged_have_coretable_session_ids"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_sessions_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.sessions_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.sessions_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.sessions_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_sessions_with_mo_M"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_sessions_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.sessions_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.sessions_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.sessions_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_sessions_with_mo_M"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_returning_visitors_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.returning_visitors_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.returning_visitors_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.returning_visitors_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_returning_visitors_with_mo_M"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_returning_visitors_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.returning_visitors_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.returning_visitors_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.returning_visitors_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_returning_visitors_with_mo_M"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_returning_visit_share_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.returning_visit_share_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.returning_visit_share_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.returning_visit_share_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_returning_visit_share_with_mo_M"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_returning_visit_share_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.returning_visit_share_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.returning_visit_share_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.returning_visit_share_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_returning_visit_share_with_mo_M"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_visits_per_returning_visitor_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.visits_per_returning_visitor_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.visits_per_returning_visitor_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.visits_per_returning_visitor_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_visits_per_returning_visitor_with_mo_M"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Verbs": [
+			              {
+			                "visit": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "PrepositionalPhrases": [
+			              {
+			                "Prepositions": [
+			                  {
+			                    "per": {
+			                      "State": "Generated"
+			                    }
+			                  }
+			                ],
+			                "Object": {
+			                  "Role": "mapp_api_query_7241_merged.visits_per_returning_visitor_with_mo_M"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "mapp_api_query_7241_merged_visit_per_visits_per_returning_visitor_with_mo_M"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_visits_per_returning_visitor_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.visits_per_returning_visitor_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.visits_per_returning_visitor_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.visits_per_returning_visitor_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_visits_per_returning_visitor_with_mo_M"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Verbs": [
+			              {
+			                "visit": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "PrepositionalPhrases": [
+			              {
+			                "Prepositions": [
+			                  {
+			                    "per": {
+			                      "State": "Generated"
+			                    }
+			                  }
+			                ],
+			                "Object": {
+			                  "Role": "mapp_api_query_7241_merged.visits_per_returning_visitor_with_mo_M"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "z__DateTables_visit_per_visits_per_returning_visitor_with_mo_M"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_avg_duration_per_session_mmss_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.avg_duration_per_session_mmss_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.avg_duration_per_session_mmss_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.avg_duration_per_session_mmss_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_avg_duration_per_session_mmss_with_mo_M"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_avg_duration_per_session_mmss_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.avg_duration_per_session_mmss_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.avg_duration_per_session_mmss_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.avg_duration_per_session_mmss_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_avg_duration_per_session_mmss_with_mo_M"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_sgr_total_visits_per_week_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.sgr_total_visits_per_week_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.sgr_total_visits_per_week_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.sgr_total_visits_per_week_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_sgr_total_visits_per_week_with_mo_M"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_sgr_total_visits_per_week_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.sgr_total_visits_per_week_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.sgr_total_visits_per_week_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.sgr_total_visits_per_week_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_sgr_total_visits_per_week_with_mo_M"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_returning_visitors_LTD": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.returning_visitors_LTD": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.returning_visitors_LTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.returning_visitors_LTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_returning_visitors_LTD"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_returning_visit_share_LTD": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.returning_visit_share_LTD": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.returning_visit_share_LTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.returning_visit_share_LTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_returning_visit_share_LTD"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_visits_per_returning_visitor_LTD": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.visits_per_returning_visitor_LTD": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.visits_per_returning_visitor_LTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.visits_per_returning_visitor_LTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_visits_per_returning_visitor_LTD"
+			        },
+			        {
+			          "Verb": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Verbs": [
+			              {
+			                "visit": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "PrepositionalPhrases": [
+			              {
+			                "Prepositions": [
+			                  {
+			                    "per": {
+			                      "State": "Generated"
+			                    }
+			                  }
+			                ],
+			                "Object": {
+			                  "Role": "mapp_api_query_7241_merged.visits_per_returning_visitor_LTD"
+			                }
+			              }
+			            ]
+			          },
+			          "State": "Generated",
+			          "Weight": 0.95,
+			          "ID": "mapp_api_query_7241_merged_visit_per_visits_per_returning_visitor_LTD"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_avg_duration_per_session_mmss_LTD": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.avg_duration_per_session_mmss_LTD": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.avg_duration_per_session_mmss_LTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.avg_duration_per_session_mmss_LTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_avg_duration_per_session_mmss_LTD"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_visitors_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.visitors_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.visitors_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.visitors_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_visitors_with_mo_M"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_visitors_with_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.visitors_with_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.visitors_with_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.visitors_with_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_visitors_with_mo_M"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_sgr_total_visits_per_week_LTD": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.sgr_total_visits_per_week_LTD": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.sgr_total_visits_per_week_LTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.sgr_total_visits_per_week_LTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_sgr_total_visits_per_week_LTD"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_sgr_total_visits_per_week_LTD": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.sgr_total_visits_per_week_LTD": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.sgr_total_visits_per_week_LTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.sgr_total_visits_per_week_LTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_sgr_total_visits_per_week_LTD"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_visits_week_total__wed_only_avg_total_MoM": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.visits_week_total__wed_only_avg_total_MoM": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.visits_week_total__wed_only_avg_total_MoM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.visits_week_total__wed_only_avg_total_MoM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_visits_week_total__wed_only_avg_total_MoM"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_visits_week_total__wed_only_avg_total_MoM": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.visits_week_total__wed_only_avg_total_MoM": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.visits_week_total__wed_only_avg_total_MoM"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.visits_week_total__wed_only_avg_total_MoM"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_visits_week_total__wed_only_avg_total_MoM"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_visitors": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.visitors": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.visitors"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.visitors"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_visitors"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_visitors_LTD": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.visitors_LTD": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.visitors_LTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.visitors_LTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_visitors_LTD"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_visitors_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.visitors_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.visitors_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.visitors_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_visitors_mo_M"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_visitors_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.visitors_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.visitors_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.visitors_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_visitors_mo_M"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_distinct_count_session_id_march_2025": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.distinct_count_session_id_march_2025": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.distinct_count_session_id_march_2025"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.distinct_count_session_id_march_2025"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_distinct_count_session_id_march_2025"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_sessions_LTD": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.sessions_LTD": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.sessions_LTD"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.sessions_LTD"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_sessions_LTD"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_MoM_Returning_Visit_Share": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.MoM_Returning_Visit_Share": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.MoM_Returning_Visit_Share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.MoM_Returning_Visit_Share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_MoM_Returning_Visit_Share"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_MoM_Returning_Visit_Share": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.MoM_Returning_Visit_Share": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.MoM_Returning_Visit_Share"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.MoM_Returning_Visit_Share"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_MoM_Returning_Visit_Share"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_sessions_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.sessions_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.sessions_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.sessions_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_sessions_mo_M"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_sessions_mo_M": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.sessions_mo_M": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.sessions_mo_M"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.sessions_mo_M"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_sessions_mo_M"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_sessions": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.sessions": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.sessions"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.sessions"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_sessions"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_merged_has_MoM_Returning_Visitors": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_merged"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_merged": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.MoM_Returning_Visitors": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.MoM_Returning_Visitors"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_merged"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.MoM_Returning_Visitors"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "mapp_api_query_7241_merged_have_MoM_Returning_Visitors"
+			        }
+			      ]
+			    },
+			    "z__DateTable_has_mapp_api_query_7241_merged_MoM_Returning_Visitors": {
+			      "Binding": {
+			        "ConceptualEntity": "Z - DateTable"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "z__DateTable": {
+			          "Target": {
+			            "Entity": "z__DateTable"
+			          }
+			        },
+			        "mapp_api_query_7241_merged.MoM_Returning_Visitors": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_merged.MoM_Returning_Visitors"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "z__DateTable"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_merged.MoM_Returning_Visitors"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "z__DateTables_have_MoM_Returning_Visitors"
 			        }
 			      ]
 			    },
@@ -80487,7 +83359,7 @@ cultureInfo de-CH
 			        }
 			      ]
 			    },
-			    "mapp_api_query_7241_09_clone_has_visitor": {
+			    "mapp_api_query_7241_09_clone_has_visitors": {
 			      "Binding": {
 			        "ConceptualEntity": "mapp_api_query_7241_09_clone"
 			      },
@@ -80498,9 +83370,9 @@ cultureInfo de-CH
 			            "Entity": "mapp_api_query_7241_09_clone"
 			          }
 			        },
-			        "mapp_api_query_7241_09_clone.visitor": {
+			        "mapp_api_query_7241_09_clone.visitors": {
 			          "Target": {
-			            "Entity": "mapp_api_query_7241_09_clone.visitor"
+			            "Entity": "mapp_api_query_7241_09_clone.visitors"
 			          }
 			        }
 			      },
@@ -80511,7 +83383,7 @@ cultureInfo de-CH
 			              "Role": "mapp_api_query_7241_09_clone"
 			            },
 			            "Object": {
-			              "Role": "mapp_api_query_7241_09_clone.visitor"
+			              "Role": "mapp_api_query_7241_09_clone.visitors"
 			            }
 			          },
 			          "State": "Generated",
@@ -81576,7 +84448,7 @@ cultureInfo de-CH
 			        }
 			      ]
 			    },
-			    "mapp_api_query_7241_09_clone_enriched_has_visitor": {
+			    "mapp_api_query_7241_09_clone_enriched_has_visitors": {
 			      "Binding": {
 			        "ConceptualEntity": "mapp_api_query_7241_09_clone_enriched"
 			      },
@@ -81587,9 +84459,9 @@ cultureInfo de-CH
 			            "Entity": "mapp_api_query_7241_09_clone_enriched"
 			          }
 			        },
-			        "mapp_api_query_7241_09_clone_enriched.visitor": {
+			        "mapp_api_query_7241_09_clone_enriched.visitors": {
 			          "Target": {
-			            "Entity": "mapp_api_query_7241_09_clone_enriched.visitor"
+			            "Entity": "mapp_api_query_7241_09_clone_enriched.visitors"
 			          }
 			        }
 			      },
@@ -81600,7 +84472,7 @@ cultureInfo de-CH
 			              "Role": "mapp_api_query_7241_09_clone_enriched"
 			            },
 			            "Object": {
-			              "Role": "mapp_api_query_7241_09_clone_enriched.visitor"
+			              "Role": "mapp_api_query_7241_09_clone_enriched.visitors"
 			            }
 			          },
 			          "State": "Generated",
@@ -86255,7 +89127,7 @@ cultureInfo de-CH
 			        }
 			      ]
 			    },
-			    "mapp_api_query_7241_09_enriched_has_visitor": {
+			    "mapp_api_query_7241_09_enriched_has_visitors": {
 			      "Binding": {
 			        "ConceptualEntity": "mapp_api_query_7241_09_enriched"
 			      },
@@ -86266,9 +89138,9 @@ cultureInfo de-CH
 			            "Entity": "mapp_api_query_7241_09_enriched"
 			          }
 			        },
-			        "mapp_api_query_7241_09_enriched.visitor": {
+			        "mapp_api_query_7241_09_enriched.visitors": {
 			          "Target": {
-			            "Entity": "mapp_api_query_7241_09_enriched.visitor"
+			            "Entity": "mapp_api_query_7241_09_enriched.visitors"
 			          }
 			        }
 			      },
@@ -86279,7 +89151,7 @@ cultureInfo de-CH
 			              "Role": "mapp_api_query_7241_09_enriched"
 			            },
 			            "Object": {
-			              "Role": "mapp_api_query_7241_09_enriched.visitor"
+			              "Role": "mapp_api_query_7241_09_enriched.visitors"
 			            }
 			          },
 			          "State": "Generated",
@@ -100677,7 +103549,7 @@ cultureInfo de-CH
 			        }
 			      ]
 			    },
-			    "mapp_api_query_7241_09_has_visitor": {
+			    "mapp_api_query_7241_09_has_visitors": {
 			      "Binding": {
 			        "ConceptualEntity": "mapp_api_query_7241_09"
 			      },
@@ -100688,9 +103560,9 @@ cultureInfo de-CH
 			            "Entity": "mapp_api_query_7241_09"
 			          }
 			        },
-			        "mapp_api_query_7241_09.visitor": {
+			        "mapp_api_query_7241_09.visitors": {
 			          "Target": {
-			            "Entity": "mapp_api_query_7241_09.visitor"
+			            "Entity": "mapp_api_query_7241_09.visitors"
 			          }
 			        }
 			      },
@@ -100701,7 +103573,7 @@ cultureInfo de-CH
 			              "Role": "mapp_api_query_7241_09"
 			            },
 			            "Object": {
-			              "Role": "mapp_api_query_7241_09.visitor"
+			              "Role": "mapp_api_query_7241_09.visitors"
 			            }
 			          },
 			          "State": "Generated",
@@ -105888,6 +108760,138 @@ cultureInfo de-CH
 			          "State": "Generated",
 			          "Weight": 0.9,
 			          "ID": "mapp_api_query_7241_09_enriched_are_published_on_published"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_10_clone_enriched_published_jahr_has_mapp_api_query_7241_10_clone_enriched_published_quartal": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_10_clone_enriched"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_10_clone_enriched.published.jahr": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_10_clone_enriched.published.jahr"
+			          }
+			        },
+			        "mapp_api_query_7241_10_clone_enriched.published.quartal": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_10_clone_enriched.published.quartal"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.jahr"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.quartal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "jahrs_have_quartals21"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.quartal"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.jahr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartals_have_jahrs21"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.quartal"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.jahr"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartals_are_in_jahrs21"
+			        }
+			      ]
+			    },
+			    "mapp_api_query_7241_10_clone_enriched_published_quartal_has_mapp_api_query_7241_10_clone_enriched_published_monat": {
+			      "Binding": {
+			        "ConceptualEntity": "mapp_api_query_7241_10_clone_enriched"
+			      },
+			      "State": "Generated",
+			      "Roles": {
+			        "mapp_api_query_7241_10_clone_enriched.published.quartal": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_10_clone_enriched.published.quartal"
+			          }
+			        },
+			        "mapp_api_query_7241_10_clone_enriched.published.monat": {
+			          "Target": {
+			            "Entity": "mapp_api_query_7241_10_clone_enriched.published.monat"
+			          }
+			        }
+			      },
+			      "Phrasings": [
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.quartal"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.monat"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "quartals_have_monats21"
+			        },
+			        {
+			          "Attribute": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.monat"
+			            },
+			            "Object": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.quartal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monats_have_quartals21"
+			        },
+			        {
+			          "Preposition": {
+			            "Subject": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.monat"
+			            },
+			            "Prepositions": [
+			              {
+			                "in": {
+			                  "State": "Generated"
+			                }
+			              }
+			            ],
+			            "Object": {
+			              "Role": "mapp_api_query_7241_10_clone_enriched.published.quartal"
+			            }
+			          },
+			          "State": "Generated",
+			          "Weight": 0.99,
+			          "ID": "monats_are_in_quartals21"
 			        }
 			      ]
 			    },

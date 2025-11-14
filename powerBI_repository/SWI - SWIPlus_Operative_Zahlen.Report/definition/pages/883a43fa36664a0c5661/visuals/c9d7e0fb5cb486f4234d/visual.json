@@ -4,10 +4,10 @@
   "position": {
     "x": 259.16049382716051,
     "y": 66.370370370370367,
-    "z": 4000,
+    "z": 5000,
     "height": 553.08641975308637,
     "width": 723.75308641975312,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
     "visualType": "pivotTable",
@@ -221,72 +221,13 @@
         "sort": [
           {
             "field": {
-              "HierarchyLevel": {
+              "Measure": {
                 "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "Z - DateTable"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "Date"
-                      }
-                    },
-                    "Hierarchy": "Datumshierarchie"
+                  "SourceRef": {
+                    "Entity": "mapp_api_query_7241_merged"
                   }
                 },
-                "Level": "Jahr"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "Z - DateTable"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "Date"
-                      }
-                    },
-                    "Hierarchy": "Datumshierarchie"
-                  }
-                },
-                "Level": "Monat"
-              }
-            },
-            "direction": "Ascending"
-          },
-          {
-            "field": {
-              "HierarchyLevel": {
-                "Expression": {
-                  "Hierarchy": {
-                    "Expression": {
-                      "PropertyVariationSource": {
-                        "Expression": {
-                          "SourceRef": {
-                            "Entity": "Z - DateTable"
-                          }
-                        },
-                        "Name": "Variation",
-                        "Property": "Date"
-                      }
-                    },
-                    "Hierarchy": "Datumshierarchie"
-                  }
-                },
-                "Level": "Tag"
+                "Property": "avg_duration_per_session_mmss"
               }
             },
             "direction": "Ascending"
@@ -794,7 +735,7 @@
         "howCreated": "User"
       },
       {
-        "name": "25ca51420e7b622c9c9d",
+        "name": "eaf989701e52976ee942",
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -819,7 +760,7 @@
         "type": "Advanced"
       },
       {
-        "name": "dbe5e0795376d28e3ffc",
+        "name": "b5862a6b28671c0109d6",
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -844,7 +785,7 @@
         "type": "Categorical"
       },
       {
-        "name": "af13800690c848315a53",
+        "name": "84b1e75070db0c514924",
         "field": {
           "HierarchyLevel": {
             "Expression": {
@@ -869,7 +810,7 @@
         "type": "Advanced"
       },
       {
-        "name": "832b17d01947c0353225",
+        "name": "b077e71a017d64ad7e46",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -888,7 +829,7 @@
         "type": "Advanced"
       },
       {
-        "name": "cda8d8012a65ec54b3c7",
+        "name": "c02068ce2d95c65ea37b",
         "field": {
           "Measure": {
             "Expression": {
@@ -902,7 +843,7 @@
         "type": "Advanced"
       },
       {
-        "name": "1320e223e05303f4e5a6",
+        "name": "082a9eec3d038c4130b6",
         "field": {
           "Measure": {
             "Expression": {
@@ -916,7 +857,7 @@
         "type": "Advanced"
       },
       {
-        "name": "1a0b5d881a12e31e293d",
+        "name": "14f52ddbd0604c9c4761",
         "field": {
           "Measure": {
             "Expression": {
@@ -930,7 +871,7 @@
         "type": "Advanced"
       },
       {
-        "name": "d3e709692394801a81de",
+        "name": "5285361941c9091bb06c",
         "field": {
           "Measure": {
             "Expression": {
@@ -944,7 +885,7 @@
         "type": "Advanced"
       },
       {
-        "name": "50ef439035d163015a3c",
+        "name": "d9c4cdaad2bd58d17b3a",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -963,7 +904,7 @@
         "type": "Advanced"
       },
       {
-        "name": "eaa1eae894b85a7aefa4",
+        "name": "97b6ad33377aac0ddc53",
         "field": {
           "Measure": {
             "Expression": {

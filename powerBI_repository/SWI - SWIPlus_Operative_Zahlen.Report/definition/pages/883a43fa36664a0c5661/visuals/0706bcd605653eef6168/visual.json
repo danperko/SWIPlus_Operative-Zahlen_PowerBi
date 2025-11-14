@@ -7,7 +7,7 @@
     "z": 3000,
     "height": 80.864505403158773,
     "width": 224.50540315876975,
-    "tabOrder": 6001
+    "tabOrder": 6000
   },
   "visual": {
     "visualType": "slicer",
@@ -438,20 +438,6 @@
           ]
         },
         "howCreated": "User"
-      },
-      {
-        "name": "94941a4f9e979bb73c3b",
-        "field": {
-          "Column": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "mapp_api_query_7241_14"
-              }
-            },
-            "Property": "application_version_PC67"
-          }
-        },
-        "type": "Categorical"
       }
     ],
     "filterSortOrder": "Custom"

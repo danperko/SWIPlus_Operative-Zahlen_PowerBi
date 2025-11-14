@@ -1,0 +1,642 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "a887c2ea440372b21049",
+  "position": {
+    "x": 258.75,
+    "y": 53.75,
+    "z": 5000,
+    "height": 332.5,
+    "width": 1021.25,
+    "tabOrder": 1000
+  },
+  "visual": {
+    "visualType": "pivotTable",
+    "query": {
+      "queryState": {
+        "Rows": {
+          "projections": [
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "Z - DateTable"
+                            }
+                          },
+                          "Name": "Variation",
+                          "Property": "Date"
+                        }
+                      },
+                      "Hierarchy": "Datumshierarchie"
+                    }
+                  },
+                  "Level": "Monat"
+                }
+              },
+              "queryRef": "Z - DateTable.Date.Variation.Datumshierarchie.Monat",
+              "nativeQueryRef": "Date Monat",
+              "active": true
+            }
+          ]
+        },
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mapp_api_query_7241_merged"
+                    }
+                  },
+                  "Property": "sessions_with_MoM"
+                }
+              },
+              "queryRef": "mapp_api_query_7241_merged.sessions_with_MoM",
+              "nativeQueryRef": "App Reach (Visits) + MoM",
+              "displayName": "App Reach (Visits) + MoM"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mapp_api_query_7241_merged"
+                    }
+                  },
+                  "Property": "sessions_LTD"
+                }
+              },
+              "queryRef": "mapp_api_query_7241_merged.sessions_LTD",
+              "nativeQueryRef": "LaunchTD",
+              "displayName": "LaunchTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mapp_api_query_7241_merged"
+                    }
+                  },
+                  "Property": "returning_visitors_with_MoM"
+                }
+              },
+              "queryRef": "mapp_api_query_7241_merged.returning_visitors_with_MoM",
+              "nativeQueryRef": "Returning Visitors + MoM",
+              "displayName": "Returning Visitors + MoM"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mapp_api_query_7241_merged"
+                    }
+                  },
+                  "Property": "returning_visitors_LTD"
+                }
+              },
+              "queryRef": "mapp_api_query_7241_merged.returning_visitors_LTD",
+              "nativeQueryRef": "LaunchTD1",
+              "displayName": "LaunchTD"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mapp_api_query_7241_merged"
+                    }
+                  },
+                  "Property": "returning_visit_share_with_MoM"
+                }
+              },
+              "queryRef": "mapp_api_query_7241_merged.returning_visit_share_with_MoM",
+              "nativeQueryRef": "Returning Visit Share + MoM",
+              "displayName": "Returning Visit Share + MoM"
+            },
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "mapp_api_query_7241_merged"
+                    }
+                  },
+                  "Property": "returning_visit_share_LTD"
+                }
+              },
+              "queryRef": "mapp_api_query_7241_merged.returning_visit_share_LTD",
+              "nativeQueryRef": "returning_visit_share_LTD"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "HierarchyLevel": {
+                "Expression": {
+                  "Hierarchy": {
+                    "Expression": {
+                      "PropertyVariationSource": {
+                        "Expression": {
+                          "SourceRef": {
+                            "Entity": "Z - DateTable"
+                          }
+                        },
+                        "Name": "Variation",
+                        "Property": "Date"
+                      }
+                    },
+                    "Hierarchy": "Datumshierarchie"
+                  }
+                },
+                "Level": "Monat"
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "expansionStates": [
+      {
+        "roles": [
+          "Rows"
+        ],
+        "levels": [
+          {
+            "queryRefs": [
+              "Z - DateTable.Date.Variation.Datumshierarchie.Monat"
+            ],
+            "isCollapsed": true,
+            "identityKeys": [
+              {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "LocalDateTable_b65e814b-e63c-48ae-8993-ef848fc7ed61"
+                    }
+                  },
+                  "Property": "Monat"
+                }
+              }
+            ],
+            "isPinned": true
+          }
+        ],
+        "root": {}
+      }
+    ],
+    "objects": {
+      "values": [
+        {
+          "properties": {
+            "fontSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "urlIcon": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "total": [
+        {
+          "properties": {}
+        }
+      ],
+      "grid": [
+        {
+          "properties": {
+            "gridHorizontal": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "outlineColor": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "Literal": {
+                      "Value": "'#AC041A'"
+                    }
+                  }
+                }
+              }
+            },
+            "rowPadding": {
+              "expr": {
+                "Literal": {
+                  "Value": "0D"
+                }
+              }
+            },
+            "textSize": {
+              "expr": {
+                "Literal": {
+                  "Value": "12D"
+                }
+              }
+            },
+            "gridVertical": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "imageHeight": {
+              "expr": {
+                "Literal": {
+                  "Value": "40D"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "subTotals": [
+        {
+          "properties": {
+            "rowSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "rowSubtotalsPosition": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Top'"
+                }
+              }
+            },
+            "columnSubtotals": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "perRowLevel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnTotal": [
+        {
+          "properties": {
+            "applyToHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "rowTotal": [
+        {
+          "properties": {
+            "applyToHeaders": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "blankRows": [
+        {
+          "properties": {
+            "showBlankRows": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "145.99999610745147D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mapp_api_query_7241_merged.sessions_with_MoM"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "151.2153846153846D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mapp_api_query_7241_merged.returning_visitors_with_MoM"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "166.9432816048384D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "mapp_api_query_7241_merged.returning_visit_share_with_MoM"
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "visualHeader": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "stylePreset": [
+        {
+          "properties": {
+            "name": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Minimal'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "37f55caf628745292fb9",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mapp_api_query_7241_09_enriched"
+              }
+            },
+            "Property": "title"
+          }
+        },
+        "type": "Advanced",
+        "filter": {
+          "Version": 2,
+          "From": [
+            {
+              "Name": "m",
+              "Entity": "mapp_api_query_7241_09_enriched",
+              "Type": 0
+            }
+          ],
+          "Where": [
+            {
+              "Condition": {
+                "Not": {
+                  "Expression": {
+                    "Comparison": {
+                      "ComparisonKind": 0,
+                      "Left": {
+                        "Column": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Source": "m"
+                            }
+                          },
+                          "Property": "title"
+                        }
+                      },
+                      "Right": {
+                        "Literal": {
+                          "Value": "null"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "howCreated": "User"
+      },
+      {
+        "name": "eb131ae7e7661df2f229",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Z - DateTable"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "1334108d3b5c43dd47f4",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Z - DateTable"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Categorical",
+        "howCreated": "User"
+      },
+      {
+        "name": "af472f3601a6eeb402a6",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "Z - DateTable"
+              }
+            },
+            "Property": "Date"
+          }
+        },
+        "type": "Advanced",
+        "howCreated": "User"
+      },
+      {
+        "name": "4b5b2a873850a8596975",
+        "field": {
+          "HierarchyLevel": {
+            "Expression": {
+              "Hierarchy": {
+                "Expression": {
+                  "PropertyVariationSource": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "Z - DateTable"
+                      }
+                    },
+                    "Name": "Variation",
+                    "Property": "Date"
+                  }
+                },
+                "Hierarchy": "Datumshierarchie"
+              }
+            },
+            "Level": "Monat"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "3943f7900876d0d90d3c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mapp_api_query_7241_merged"
+              }
+            },
+            "Property": "sessions_with_MoM"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "dc92b08ca7dd565ac9b8",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mapp_api_query_7241_merged"
+              }
+            },
+            "Property": "returning_visitors_with_MoM"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b2e080f63393d642b5ab",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mapp_api_query_7241_merged"
+              }
+            },
+            "Property": "returning_visit_share_with_MoM"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "ded7ade2ce7d72908210",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mapp_api_query_7241_merged"
+              }
+            },
+            "Property": "returning_visit_share_LTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "770fe542e4700b5a9d1c",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mapp_api_query_7241_merged"
+              }
+            },
+            "Property": "sessions_LTD"
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "83d88303acc4bdb35b68",
+        "field": {
+          "Measure": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "mapp_api_query_7241_merged"
+              }
+            },
+            "Property": "returning_visitors_LTD"
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

@@ -288,6 +288,476 @@ table mapp_api_query_7241_merged
 		formatString: 0
 		lineageTag: bbdfcf71-f2ef-4c13-bb91-505e8a3bd5de
 
+	measure 'MoM Returning_Visitors' = ```
+			
+			VAR CurrentValue = [Returning_Visitors]
+			VAR PrevValue = CALCULATE([Returning_Visitors], DATEADD('Z - DateTable'[Date], -1, MONTH))
+			VAR Change = DIVIDE(CurrentValue - PrevValue, PrevValue)
+			VAR Icon = 
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "🟢 ↑",
+			        Change < 0, "🔴 ↓",
+			        "➖"
+			    )
+			RETURN
+			    IF(
+			        HASONEVALUE('Z - DateTable'[Month]),  -- Asegura que hay un solo mes en contexto
+			        Icon & " " & FORMAT(Change, "0.00%"),
+			        BLANK()  -- O "Total no aplicable" si prefieres mostrar texto
+			    )
+			
+			```
+		lineageTag: d011cc30-11a7-41f3-bd66-85ce0527f392
+
+	measure sessions = DISTINCTCOUNT('mapp_api_query_7241_merged'[session_id])
+		formatString: 0
+		lineageTag: 065eb041-a113-405a-b747-a3a738ef2950
+
+	measure sessions_MoM = ```
+			
+			VAR CurrentValue = [sessions]
+			VAR PrevValue = CALCULATE([sessions], DATEADD('Z - DateTable'[Date], -1, MONTH))
+			VAR Change = DIVIDE(CurrentValue - PrevValue, PrevValue)
+			VAR Icon = 
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "🟢 ↑",
+			        Change < 0, "🔴 ↓",
+			        "➖"
+			    )
+			RETURN
+			    IF(
+			        HASONEVALUE('Z - DateTable'[Month]),  -- Asegura que hay un solo mes en contexto
+			        Icon & " " & FORMAT(Change, "0.00%"),
+			        BLANK()  -- O "Total no aplicable" si prefieres mostrar texto
+			    )
+			
+			
+			
+			```
+		lineageTag: dc9d36f0-9437-428a-9876-02a165444730
+
+	measure 'MoM Returning_Visit_Share' = ```
+			
+			VAR CurrentValue = [Returning_Visit_Share]
+			VAR PrevValue = CALCULATE([Returning_Visit_Share], DATEADD('Z - DateTable'[Date], -1, MONTH))
+			VAR Change = DIVIDE(CurrentValue - PrevValue, PrevValue)
+			VAR Icon = 
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "🟢 ↑",
+			        Change < 0, "🔴 ↓",
+			        "➖"
+			    )
+			RETURN
+			    IF(
+			        HASONEVALUE('Z - DateTable'[Month]),  -- Asegura que hay un solo mes en contexto
+			        Icon & " " & FORMAT(Change, "0.00%"),
+			        BLANK()  -- O "Total no aplicable" si prefieres mostrar texto
+			    )
+			```
+		lineageTag: 8b754fae-a85b-4c99-9cee-ddcd2c8cbafc
+
+	measure sessions_LTD =
+			
+			VAR CurrentYear = YEAR(TODAY())
+			VAR CurrentMonth = MONTH(TODAY())
+			
+			VAR CurrentYTD =
+			    CALCULATE(
+			        [sessions],
+			        DATESYTD('Z - DateTable'[Date])
+			    )
+			
+			VAR LaunchYTD =
+			    CALCULATE(
+			        [sessions],
+			        DATESYTD('Z - DateTable'[Date]),
+			        FILTER(
+			            ALL('Z - DateTable'),
+			            MONTH('Z - DateTable'[Date]) = 3 &&
+			            YEAR('Z - DateTable'[Date]) = 2025
+			        )
+			    )
+			
+			RETURN
+			    IF(
+			        CurrentYear < 2025 || (CurrentYear = 2025 && CurrentMonth < 3),
+			        BLANK(),
+			        FORMAT(DIVIDE(CurrentYTD - LaunchYTD, LaunchYTD), "0.00%")
+			    )
+		lineageTag: 8294eef6-224e-4e22-a591-496275e85e5c
+
+	measure 'Distinct Count session_id (March 2025)' =
+			
+			CALCULATE(
+			    DISTINCTCOUNT(mapp_api_query_7241_merged[session_id]),
+			    FILTER(
+			        ALL('Z - DateTable'),
+			        MONTH('Z - DateTable'[Date]) = 3 &&
+			        YEAR('Z - DateTable'[Date] = 2025
+			    )
+			)
+			
+			)
+		formatString: 0
+		lineageTag: daadaaab-822a-4dd2-8b9d-7a9006b9796d
+
+	measure visitors_MoM = ```
+			
+			VAR CurrentValue = [visitors]
+			VAR PrevValue = CALCULATE([visitors], DATEADD('Z - DateTable'[Date], -1, MONTH))
+			VAR Change = DIVIDE(CurrentValue - PrevValue, PrevValue)
+			VAR Icon = 
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "🟢 ↑",
+			        Change < 0, "🔴 ↓",
+			        "➖"
+			    )
+			RETURN
+			    IF(
+			        HASONEVALUE('Z - DateTable'[Month]),  -- Asegura que hay un solo mes en contexto
+			        Icon & " " & FORMAT(Change, "0.00%"),
+			        BLANK()  -- O "Total no aplicable" si prefieres mostrar texto
+			    )
+			```
+		lineageTag: 9033d852-da3f-4db5-b934-35cbe054d84b
+
+	measure visitors_LTD =
+			
+			VAR CurrentYear = YEAR(TODAY())
+			VAR CurrentMonth = MONTH(TODAY())
+			
+			VAR CurrentYTD =
+			    CALCULATE(
+			        [visitors],
+			        DATESYTD('Z - DateTable'[Date])
+			    )
+			
+			VAR LaunchYTD =
+			    CALCULATE(
+			        [visitors],
+			        DATESYTD('Z - DateTable'[Date]),
+			        FILTER(
+			            ALL('Z - DateTable'),
+			            MONTH('Z - DateTable'[Date]) = 3 &&
+			            YEAR('Z - DateTable'[Date]) = 2025
+			        )
+			    )
+			
+			RETURN
+			    IF(
+			        CurrentYear < 2025 || (CurrentYear = 2025 && CurrentMonth < 3),
+			        BLANK(),
+			        FORMAT(DIVIDE(CurrentYTD - LaunchYTD, LaunchYTD), "0.00%"))
+		lineageTag: 8f1e55d2-0b77-439d-a580-840dd16ae193
+
+	measure visitors = DISTINCTCOUNT(mapp_api_query_7241_merged[user_id_05])
+		formatString: 0
+		lineageTag: c7c7bb2b-8922-4244-85b9-9ac4e559715e
+
+	measure 'Visits (Week Total – Wed only, Avg Total)_MoM' = ```
+			
+			VAR CurrentValue = [Visits (Week Total – Wed only, Avg Total)]
+			VAR PrevValue = CALCULATE([Visits (Week Total – Wed only, Avg Total)], DATEADD('Z - DateTable'[Date], -1, MONTH))
+			VAR Change = DIVIDE(CurrentValue - PrevValue, PrevValue)
+			VAR Icon = 
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "🟢 ↑",
+			        Change < 0, "🔴 ↓",
+			        "➖"
+			    )
+			RETURN
+			    IF(
+			        HASONEVALUE('Z - DateTable'[Month]),  -- Asegura que hay un solo mes en contexto
+			        Icon & " " & FORMAT(Change, "0.00%"),
+			        BLANK()  -- O "Total no aplicable" si prefieres mostrar texto
+			    )
+			```
+		lineageTag: 9a300383-9c56-4e3b-a0b2-4691b12d976b
+
+	measure sgr_total_visits_per_week_LTD =
+			
+			VAR CurrentYear = YEAR(TODAY())
+			VAR CurrentMonth = MONTH(TODAY())
+			
+			VAR CurrentYTD =
+			    CALCULATE(
+			        [Visits (Week Total – Wed only, Avg Total)],
+			        DATESYTD('Z - DateTable'[Date])
+			    )
+			
+			VAR LaunchYTD =
+			    CALCULATE(
+			        [Visits (Week Total – Wed only, Avg Total)],
+			        DATESYTD('Z - DateTable'[Date]),
+			        FILTER(
+			            ALL('Z - DateTable'),
+			            MONTH('Z - DateTable'[Date]) = 3 &&
+			            YEAR('Z - DateTable'[Date]) = 2025
+			        )
+			    )
+			
+			RETURN
+			    IF(
+			        CurrentYear < 2025 || (CurrentYear = 2025 && CurrentMonth < 3),
+			        BLANK(),
+			        FORMAT(DIVIDE(CurrentYTD - LaunchYTD, LaunchYTD), "0.00%"))
+		lineageTag: 47dac572-0574-4839-8ed2-b18f0a0909ce
+
+	measure visitors_with_MoM = ```
+			
+			VAR CurrentValue = DISTINCTCOUNT(mapp_api_query_7241_merged[user_id_05])
+			VAR PrevValue = CALCULATE(
+			    DISTINCTCOUNT(mapp_api_query_7241_merged[user_id_05]),
+			    DATEADD('Z - DateTable'[Date], -1, MONTH)
+			)
+			VAR Change = DIVIDE(CurrentValue - PrevValue, PrevValue)
+			VAR Icon = 
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "🟢 ↑",
+			        Change < 0, "🔴 ↓",
+			        "➖"
+			    )
+			RETURN
+			    IF(
+			        HASONEVALUE('Z - DateTable'[Month]),
+			        FORMAT(CurrentValue, "0") & " " & Icon & " " & FORMAT(Change, "0.00%"),
+			        BLANK()
+			    )
+			```
+		lineageTag: 162fe9dd-a16b-4301-8714-828341d2c48b
+
+	measure avg_duration_per_session_mmss_LTD = ```
+			
+			VAR CurrentYear = YEAR(TODAY())
+			VAR CurrentMonth = MONTH(TODAY())
+			
+			VAR CurrentYTD = CALCULATE([avg_duration_per_session_mmss], DATESYTD('Z - DateTable'[Date]))
+			VAR LaunchYTD = CALCULATE(
+			    [avg_duration_per_session_mmss],
+			    DATESYTD('Z - DateTable'[Date]),
+			    FILTER(
+			        ALL('Z - DateTable'),
+			        MONTH('Z - DateTable'[Date]) = 3 &&
+			        YEAR('Z - DateTable'[Date]) = 2025
+			    )
+			)
+			
+			RETURN
+			    IF(
+			        CurrentYear < 2025 || (CurrentYear = 2025 && CurrentMonth < 3),
+			        BLANK(),
+			        FORMAT(DIVIDE(CurrentYTD - LaunchYTD, LaunchYTD), "0.00%")
+			    )
+			
+			```
+		lineageTag: a2238578-357c-4795-a4e1-fdf6f77d0422
+
+	measure visits_per_returning_visitor_LTD =
+			
+			VAR CurrentYear = YEAR(TODAY())
+			VAR CurrentMonth = MONTH(TODAY())
+			
+			VAR CurrentYTD = CALCULATE([Visits_per_ReturningVisitor], DATESYTD('Z - DateTable'[Date]))
+			VAR LaunchYTD = CALCULATE(
+			    [Visits_per_ReturningVisitor],
+			    DATESYTD('Z - DateTable'[Date]),
+			    FILTER(
+			        ALL('Z - DateTable'),
+			        MONTH('Z - DateTable'[Date]) = 3 &&
+			        YEAR('Z - DateTable'[Date]) = 2025
+			    )
+			)
+			
+			RETURN
+			    IF(
+			        CurrentYear < 2025 || (CurrentYear = 2025 && CurrentMonth < 3),
+			        BLANK(),
+			        FORMAT(DIVIDE(CurrentYTD - LaunchYTD, LaunchYTD), "0.00%")
+			    )
+		lineageTag: f506ab62-757b-43be-a9bc-a2a032510535
+
+	measure returning_visit_share_LTD = ```
+			
+			VAR CurrentYear = YEAR(TODAY())
+			VAR CurrentMonth = MONTH(TODAY())
+			
+			VAR CurrentYTD = CALCULATE([Returning_Visit_Share], DATESYTD('Z - DateTable'[Date]))
+			VAR LaunchYTD = CALCULATE(
+			    [Returning_Visit_Share],
+			    DATESYTD('Z - DateTable'[Date]),
+			    FILTER(
+			        ALL('Z - DateTable'),
+			        MONTH('Z - DateTable'[Date]) = 3 &&
+			        YEAR('Z - DateTable'[Date]) = 2025
+			    )
+			)
+			
+			RETURN
+			    IF(
+			        CurrentYear < 2025 || (CurrentYear = 2025 && CurrentMonth < 3),
+			        BLANK(),
+			        FORMAT(DIVIDE(CurrentYTD - LaunchYTD, LaunchYTD), "0.00%")
+			    )
+			
+			```
+		lineageTag: ce1cd696-ae19-4f00-8bb1-2a0d6c0ad964
+
+	measure returning_visitors_LTD =
+			
+			VAR CurrentYear = YEAR(TODAY())
+			VAR CurrentMonth = MONTH(TODAY())
+			
+			VAR CurrentYTD = CALCULATE([Returning_Visitors], DATESYTD('Z - DateTable'[Date]))
+			VAR LaunchYTD = CALCULATE(
+			    [Returning_Visitors],
+			    DATESYTD('Z - DateTable'[Date]),
+			    FILTER(
+			        ALL('Z - DateTable'),
+			        MONTH('Z - DateTable'[Date]) = 3 &&
+			        YEAR('Z - DateTable'[Date]) = 2025
+			    )
+			)
+			
+			RETURN
+			    IF(
+			        CurrentYear < 2025 || (CurrentYear = 2025 && CurrentMonth < 3),
+			        BLANK(),
+			        FORMAT(DIVIDE(CurrentYTD - LaunchYTD, LaunchYTD), "0.00%")
+			    )
+		lineageTag: c1430c95-e001-4e8c-871d-a714f8fa02ab
+
+	measure sgr_total_visits_per_week_with_MoM = ```
+			
+			VAR CurrentValue = [Visits (Week Total – Wed only, Avg Total)]
+			VAR PrevValue = CALCULATE([Visits (Week Total – Wed only, Avg Total)], DATEADD('Z - DateTable'[Date], -1, MONTH))
+			VAR Change = DIVIDE(CurrentValue - PrevValue, PrevValue)
+			VAR Icon = 
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "🟢 ↑",
+			        Change < 0, "🔴 ↓",
+			        "➖"
+			    )
+			RETURN
+			    IF(
+			        HASONEVALUE('Z - DateTable'[Month]),
+			        FORMAT(CurrentValue, "0") & " " & Icon & " " & FORMAT(Change, "0.00%"),
+			        BLANK()
+			)
+			```
+		lineageTag: f9b05526-ef53-4c0f-8b05-44a69ebd1291
+
+	measure avg_duration_per_session_mmss_with_MoM = ```
+			
+			VAR CurrentValue = [avg_duration_per_session_mmss]
+			VAR PrevValue = CALCULATE([avg_duration_per_session_mmss], DATEADD('Z - DateTable'[Date], -1, MONTH))
+			VAR Change = DIVIDE(CurrentValue - PrevValue, PrevValue)
+			VAR Icon = 
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "🟢 ↑",
+			        Change < 0, "🔴 ↓",
+			        "➖"
+			    )
+			RETURN
+			    IF(
+			        HASONEVALUE('Z - DateTable'[Month]),
+			        FORMAT(CurrentValue, "0") & " " & Icon & " " & FORMAT(Change, "0.00%"),
+			        BLANK()
+			    )
+			```
+		lineageTag: fbf0613c-ddc5-4521-b091-f625ba66a3dd
+
+	measure visits_per_returning_visitor_with_MoM = ```
+			
+			VAR CurrentValue = [Visits_per_ReturningVisitor]
+			VAR PrevValue = CALCULATE([Visits_per_ReturningVisitor], DATEADD('Z - DateTable'[Date], -1, MONTH))
+			VAR Change = DIVIDE(CurrentValue - PrevValue, PrevValue)
+			VAR Icon = 
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "🟢 ↑",
+			        Change < 0, "🔴 ↓",
+			        "➖"
+			    )
+			RETURN
+			    IF(
+			        HASONEVALUE('Z - DateTable'[Month]),
+			        FORMAT(CurrentValue, "0.00") & " " & Icon & " " & FORMAT(Change, "0.00%"),
+			        BLANK()
+			    )
+			```
+		lineageTag: 01b002e7-f584-4217-985e-c68614093918
+
+	measure returning_visit_share_with_MoM = ```
+			
+			VAR CurrentValue = [Returning_Visit_Share]
+			VAR PrevValue = CALCULATE([Returning_Visit_Share], DATEADD('Z - DateTable'[Date], -1, MONTH))
+			VAR Change = DIVIDE(CurrentValue - PrevValue, PrevValue)
+			VAR Icon = 
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "🟢 ↑",
+			        Change < 0, "🔴 ↓",
+			        "➖"
+			    )
+			RETURN
+			    IF(
+			        HASONEVALUE('Z - DateTable'[Month]),
+			        FORMAT(CurrentValue, "0.00%") & " " & Icon & " " & FORMAT(Change, "0.00%"),
+			        BLANK()
+			    )
+			```
+		lineageTag: a079676a-5b47-4834-8757-dbac48d18aeb
+
+	measure returning_visitors_with_MoM = ```
+			
+			VAR CurrentValue = [Returning_Visitors]
+			VAR PrevValue = CALCULATE([Returning_Visitors], DATEADD('Z - DateTable'[Date], -1, MONTH))
+			VAR Change = DIVIDE(CurrentValue - PrevValue, PrevValue)
+			VAR Icon = 
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "🟢 ↑",
+			        Change < 0, "🔴 ↓",
+			        "➖"
+			    )
+			RETURN
+			    IF(
+			        HASONEVALUE('Z - DateTable'[Month]),
+			        FORMAT(CurrentValue, "0") & " " & Icon & " " & FORMAT(Change, "0.00%"),
+			        BLANK()
+			    )
+			```
+		lineageTag: 563c87d9-c3dd-47ab-b3b0-04d87d8d7ff9
+
+	measure sessions_with_MoM = ```
+			
+			VAR CurrentValue = [sessions]
+			VAR PrevValue = CALCULATE([sessions], DATEADD('Z - DateTable'[Date], -1, MONTH))
+			VAR Change = DIVIDE(CurrentValue - PrevValue, PrevValue)
+			VAR Icon = 
+			    SWITCH(
+			        TRUE(),
+			        Change > 0, "🟢 ↑",
+			        Change < 0, "🔴 ↓",
+			        "➖"
+			    )
+			RETURN
+			    IF(
+			        HASONEVALUE('Z - DateTable'[Month]),
+			        FORMAT(CurrentValue, "0") & " " & Icon & " " & FORMAT(Change, "0.00%"),
+			        BLANK()
+			    )
+			```
+		lineageTag: 108958fd-be54-4bd5-83a9-77d4bad80376
+
 	column session_id
 		dataType: string
 		sourceProviderType: nvarchar(65535)

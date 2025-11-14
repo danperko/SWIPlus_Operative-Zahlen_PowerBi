@@ -1,0 +1,66 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.3.0/schema.json",
+  "name": "4f33cebba88be30c5579",
+  "position": {
+    "x": 8.8378319811456034,
+    "y": 563.775456085496,
+    "z": 5000,
+    "height": 83.505704548822038,
+    "width": 221.89145866727728,
+    "tabOrder": 3000
+  },
+  "visual": {
+    "visualType": "textbox",
+    "objects": {
+      "general": [
+        {
+          "properties": {
+            "paragraphs": [
+              {
+                "textRuns": [
+                  {
+                    "value": "To Be done \"",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  },
+                  {
+                    "value": "App-Sprache",
+                    "textStyle": {
+                      "fontFamily": "WordVisi_MSFontService, Arial, Arial_EmbeddedFont, Arial_MSCustomFont, Arial_MSFontService, sans-serif",
+                      "fontSize": "8pt",
+                      "color": "#000000"
+                    }
+                  },
+                  {
+                    "value": "\"",
+                    "textStyle": {
+                      "fontSize": "8pt"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "dropShadow": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "parentGroupName": "c604facc632b96501e05"
+}
